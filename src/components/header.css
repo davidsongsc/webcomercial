@@ -103,6 +103,7 @@ nav ul {
   display: flex;
   list-style: none;
 }
+
 /*
 nav li {
   margin: 0 10px;
@@ -180,7 +181,90 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 960px) {
+  header {
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    color: var(--white);
+    text-transform: capitalize;
+    font-family: 'Manrope', sans-serif;
+    z-index: 9;
+    text-shadow: 1px 1px 11px black;
+  }
+
+  header svg {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    fill: var(--fill);
+    fill-opacity: var(--fill-opacity);
+    stroke: var(--stroke);
+    stroke-opacity: var(--stroke-opacity);
+    stroke-width: var(--stroke-width);
+    left: -4px;
+    position: relative;
+    top: 94px;
+    width: 123px;
+    margin: -87px 0 0 0;
+    transform: scale(1.5);
+    z-index: 9;
+  }
+
+  header h2 {
+    color: var(--gray-300);
+    font-size: 0.5rem;
+    font-weight: 100;
+    background: black;
+    letter-spacing: 5px;
+    border-radius: 8px;
+    padding: 5px;
+    text-transform: capitalize;
+    font-family: 'Manrope', sans-serif;
+    text-shadow: 1px 1px 5px white;
+    z-index: 9;
+  }
+
+
+  .ab-cardapio {
+    left: 0px;
+    position: relative;
+    transform: scale(0.5) rotateZ(270deg);
+    
+  }
+  .ab-cardapio .titulo-produto{
+    height: 306px;
+    width: 188px;
+    left: 48px;
+    top: -17px;
+    transform:  rotateZ(90deg);
+  }
+  .ab-cardapio .grupo-nome-descricao{
+    height: 256px;
+    width: 187px;
+    left: 158px;
+    top: -35px;
+    transform: rotateZ(-90deg);
+    position: relative;
+  }
+  .ab-cardapio .quadro{
+    height: 306px;
+    width: 188px;
+    left: 48px;
+    top: -17px;
+    transform:  rotateZ(-90deg);
+  }
+  .abertura-cardapio {
+    transform: scale(0.6);
+    margin: -54px -113px;
+    
+  }
+
+}
+
 @media screen and (min-width: 960px) {
+
 
   .menu {
     display: flex;

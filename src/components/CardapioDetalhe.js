@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom';
 import Main from './Main';
+import Aside from './Aside';
+import dados from '../configure.json';
 
 
 function CardapioDetail() {
@@ -8,6 +10,7 @@ function CardapioDetail() {
         return (
             <>
                 <div className='novidades'>
+                <Aside dados={dados}/>
                     <Main grupoh={0} />
                 </div>
             </>

@@ -124,18 +124,23 @@
     /* font-size: 20px; */
     position: relative;
     display: flex;
-    width: 284px;
+    width: 286px;
     font-weight: bold;
-    background-color: gray;
+    background-color: var(--black);
     /* margin: -3.5rem 0; */
     text-transform: capitalize;
     text-align: center;
-    height: 187px;
-    top: 43px;
-    left: 8px;
+    height: 188px;
+    top: 42px;
+    left: 7px;
     font-family: var(--font-text);
     align-items: center;
     justify-content: center;
+    transition: .8s ease-in-out;
+}
+
+.titulo-produto:hover {
+    background-color: var(--yellow);
 }
 
 .produtos-card p {
