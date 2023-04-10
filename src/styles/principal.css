@@ -1,0 +1,188 @@
+ @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Indie+Flower&family=Kavoon&family=Michroma&family=Pacifico&family=Questrial&family=Rampart+One&family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&family=Secular+One&family=Tilt+Prism&display=swap');
+
+ .loading {
+
+   text-align: center;
+   background-color: #eb790f;
+   animation: load 5s ease-in-out infinite;
+ }
+
+ @keyframes load {
+   0% {
+     background-color: #ff0505;
+   }
+
+   50% {
+     background-color: #ff050500;
+   }
+
+   100% {
+     background-color: #ff0505;
+   }
+ }
+
+ .c-div-cardapio {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex-wrap: nowrap;
+
+ }
+
+ .titulo-cardapio {
+   /*border-radius: 8px; */
+   background-color: white;
+   margin-top: 649px;
+   margin-bottom: -33px;
+   text-decoration: underline;
+   text-decoration-color: #eb790f;
+   padding: 20px;
+   /* border-radius: 10px; */
+   width: -webkit-fill-available;
+
+ }
+
+ .cardapio {
+   background-color: whitesmoke;
+   /* background-image: url(https://i.pinimg.com/736x/f1/58/49/f158496….jpg); */
+   background-size: 450px;
+   background-position: -81px 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: stretch;
+   margin-top: 1rem;
+   margin-bottom: 2rem;
+   flex-direction: row;
+   /* max-width: 100%;*/
+ }
+
+ .produtos-card {
+   background: #f0eccf75;
+   background-image: url('https://img.freepik.com/fotos-premium/cubos-de-carne-crua-para-guisado-em-uma-tabua-de-madeira-copie-o-espaco_92134-3179.jpg');
+   background-size: contain;
+   background-position: 0px 0px;
+   border: 1.5px solid #ff6937d2;
+   box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.897);
+   display: flex;
+   justify-content: space-between;
+   padding: 1rem;
+   margin: 1px;
+   text-align: left;
+   height: 326px;
+   transition: all 0.3s ease-in-out;
+ }
+
+ .produtos-card:hover {
+   transform: scale(1.01) translateZ(0);
+   z-index: 1;
+ }
+
+ .cardapio:hover .produtos-card:not(:hover) {
+   filter: brightness(1) saturate(0);
+   transform: scale(1) translateZ(0);
+   opacity: 0.5;
+ }
+
+ .esgotado {
+   content: "Produto Esgotado!";
+   filter: brightness(1) saturate(0);
+   opacity: 0.5;
+ }
+
+
+
+ .esgotado img {
+
+   object-fit: cover;
+ }
+
+ .esgotado h2 {
+   font-size: 20px;
+   text-align: center;
+ }
+
+ .conteiner-bloco {
+   margin: -29px 35px;
+ }
+
+ .produto-imagem {
+   background: #DE4D00;
+   border-top-left-radius: 24px;
+   border-top-right-radius: 24px;
+   width: 200px;
+   height: 200px;
+   padding: 1px 10px;
+ }
+
+ .produtos-card h2 {
+   text-align: center;
+   font-size: 33px;
+   font-family: 'Rokkitt', serif;
+   font-weight: 800;
+   font-style: italic;
+   text-shadow: 1px 1px 3px rgb(255, 255, 255), -1px -1px 3px rgb(145, 117, 117);
+   letter-spacing: 3px;
+   text-transform: capitalize;
+   background-color: #ffffff;
+ }
+
+ .produtos-card h4 {
+   background-color: white;
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   letter-spacing: 8px;
+   color: black;
+   top: -28px;
+   position: relative;
+   font-weight: 100;
+   font-size: 1.2rem;
+   padding: 5px;
+   text-align: center;
+   text-decoration: underline;
+   text-decoration-color: rgba(102, 51, 153, 0.205);
+ }
+
+ .produtos-card h4:hover {
+   text-decoration: overline;
+   text-decoration-color: rgba(102, 51, 153, 0.205);
+ }
+
+ .produtos-card p {
+   background-color: #e3f96b;
+   color: #06064e;
+   font-size: 1.5rem;
+   font-family: 'Archivo', sans-serif;
+   font-weight: 100;
+   margin-top: -1.7rem;
+   margin-bottom: 0.5rem;
+   padding: 30px;
+   height: 23vh;
+ }
+
+ .butao-compra-div-n {
+   margin: -50px 0 0 0;
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+ }
+
+ .btn-adicionar {
+   margin: 3px;
+   background-color: #4CAF50;
+   color: white;
+   padding: 12px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+
+ .btn-remover {
+   margin: 3px;
+   background-color: red;
+   color: white;
+   padding: 12px 20px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+ }

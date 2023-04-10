@@ -1,0 +1,37 @@
+{
+    "imagens": [
+        {
+            "nome": "Premium Burguer X",
+            "descricao": "Aprecie o sabor do hambúrguer premium sem complicações, aquecendo-o em uma frigideira ou grelha. Os ingredientes totalmente naturais deste hambúrguer incluem lombo de vaca proveniente do Uruguai, queijo cheddar e pão com uma abundância de sabores para completar este prato perfeito",
+            "promo": "Estréia",
+            "localevento": "Lojas e Delivery",
+            "url": "http://192.168.0.50:5000/static/img/produtos/chavaburg.png",
+            "alt": "Imagem 1",
+            "grupo": "",
+            "tipo": "alfa",
+            "codigo": "N915"
+        },
+        {
+            "nome": "Minerva",
+            "descricao": "Hamburguer Artesanal 200G grelhado em chama aberta, com bacon, quejo especial, molho chavron e pão brioche. acompanha fritas.",
+            "promo": "19.95",
+            "localevento": "Lojas e Delivery",
+            "url": "http://192.168.0.50:5000/static/img/produtos/burgx.png",
+            "alt": "Imagem 2",
+            "grupo": "",
+            "tipo": "bravo",
+            "codigo": "N917"
+        },
+        {
+            "nome": "Kreiton",
+            "descricao": "Hamburguer Artesanal 200G grelhado em chama aberta, com bacon, quejo especial, molho chavron e pão brioche. acompanha fritas.",
+            "promo": "19.95",
+            "localevento": "Lojas e Delivery",
+            "url": "http://192.168.0.50:5000/static/img/produtos/baconmax.png",
+            "alt": "Imagem 3",
+            "grupo": "",
+            "tipo": "charlie",
+            "codigo": "N723"
+        }
+    ]
+}

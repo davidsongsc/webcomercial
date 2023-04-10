@@ -1,0 +1,36 @@
+.novidades {
+    max-width: 100%; /* definindo a largura máxima */
+    overflow-x: auto; /* permitindo que haja uma barra de rolagem apenas na direção horizontal */
+    overflow-y: hidden; /* desativando a barra de rolagem vertical */
+    position: relative; /* definindo a posição relativa para permitir o posicionamento absoluto da barra de rolagem */
+  }
+  
+  .novidades::-webkit-scrollbar {
+    height: 10px; /* definindo a altura da barra de rolagem */
+  }
+  
+  .novidades::-webkit-scrollbar-thumb {
+    background-color: black; /* definindo a cor da barra de rolagem */
+  }
+  
+  .novidades::-webkit-scrollbar-track {
+    background-color: transparent; /* definindo a cor do fundo da barra de rolagem */
+  }
+  
+  .novidades::-webkit-scrollbar-thumb:hover {
+    background-color: gray; /* definindo a cor da barra de rolagem quando o mouse passa por cima */
+  }
+  
+  .novidades::-webkit-scrollbar-corner {
+    background-color: transparent; /* definindo a cor do canto da barra de rolagem */
+  }
+  
+  .novidades .scrollbar {
+    position: absolute; /* definindo a posição absoluta para a barra de rolagem */
+    bottom: 0; /* definindo a posição no rodapé da div */
+    left: 0; /* definindo a posição à esquerda da div */
+    width: 100%; /* definindo a largura da barra de rolagem */
+    height: 10px; /* definindo a altura da barra de rolagem */
+    background-color: black; /* definindo a cor da barra de rolagem */
+    z-index: 1; /* definindo a ordem de empilhamento para ficar acima do conteúdo */
+  }

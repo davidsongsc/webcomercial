@@ -1,0 +1,36 @@
+{
+    "dados": {
+        "titulo": "Demas & Divas",
+        "stitulo": "A CASA MAIS HOLLYWOODIANA DO RIO"
+    },
+    "lojas": {
+        "lojaA": {
+            "nomeLoja": "valquerie",
+            "dados": {
+                "ddd": "21",
+                "telefone1": "2146-1869",
+                "rua": "rua das rosas 126",
+                "cep": "21330-680",
+                "bairro": "Vila Valqueire",
+                "cidade": "Rio de Janeiro",
+                "estado": "RJ",
+                "email": "contato@demasedivas.com.br"
+            }
+        },
+        "lojaB": {
+            "nomeLoja": "Madureira",
+            "dados": {
+                "ddd": "21",
+                "telefone1": "2146-1869",
+                "rua": "rua das rosas 126",
+                "cep": "21330-680",
+                "bairro": "Vila Valqueire",
+                "cidade": "Rio de Janeiro",
+                "estado": "RJ",
+                "email": "contato@demasedivas.com.br"
+            }
+        }
+    },
+    "ip": "192.168.0.50",
+    "nome_social_loja": "Demas & Divas"
+}

@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Estilo do main */
+main {
+  display: flex;
+  position: relative;
+  margin: 5px 0 0 0;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.abertura-cardapio {
+  display: flex;
+  height: 274px;
+  width: 599px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.abertura-cardapio .titulos-abertura {
+  position: relative;
+  margin: 0 auto;
+  left: -142px;
+  top: -23px;
+}
+
+.titulos-abertura {
+  position: absolute;
+}
+
+/* Estilo do article */
+article {
+  width: 894px;
+  display: flex;
+  background-image: url(http://192.168.0.50:5000/static/img/demas/fita.svg);
+  background-size: cover;
+  height: 275px;
+  background-color: #ffffff00;
+  /*
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(0, 0, 0, 0.5);
+  */
+  overflow: hidden;
+  cursor: pointer;
+  margin: 2px 0px;
+  transition: width 0.3s ease-in-out;
+}
+
+article .quadro {
+
+  overflow: hidden;
+  margin: 43px 603px;
+  position: absolute;
+}
+
+.abertura-cardapio .quadro {
+  margin: 0 0;
+  right: 8px;
+  height: 187px;
+  width: 290px;
+  top: -1px;
+  position: relative;
+}
+
+.grupo-nome-descricao {
+  background-color: aliceblue;
+  margin: 43px 22px;
+  width: 284px;
+  height: 187px;
+}
+
+.grupo-valor-descricao {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+
+}
+
+
+article h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--gray-500);
+  text-transform: capitalize;
+  text-align: center;
+  text-shadow: 0 0 1px black;
+  margin-bottom: 21px;
+  padding: 10px;
+  letter-spacing: 5px;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: var(--gray-200);
+}
+
+article h3 {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--gray-500);
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  width: 283px;
+  left: -5px;
+  top: -19px;
+}
+
+article figure {
+  display: flex;
+  justify-content: center;
+}
+
+article figure .dividido-img {
+  width: 46.5%;
+  border-style: double;
+  background-position: -56px -3px;
+  height: 27vh;
+  /* left: 3px; */
+  position: relative;
+}
+
+article figure .principal-img {
+  width: 98%;
+  height: 27vh;
+}
+
+article figcaption {
+  position: absolute;
+  width: 152px;
+  font-size: 9px;
+  margin-top: 222px;
+  background: #00000073;
+  margin-left: -101px;
+  color: white;
+  padding: 1px;
+}
+
+.sim .invert {
+  filter: invert(100%);
+}
+
+.blur {
+  filter: blur(14px) saturate(75%);
+}
+
+.pb {
+  filter: grayscale(85%);
+  border-radius: 19px;
+
+}
+
+.bloqui {
+  filter: saturate(75%) brightness(80%);
+}
+
+#vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+article figure .vertical-img {
+  width: 64%;
+  border-style: double;
+  height: 10vh;
+  margin: 0 auto;
+  /* left: 3px; */
+  position: relative;
+  background-size: contain;
+  /* background-position: 10%;*/
+}
+
+.rcon {
+  justify-content: center;
+  flex-direction: column;
+}
+
+#imgfigura-01,
+#imgsombremesa-01,
+#imgsombremesa-02 {
+  background-size: cover;
+  /*
+  border-radius: 15px;
+  */
+}
+
+#imgsobremesa-01 {
+  background-image: url("http://192.168.0.50:5000/static/img/demas/sobremesa04.webp");
+}
+
+#imgsobremesa-02 {
+  background-image: url("http://192.168.0.50:5000/static/img/demas/sobremesa05.webp");
+}
+
+#imgfigura-01 {
+  background-image: url("http://192.168.0.50:5000/static/img/demas/gastronomiaprincipal.png");
+}
+
+#imgfigura-v01 {
+  background-image: url("http://192.168.0.50:5000/static/img/demas/figura-01.webp");
+
+}
+
+#imgfigura-v02 {
+  background-image: url("http://192.168.0.50:5000/static/img/demas/figura-02.webp");
+
+}
+
+#imgfigura-v03t {
+  background-image: url("http://192.168.0.50:5000/static/img/demas/figura-03.webp");
+  background-size: 368px;
+}
+
+#imgfigura-v04 {
+  background-image: url("http://192.168.0.50:5000/static/img/demas/figura-03.webp");
+
+}
+
+/*
+article figure {
+  margin: 15px 7px;
+}
+*/
+article img {
+  width: 100%;
+  height: auto;
+}
+
+article p {
+  text-indent: 15px;
+  line-height: 1.6;
+  color: var(--gray-500);
+  /* margin: auto 0; */
+  left: -5px;
+  top: 0px;
+  position: absolute;
+  width: 283px;
+  max-height: 115px;
+  overflow-y: auto;
+
+}
+
+/* Estilo do section */
+section {
+  background-color: #f8f8f84f;
+  /*width: 98%;*/
+  display: flex;
+  /* margin-left: 10px; */
+  /* margin-bottom: 43px; */
+  flex-direction: row;
+  /* border-radius: 10px; */
+  /*box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);*/
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: stretch;
+  background-repeat: no-repeat;
+  /* background-position: 5px 10px; */
+  background-size: contain;
+  /* background-image: url(http://192.168.0.50:5000/static/img/demas/bgprincipal.jpg); */
+  justify-content: center;
+}
+
+section h2 {
+  color: #333;
+  font-size: 22px;
+  text-shadow: 2px 2px 1px white;
+  width: 282px;
+  position: absolute;
+  font-weight: bold;
+  top: -71px;
+  left: -5px;
+  background-color: var(--gray-200);
+
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+section article {
+  margin-right: 10px;
+}

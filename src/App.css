@@ -1,0 +1,44 @@
+    /* Definindo as fontes */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Manrope:wght@200;300;400;500;600;700;800display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+    /* Definindo as variáveis das cores */
+    :root {
+        --black: #000000;
+        --white: #ffffff;
+        --gray-100: #f8f8f8;
+        --gray-200: #e0e0e0;
+        --gray-300: #b0b0b0;
+        --gray-400: #666666;
+        --gray-500: #333333;
+        --blue: #0097e6;
+        --green: #00b894;
+        --red: #ff6b6b;
+        --yellow: #fbc531;
+        --stroke-width: 0;
+        --fill-opacity: 1;
+        --stroke: #7ced15;
+        --stroke-opacity: 1;
+        --fill: #ed1515;
+        --font-text: 'Montserrat', sans-serif;
+        width: auto;
+    }
+
+    /* Reset de estilos */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Estilo do body */
+    body {
+        font-family: var(--font-text);
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: var(--gray-100);
+        color: var(--gray-500);
+
+    }
+
+         

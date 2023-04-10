@@ -1,0 +1,70 @@
+.login-grupo-stantment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 23vh;
+}
+
+.area-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.i-l-b-login-g {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+button {
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005266;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+@media only screen and (max-width: 600px) {
+  input[type="text"],
+  input[type="password"],
+  button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
