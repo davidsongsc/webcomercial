@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "node_modules/.bin/react-scripts build",
+    "build": "react-scripts build && npx workbox generateSW workbox-config.js",
     "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
