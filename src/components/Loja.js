@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './loja.css';
 import dados from '../configure.json';
 
 const Loja = () => {

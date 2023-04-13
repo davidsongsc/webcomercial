@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './main.css';
+
 import dados from '../configure.json';
 import Produto from './Produtos';
 import ApiGrupo from './ApiGrupo';

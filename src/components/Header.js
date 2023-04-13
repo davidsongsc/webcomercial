@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import dados from '../configure.json';
 
-import './header.css';
+
 
 function Header() {
     const [isFixed, setIsFixed] = useState(false);

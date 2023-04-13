@@ -1,6 +1,10 @@
 {
-  "short_name": "Projeto Demas",
   "name": "Demas & Divas",
+  "short_name": "Demas Delivery",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FF7B3E",
+  "background_color": "#ff6b6b",
   "icons": [
     {
       "src": "https://dagesico.pythonanywhere.com/static/img/demas/logodemas.ico",
@@ -10,16 +14,8 @@
     {
       "src": "https://dagesico.pythonanywhere.com/static/img/demas/logodemas.webp",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "https://dagesico.pythonanywhere.com/static/img/demas/logodemas.webp",
-      "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "version": "1.0.0"
 }

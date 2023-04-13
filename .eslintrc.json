@@ -1,0 +1,9 @@
+{
+    "env": {
+      "serviceworker": true
+    },
+    "rules": {
+      "no-restricted-globals": ["error", "self"]
+    }
+  }
+  

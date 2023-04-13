@@ -1,5 +1,5 @@
 import React from 'react';
-import './sobre.css';
+
 function Sobre() {
   return (
     <div id='sobre'>

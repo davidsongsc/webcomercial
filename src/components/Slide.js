@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import "./slide.css";
-
 
 function Slider() {
   // eslint-disable-next-line

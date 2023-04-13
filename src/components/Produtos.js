@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './produtos.css';
+
 
 /*
 function Produto_imagem(nome_produto) {

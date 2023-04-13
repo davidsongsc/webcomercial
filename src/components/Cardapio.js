@@ -1,9 +1,6 @@
 import React from 'react';
-
 import Main from './Main';
 import Slide from './Slide';
-//import Banner from './Banner';
-import './Cardapio.css';
 import Conteudo from './Conteudo';
 import Conteudoduo from './Conteudoduo';
 import Reservas from './Reservas';

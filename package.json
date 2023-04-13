@@ -21,9 +21,38 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npx workbox generateSW workbox-config.js",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
+  },
+  "workbox": {
+    "swDest": "build/service-worker.js",
+    "runtimeCaching": [
+      {
+        "urlPattern": "\\.\\.(?:png|jpg|jpeg|svg|gif|woff2|ttf|otf|css)$",
+        "handler": "CacheFirst",
+        "options": {
+          "cacheName": "assets-cache",
+          "expiration": {
+            "maxEntries": 50,
+            "maxAgeSeconds": 2592000
+          }
+        }
+      },
+      {
+        "urlPattern": "\\.\\.(?:js|json)$",
+        "handler": "StaleWhileRevalidate",
+        "options": {
+          "cacheName": "js-cache",
+          "expiration": {
+            "maxEntries": 10,
+            "maxAgeSeconds": 86400
+          }
+        }
+      }
+    ]
   },
   "eslintConfig": {
     "extends": [

@@ -1,6 +1,5 @@
 import React from "react";
 import Cardapio from "./Cardapio";
-import "./inicio.css";
 import dados from '../configure.json';
 
 function Inicio() {

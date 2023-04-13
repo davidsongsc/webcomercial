@@ -1,6 +1,4 @@
 import React from 'react';
-import './aside.css';
-
 
 function Aside({ dados }) {
     return (
