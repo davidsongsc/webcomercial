@@ -44,13 +44,14 @@ function Login() {
     const usuario = JSON.parse(sessionStorage.getItem('usuario'));
     const autenticado = localStorage.getItem('autenticado');
     const access_token = localStorage.getItem('access_token');
+    const token = 'abc123'
 
     if (usuario && autenticado) {
       console.log(usuario);
       console.log(autenticado);
       setAutenticado(true);
       $.ajax({
-        url: "https://dagesico.pythonanywhere.com/usuario",
+        url: `https://dagesico.pythonanywhere.com/usuario?nome=${usuario}&token=${token}`,
         type: "GET",
         dataType: "json",
         headers: {
