@@ -105,7 +105,7 @@ function Header() {
                 */}
             </header>
             <nav className={isFixed ? 'menu fixed' : `menu ${menuOpen ? 'menu-open' : ''}`}>
-                <img className='logo' src='http://192.168.0.50:5000/static/img/demas/logodemas.webp' alt='' />
+                <img className='logo' src='https://dagesico.pythonanywhere.com/static/img/demas/logodemas.webp' alt='' />
 
                 <ul className={`menu-items ${menuOpen ? 'menu-items-aberto' : 'menu-items-fechado'}`}>
 
@@ -162,7 +162,7 @@ function Header() {
               
             </nav>
             <div className='menu-icon' onClick={handleMenuClick}>
-            <img src='http://192.168.0.50:5000/static/img/demas/logodemas.webp' alt='' />
+            <img src='https://dagesico.pythonanywhere.com/static/img/demas/logodemas.webp' alt='' />
                 </div>
 
 

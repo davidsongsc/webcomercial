@@ -7,7 +7,7 @@ function Conteudo() {
   return (
     <div>
       <div className="cont-conteudo">
-        <img src="http://192.168.0.50:5000/static/img/demas/gastronomiaprincipal.png" alt="" />
+        <img src="https://dagesico.pythonanywhere.com/static/img/demas/gastronomiaprincipal.png" alt="" />
         <div className="cont-conteudo-texto">
           <h1>Gastronomia & Cinema</h1>
           <p>

@@ -8,7 +8,7 @@ function Produto_imagem(nome_produto) {
 }
 */
 function demas(nome_produto) {
-  return `http://${dados.ip}:5000/static/img/demas/${nome_produto}.jpg`;;
+  return `https://dagesico.pythonanywhere.com/static/img/demas/${nome_produto}.jpg`;;
 }
 
 function Produto({ produto }) {

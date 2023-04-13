@@ -17,8 +17,8 @@ function Conteudoduo() {
           </p>
         </div>
         <div className="imagens">
-        <img src="http://192.168.0.50:5000/static/img/demas/sobremesa04.webp" alt="" />
-        <img src="http://192.168.0.50:5000/static/img/demas/sobremesa05.webp" alt="" />
+        <img src="https://dagesico.pythonanywhere.com/static/img/demas/sobremesa04.webp" alt="" />
+        <img src="https://dagesico.pythonanywhere.com/static/img/demas/sobremesa05.webp" alt="" />
         </div>
       </div>
     </div>

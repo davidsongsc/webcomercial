@@ -16,9 +16,9 @@ function Conteudo() {
           </p>
         </div>
         <div className="galeria-fotos-reservas">
-          <img src="http://192.168.0.50:5000/static/img/demas/loja1.webp" alt="" />
-          <img src="http://192.168.0.50:5000/static/img/demas/loja2.webp" alt="" />
-          <img src="http://192.168.0.50:5000/static/img/demas/loja3.webp" alt="" />
+          <img src="https://dagesico.pythonanywhere.com/static/img/demas/loja1.webp" alt="" />
+          <img src="https://dagesico.pythonanywhere.com/static/img/demas/loja2.webp" alt="" />
+          <img src="https://dagesico.pythonanywhere.com/static/img/demas/loja3.webp" alt="" />
         </div>
       </div>
     </div>
