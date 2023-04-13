@@ -34,7 +34,7 @@ main {
 article {
   width: 894px;
   display: flex;
-  background-image: url(http://192.168.0.50:5000/static/img/demas/fita.svg);
+  background-image: url('https://dagesico.pythonanywhere.com/static/img/demas/fita.svg');
   background-size: cover;
   height: 275px;
   background-color: #ffffff00;
@@ -186,34 +186,34 @@ article figure .vertical-img {
 }
 
 #imgsobremesa-01 {
-  background-image: url("http://192.168.0.50:5000/static/img/demas/sobremesa04.webp");
+  background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/sobremesa04.webp");
 }
 
 #imgsobremesa-02 {
-  background-image: url("http://192.168.0.50:5000/static/img/demas/sobremesa05.webp");
+  background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/sobremesa05.webp");
 }
 
 #imgfigura-01 {
-  background-image: url("http://192.168.0.50:5000/static/img/demas/gastronomiaprincipal.png");
+  background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/gastronomiaprincipal.png");
 }
 
 #imgfigura-v01 {
-  background-image: url("http://192.168.0.50:5000/static/img/demas/figura-01.webp");
+  background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/figura-01.webp");
 
 }
 
 #imgfigura-v02 {
-  background-image: url("http://192.168.0.50:5000/static/img/demas/figura-02.webp");
+  background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/figura-02.webp");
 
 }
 
 #imgfigura-v03t {
-  background-image: url("http://192.168.0.50:5000/static/img/demas/figura-03.webp");
+  background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/figura-03.webp");
   background-size: 368px;
 }
 
 #imgfigura-v04 {
-  background-image: url("http://192.168.0.50:5000/static/img/demas/figura-03.webp");
+  background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/figura-03.webp");
 
 }
 

@@ -61,21 +61,20 @@ header h2 {
 nav {
   display: flex;
   justify-content: space-evenly;
-  height: 100vh;
+  height: 4.4vh;
   background-color: var(--gray-400);
   position: relative;
   transition: all 1.2s ease-in-out;
   align-items: center;
-  background: url("http://192.168.0.50:5000/static/img/demas/bgprincipal.jpg");
-  animation: movebackground 30s ease-in-out infinite;
-  background-size: cover;
+  background: url("https://dagesico.pythonanywhere.com/static/img/demas/bgprincipal.jpg");
+
 }
 
 
 nav.fixed {
   position: fixed;
   background-position-y: -160px;
-  height: 10vh;
+  height: 6vh;
   /* Define a posição como fixa */
   top: 0;
   /* Fixa o elemento no topo da página */
@@ -210,6 +209,11 @@ nav a:hover {
 
 
 @media screen and (min-width: 320px) and (max-width: 800px) {
+  nav {
+
+    height: 0vh;
+
+  }
   nav.fixed {
     height: 0;
   }
@@ -306,44 +310,7 @@ nav a:hover {
     background-color: var(--stroke);
   }
 
-  @keyframes movebackground {
-    0% {
-      background-position: -1300px 0;
-      opacity: 0;
-    }
-    1%{
-      opacity: 0.5;
-    }
-    3%{
-      opacity: 1;
-    }
-    15% {
-
-      background-position: -1035px 0;
-    }
-    50%{
-      background-position: -235px 0;
-    }
-    90% {
-      opacity: 1;
-
-
-    }
-
-    95% {
-   
-      opacity: 1;
-    }
-    97% {
-
-      opacity: 0.5;
-    }
-    100% {
-      background-position: -1300px 0;
-      opacity: 0;
-    }
-
-  }
+  
 
 
 }
@@ -403,6 +370,10 @@ nav a:hover {
 }
 
 @media screen and (min-width: 1065px) {
+  nav{
+    background-color: black;
+    background-image: none;
+  }
   nav.fixed {
     background-image: none;
     transition: .5s ease-in-out;
@@ -412,6 +383,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 
   }
 
@@ -436,7 +408,10 @@ nav a:hover {
 
   .div-menu-lateral {
     display: flex;
-    background-color: var(--gray-400);
+    /*background-color: var(--gray-400);*/
+    left: 228px;
+    top: 10px;
+    position: relative;
   }
 
   .div-menu-lateral .menu-fechar-ocioso {

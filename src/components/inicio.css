@@ -1,4 +1,4 @@
-.principal-demas{
+.principal-demas {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,28 +7,34 @@
 
 .principal-demas .imagem-principal {
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     position: relative;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 100px;
-    background-image: url("http://192.168.0.50:5000/static/img/demas/img_header.jpg");
+    background-position-y: -42px;
+    background-position-x: -75px;
+    background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/bgprincipal.jpg");
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 2;
+    animation: movebackground 30s ease-in-out infinite;
+    background-size: cover;
 }
-.principal-demas-link{
+
+.principal-demas-link {
     padding: 15px;
     background-color: white;
     border-radius: 15px;
     color: black;
     box-shadow: 2px 2px 2px black;
 }
+
 .principal-demas-link a {
     text-shadow: 1px 1px 2px black;
 }
+
 .principal-demas-titulo {
     display: flex;
     flex-direction: column;
@@ -36,6 +42,7 @@
     position: relative;
     top: -200px;
     z-index: 3;
+
 }
 
 .principal-demas-titulo h1 {
@@ -69,12 +76,13 @@
     border-radius: 19px;
 }
 
-.divisao{
-    height: 8.5vh;
+.divisao {
+    height: 1.5vh;
 }
+
 .conteudo-principal {
     width: 95%;
-    margin: -38px 0;
+    margin: -308px 0;
     z-index: 1;
 }
 
@@ -92,34 +100,73 @@
         position: relative;
         top: -625px;
     }
-    .principal-demas-link{
+
+    .principal-demas-link {
         margin: 15px;
     }
-    .principal-demas-titulo h2{
+
+    .principal-demas-titulo h2 {
         font-size: 10px;
     }
 
-  }
+    @keyframes movebackground {
+        0% {
 
-  @media screen and (min-width: 1065px) {
+            opacity: 0;
+        }
+
+        2% {
+            opacity: 0.5;
+        }
+        5% {
+            opacity: 1;
+        }
+
+        9% {
+
+            background-position: -1010px 0;
+        }
+
+
+
+        90% {
+            background-position: 0px 0;
+            opacity: 1;
+        }
+
+        92% {
+
+            opacity: 0.5;
+        }
+
+        100% {
+
+            opacity: 0;
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 1065px) {
 
 
     .logo {
         position: relative;
         left: 100px;
-        top: 2px;
-        width: 89px;
-      }
-    
-      .principal-demas-link {
+        top: 0px;
+        width: 50px;
+    }
+
+    .principal-demas-link {
         top: 49px;
         position: relative;
-      }
-    
-      .principal-demas-titulo {
+    }
+
+    .principal-demas-titulo {
         position: relative;
         top: -874px;
-      }
-    
+    }
 
-  }
+
+}

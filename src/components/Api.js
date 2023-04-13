@@ -1,4 +1,4 @@
-import dados from '../configure.json';
+
 
 const CACHE_KEY = 'produtos';
 const CACHE_TTL = 60 * 1000; // 1 minuto em milissegundos
@@ -6,6 +6,8 @@ const CACHE_TTL = 60 * 1000; // 1 minuto em milissegundos
 async function fetchProdutos() {
   const cache = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}');
   const timestamp = cache.timestamp;
+  const nome = 'maquina'
+  const token = 'abc123'
 
   // Verifica se os dados no cache são válidos
   if (cache.produtos && timestamp && Date.now() - timestamp < CACHE_TTL) {
@@ -13,7 +15,7 @@ async function fetchProdutos() {
   }
 
   try {
-    const response = await fetch(`http://${dados.ip}:5000/produtos`);
+    const response = await fetch(`https://dagesico.pythonanywhere.com/produtos?nome=${nome}&token=${token}`);
     const data = await response.json();
     console.log('--AQUI--');
     console.log(data);
@@ -22,7 +24,7 @@ async function fetchProdutos() {
     localStorage.setItem(CACHE_KEY, JSON.stringify({
       produtos: data.produtos.map(produto => ({
         ...produto,
-        imagem: produto.imagem ? `http://${dados.ip}:5000/${produto.imagem}` : null,
+        imagem: produto.imagem ? `https://dagesico.pythonanywhere.com/static/img/${produto.imagem}` : null,
       })),
       timestamp: Date.now(),
     }));

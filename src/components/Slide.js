@@ -6,7 +6,7 @@ function Slider() {
   // eslint-disable-next-line
   const [slides, setSlides] = useState([
     {
-      image: "http://192.168.0.50:5000/static/img/demas/figura-01.webp",
+      image: "https://dagesico.pythonanywhere.com/static/img/demas/figura-01.webp",
       descriptions: [
         { text: "Combinados", size: "40px", font: "'Yellowtail', cursive" },
         { text: "", size: "30px", font: "Tahoma" },
@@ -14,7 +14,7 @@ function Slider() {
       ],
     },
     {
-      image: "http://192.168.0.50:5000/static/img/demas/figura-02.webp",
+      image: "https://dagesico.pythonanywhere.com/static/img/demas/figura-02.webp",
       descriptions: [
         { text: "Gastronomia", size: "40px", font: "'Yellowtail', cursive" },
         { text: "ARTESANAL", size: "30px", font: "Tahoma" },
@@ -22,7 +22,7 @@ function Slider() {
       ],
     },
     {
-      image: "http://192.168.0.50:5000/static/img/demas/figura-03.webp",
+      image: "https://dagesico.pythonanywhere.com/static/img/demas/figura-03.webp",
       descriptions: [
         { text: "Gastronomia", size: "40px", font: "'Yellowtail', cursive" },
         { text: "ARTESANAL", size: "30px", font: "Tahoma" },

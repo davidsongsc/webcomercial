@@ -9,7 +9,7 @@
     position: relative;
     align-items: center;
     text-shadow: 1px 1px 1px black;
-    background-image: url("http://192.168.0.50:5000/static/img/demas/bgprincipal.jpg");
+    background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/bgprincipal.jpg");
 }
 
 .cardapio {
