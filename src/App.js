@@ -7,11 +7,11 @@ import dados from './configure.json';
 import Login from './components/Login';
 import Cadastro from './components/Cadastro';
 import Logout from './components/logout';
-import Cardapio from './components/Cardapio';
 import CardapioDetalhe from './components/CardapioDetalhe';
 import Footer from './components/Footer';
 import Sobre from './components/Sobre';
 import Loja from './components/Loja';
+import Inicio from './components/inicio';
 
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
       <Header dados={dados} />
       <Routes>
         <Route path="/catalogo" element={<Catalogo />} />
-        <Route path="/" element={<Cardapio dados={dados} />} />
-        <Route path="/inicio" element={<Cardapio dados={dados} />} />
+        <Route path="/" element={<Inicio />} />
+        <Route path="/inicio" element={<Inicio/>} />
         <Route path="/principal/:tipo" element={<CardapioDetalhe />} />
         <Route path="/demas/:tipo" element={<CardapioDetalhe />} />
         <Route path="/almoco/:tipo" element={<CardapioDetalhe />} />

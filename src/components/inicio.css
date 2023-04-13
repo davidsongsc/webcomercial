@@ -1,0 +1,125 @@
+.principal-demas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FF8A2C;
+}
+
+.principal-demas .imagem-principal {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 100px;
+    background-image: url("http://192.168.0.50:5000/static/img/demas/img_header.jpg");
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.principal-demas-link{
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    box-shadow: 2px 2px 2px black;
+}
+.principal-demas-link a {
+    text-shadow: 1px 1px 2px black;
+}
+.principal-demas-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -200px;
+    z-index: 3;
+}
+
+.principal-demas-titulo h1 {
+    display: flex;
+    color: whitesmoke;
+    font-size: 90px;
+    background-color: rgba(0, 0, 0, 0.274);
+    border-radius: 30px;
+    padding: 20px;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    text-shadow: 1px 1px 9px black;
+
+}
+
+.principal-demas-titulo .logoheader {
+    top: 5px;
+}
+
+.principal-demas-titulo h2 {
+    padding: 35px;
+    color: whitesmoke;
+    top: 3px;
+    letter-spacing: 3px;
+    position: relative;
+    text-transform: capitalize;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    text-shadow: 1px 1px 5px black;
+    background-color: #0000009c;
+    border-radius: 19px;
+}
+
+.divisao{
+    height: 8.5vh;
+}
+.conteudo-principal {
+    width: 95%;
+    margin: -38px 0;
+    z-index: 1;
+}
+
+.conteudo-principal-demas {
+    background-color: white;
+    position: relative;
+    z-index: 999;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .principal-demas-titulo {
+        position: relative;
+        top: -625px;
+    }
+    .principal-demas-link{
+        margin: 15px;
+    }
+    .principal-demas-titulo h2{
+        font-size: 10px;
+    }
+
+  }
+
+  @media screen and (min-width: 1065px) {
+
+
+    .logo {
+        position: relative;
+        left: 100px;
+        top: 2px;
+        width: 89px;
+      }
+    
+      .principal-demas-link {
+        top: 49px;
+        position: relative;
+      }
+    
+      .principal-demas-titulo {
+        position: relative;
+        top: -874px;
+      }
+    
+
+  }

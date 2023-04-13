@@ -1,0 +1,130 @@
+.cont-conteudo,
+.cont-conteudo-sobremesa {
+    margin: 10px;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+}
+.cont-conteudo-sobremesa .imagens{
+    display: flex;
+}
+
+.cont-conteudo img,
+.cont-conteudo-sobremesa img {
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.cont-conteudo-texto,
+.cont-conteudo-texto-sobremesa {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0.2px 0.2px 1px;
+}
+
+.cont-conteudo-texto h1,
+.cont-conteudo-texto-sobremesa h1 {
+    color: mediumseagreen;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.842);
+    font-size: 40px;
+
+}
+
+.cont-conteudo-texto h2,
+.cont-conteudo-texto-sobremesa h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.842);
+    font-size: 28px;
+
+}
+
+.cont-conteudo-texto p,
+.cont-conteudo-texto-sobremesa p {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    font-size: 25px;
+    width: 80%;
+}
+
+
+.galeria-fotos-reservas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.galeria-fotos-reservas img {
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 1px 1px 5px black;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 800px) {
+
+    .cont-conteudo,
+    .cont-conteudo-sobremesa {
+        display: flex;
+        margin: 10px 0;
+        padding: 15px 0;
+        flex-direction: column;
+        background-color: #FF7B3E;
+    }
+    .cont-conteudo img{
+        width: 98%;
+    }
+    .cont-conteudo-sobremesa .imagens img{
+        width: 47%;
+    }
+    .cont-conteudo-sobremesa{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .cont-conteudo-texto h1,
+    .cont-conteudo-sobremesa h1 {
+        font-size: 26px;
+        padding: 20px;
+        background-color: white;
+        position: relative;
+        top: -4px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .cont-conteudo-texto h2,
+    .cont-conteudo-sobremesa h2 {
+        font-size: 16px;
+        padding: 10px;
+        background-color: white;
+        margin-top: 15px;
+        margin-bottom: -5px;
+    }
+
+    .cont-conteudo-texto p,
+    .cont-conteudo-sobremesa p {
+        font-size: 14px;
+        font-weight: 300;
+        margin: 5px;
+        padding: 10px;
+        background-color: whitesmoke;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        width: 100%;
+        
+    }
+
+    .galeria-fotos-reservas {
+        justify-content: flex-end;
+        flex-direction: column-reverse;
+    }
+}

@@ -6,16 +6,9 @@ main {
   position: relative;
   margin: 5px 0 0 0;
   align-items: stretch;
-  background: white;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  /* background-image: url(http://192.168.0.50:5000/static/img/demas/bgprincipal.jpg);
-*/
-}
-
-.true {
-  background-color: var(--fill);
+  justify-content: space-around;
 }
 
 .abertura-cardapio {
@@ -29,10 +22,8 @@ main {
 .abertura-cardapio .titulos-abertura {
   position: relative;
   margin: 0 auto;
-  left: -5px;
-  top: -40px;
-  width: 277px;
-  height: 45px;
+  left: -142px;
+  top: -23px;
 }
 
 .titulos-abertura {
@@ -41,19 +32,23 @@ main {
 
 /* Estilo do article */
 article {
+  width: 894px;
   display: flex;
   background-image: url(http://192.168.0.50:5000/static/img/demas/fita.svg);
   background-size: cover;
   height: 275px;
   background-color: #ffffff00;
+  /*
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(0, 0, 0, 0.5);
+  */
   overflow: hidden;
   cursor: pointer;
-  /* transition: width 0.3s ease-in-out;*/
+  margin: 2px 0px;
+  transition: width 0.3s ease-in-out;
 }
 
 article .quadro {
-  background: black;
+
   overflow: hidden;
   margin: 43px 603px;
   position: absolute;
@@ -236,10 +231,10 @@ article p {
   text-indent: 15px;
   line-height: 1.6;
   color: var(--gray-500);
-  /* margin: auto 0; */
-  padding: 6px;
+  /* margin: auto 0; 
   left: -5px;
-  top: 0px;
+  top: 0px;*/
+  position: absolute;
   width: 283px;
   max-height: 115px;
   overflow-y: auto;
@@ -249,31 +244,32 @@ article p {
 /* Estilo do section */
 section {
   background-color: #f8f8f84f;
+  /*width: 98%;*/
   display: flex;
   /* margin-left: 10px; */
   /* margin-bottom: 43px; */
   flex-direction: row;
   /* border-radius: 10px; */
-  /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); */
+  /*box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);*/
   flex-wrap: wrap;
+  align-content: flex-start;
   align-items: stretch;
   background-repeat: no-repeat;
   /* background-position: 5px 10px; */
   background-size: contain;
   /* background-image: url(http://192.168.0.50:5000/static/img/demas/bgprincipal.jpg); */
-  justify-content: space-between;
-  align-content: flex-start;
+  justify-content: center;
 }
 
 section h2 {
-  text-shadow: -1px 2px 1px black, 1px 2px 1px black;
-  color: white;
+  color: #333;
   font-size: 22px;
+  text-shadow: 2px 2px 1px white;
   width: 282px;
   position: absolute;
   font-weight: bold;
-  top: -73px;
-  left: -11px;
+  top: -71px;
+  left: -5px;
   background-color: var(--gray-200);
 
 }
@@ -281,4 +277,8 @@ section h2 {
 ul,
 li {
   list-style: none;
+}
+
+section article {
+  margin-right: 10px;
 }

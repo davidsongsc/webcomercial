@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Yellowtail&display=swap');
+
+.sliderContainer {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.activeSlide {
+  opacity: 1;
+}
+
+.sliderDescription {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.descriptionContainer {
+  margin: 70px;
+  height: 300px;
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  left: 61px;
+  position: relative;
+}
+
+p {
+  text-align: center;
+  margin: -5px;
+}
+
+.controls {
+  /* margin-top: 20px; */
+  display: flex;
+  justify-content: space-between;
+  /* z-index: 999; */
+  position: relative;
+}
+
+.controls button {
+  margin: 0 0px;
+  padding: 0 10px;
+  background-color: #ffffff1e;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #fcfcfc;
+  color: black;
+  font-size: 3.2rem;
+  width: 120px;
+}
+
+.butao-movimentos-slide {
+  height: 52vh;
+  width: 40px;
+}
+
+.butao-controle-slide {
+  display: none;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 800px) {
+  .slider .slide{
+    background-size: 101%;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+  }
+  .slider .slide .descriptionContainer{
+    position: relative;
+    left: -40px;
+    bottom: -101px;
+  }
+  .controls {
+    top: 132px;
+    text-align: center;
+  }
+  .controls .butao-movimentos-slide{
+    color: black;
+  }
+  .controls button:hover {
+    width: 46px;
+    font-size: 2rem;
+  }
+  .controls button:active{
+    background-color: #FF7B3E;
+  }
+}

@@ -46,29 +46,29 @@ function Main({ grupoh }) {
         <>
 
             <main>
-                {grupos.filter(grupo => grupo.grupo_chave === grupoSelecionado).map((grupo) => (
 
-                    <article className={`abertura-cardapio ${grupo.cmd}`} onClick={() => handleGrupoClick(grupo.grupocombo)}>
-
-                        <div className='titulos-abertura'>
-
-                            <h2>{grupo.nome} </h2>
-                            <h3>{grupo.subnome}</h3>
-                            <p>{grupo.grupo_desc}</p>
-                        </div>
-
-                        <div className={`quadro`}>
-                            <figure>
-                                <div id='imgfigura-01' className={`principal-img ${grupo.cmdl}`} alt={dados.dados.titulo} />
-
-                                {/*} <figcaption>Imagem ilustrativa do Restaurante {dados.dados.titulo} &reg;</figcaption>*/}
-                            </figure>
-                        </div>
-                    </article>
-
-                ))}
                 <section>
+                    {grupos.filter(grupo => grupo.grupo_chave === grupoSelecionado).map((grupo) => (
 
+                        <article className={`abertura-cardapio ${grupo.cmd}`} onClick={() => handleGrupoClick(grupo.grupocombo)}>
+
+                            <div className='titulos-abertura'>
+
+                                <h2>{grupo.nome} </h2>
+                                <h3>{grupo.subnome}</h3>
+                                <p>{grupo.grupo_desc}</p>
+                            </div>
+
+                            <div className={`quadro`}>
+                                <figure>
+                                    <div id='imgfigura-01' className={`principal-img ${grupo.cmdl}`} alt={dados.dados.titulo} />
+
+                                    {/*} <figcaption>Imagem ilustrativa do Restaurante {dados.dados.titulo} &reg;</figcaption>*/}
+                                </figure>
+                            </div>
+                        </article>
+
+                    ))}
                     <>
 
 

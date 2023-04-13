@@ -15,7 +15,9 @@ async function fetchProdutos() {
   try {
     const response = await fetch(`http://${dados.ip}:5000/produtos`);
     const data = await response.json();
-
+    console.log('--AQUI--');
+    console.log(data);
+    console.log('--TERMINA--');
     // Atualiza o cache
     localStorage.setItem(CACHE_KEY, JSON.stringify({
       produtos: data.produtos.map(produto => ({

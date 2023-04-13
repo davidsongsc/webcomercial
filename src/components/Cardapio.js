@@ -1,21 +1,31 @@
 import React from 'react';
-import Aside from './Aside';
+
 import Main from './Main';
+import Slide from './Slide';
 //import Banner from './Banner';
 import './Cardapio.css';
-function Cardapio({dados, gp}) {
+import Conteudo from './Conteudo';
+import Conteudoduo from './Conteudoduo';
+import Reservas from './Reservas';
+
+function Cardapio({ dados, gp }) {
     return (
         <>
-           <div className='novidades'>
-            <Aside dados={dados}/>
-            <Main grupoh={gp}/>
-            
-            
+            <div >
+                <div className='novidades'>
+                    <Slide />
+                  
+                    <Conteudo />
+                    <Conteudoduo />
+                    <Reservas />
+                    <Main grupoh={gp} />
+
+
+                </div>
+                {/*<Banner dados={dados} />*/}
+
+
             </div>
-            {/*<Banner dados={dados} />*/}
-           
-
-
         </>
     )
 }

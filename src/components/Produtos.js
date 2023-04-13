@@ -16,8 +16,6 @@ function Produto({ produto }) {
   const [produtoAberto, setPAberto] = useState(false);
   const [width, setWidth] = useState(300);
   const [dplay, setDplay] = useState('none');
-  const [LeftPage, setLeft] = useState('0px');
-  const [transforma, setTransforma] = useState('');
 
   const handleMenuProdutoClick = () => {
     setPAberto(!produtoAberto);
@@ -27,24 +25,18 @@ function Produto({ produto }) {
     if (produtoAberto === false) {
       setDplay('block');
       setWidth(894);
-      setLeft('-105px');
-      setTransforma('rotateZ(3deg)');
     } else {
       setDplay('none');
       setWidth(300);
-      setLeft('0px');
-      setTransforma('rotateZ(0deg)');
     }
 
   };
 
 
   return (
-    <article className="ab-cardapio" style={{
+    <article style={{
       width: `${width}px`,
       transition: 'all 1.1s ease',
-      marginLeft: `${LeftPage}`,
-      transform: `${transforma}`
     }} onClick={handleClick}>
       <h2 className={`titulo-produto ${produtoAberto}`}>{produto.nomefantasia}</h2>
       <div className='grupo-nome-descricao' style={{ display: `${dplay}` }} >

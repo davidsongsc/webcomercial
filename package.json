@@ -2,6 +2,7 @@
   "name": "demasedivas",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://192.168.0.50",
   "dependencies": {
     "@svgr/plugin-svgo": "^7.0.0",
     "@svgr/webpack": "^5.4.0",
@@ -9,7 +10,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "css-select": "^3.1.0",
-    "install": "^0.13.0",
     "jquery": "^3.6.4",
     "nth-check": "^2.1.1",
     "react": "^18.2.0",

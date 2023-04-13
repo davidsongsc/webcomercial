@@ -8,7 +8,7 @@ function Header() {
     const [isFixed, setIsFixed] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const isMobile = window.matchMedia("(max-width: 960px)").matches;
-
+    const [palavra1, palavra2] = dados.dados.titulo.split(' & ');
     const navigate = useNavigate();
 
     const handleMenuClick = () => {
@@ -90,34 +90,81 @@ function Header() {
     return (
         <>
             <head>
-                <title>{dados.dados.titulo}</title>
+                <title>{palavra1} & {palavra2}</title>
             </head>
+
             <header>
+                {/*
                 <svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0 353.684 336.37" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353.684 336.37" role="presentation" aria-hidden="true">
                     <g>
                         <path d="M176.842 0l54.634 110.714 122.208 17.77-88.432 86.194 20.877 121.692-109.287-57.449L67.535 336.37l20.876-121.692L0 128.484l122.189-17.77L176.842 0z"></path>
                     </g>
                 </svg>
-                <h1>{dados.dados.titulo}</h1>
+                <h1>{palavra1} <img className='logoheader' src='http://192.168.0.50:5000/static/img/demas/logoteste.svg' alt='' /> {palavra2}</h1>
                 <h2>{dados.dados.stitulo}</h2>
+                */}
             </header>
             <nav className={isFixed ? 'menu fixed' : `menu ${menuOpen ? 'menu-open' : ''}`}>
                 <img className='logo' src='http://192.168.0.50:5000/static/img/demas/logodemas.webp' alt='' />
-                <button className='menu-icon' onClick={handleMenuClick}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+
                 <ul className={`menu-items ${menuOpen ? 'menu-items-aberto' : 'menu-items-fechado'}`}>
-                    <li><a href="/inicio" onClick={handleInicioClick}>Home</a></li>
-                    <li><a href="/cardapio" onClick={handleCardapiolClick}>Cardápio</a></li>
-                    <li><a href="/catalogo" onClick={handleCatalogolClick}>Catálogo</a></li>
-                    <li><a href='/loja' onClick={handleLojaClick}>Loja</a></li>
-                    <li><a href='/quemsomos' onClick={handleQuemSomosClick}>quemsomos</a></li>
-                    <li><a href='/fila' onClick={handleFilaClick}>Fila de Espera</a></li>
-                    <li><a href='/reserva' onClick={handleReservasClick}>Reservas</a></li>
+
+                    <div className='div-menu-lateral'>
+                        <li>
+
+                            <a href="/inicio" onClick={handleInicioClick}>
+                                <img src='https://www.svgrepo.com/show/217925/catalogue-catalog.svg' alt='catalogo' />
+                                <p>Home</p></a>
+                        </li>
+                        <li>
+                            <a href="/cardapio" onClick={handleCardapiolClick}>
+                                <img src='https://cdn-icons-png.flaticon.com/512/3428/3428655.png' alt='cardapio' />
+                                <p>Cardápio</p></a>
+                        </li>
+                        <li>
+
+                            <a href="/catalogo" onClick={handleCatalogolClick}>
+                                <img src='https://www.svgrepo.com/show/217925/catalogue-catalog.svg' alt='catalogo' />
+                                <p>Catálogo</p></a>
+                        </li>
+                        <li>
+
+                            <a href='/loja' onClick={handleLojaClick}>
+                                <img src='https://cdn-icons-png.flaticon.com/512/5131/5131611.png' alt='catalogo' />
+                                <p>Loja</p></a>
+                        </li>
+                        <li>
+
+                            <a href='/quemsomos' onClick={handleQuemSomosClick}>
+                                <img src='https://svgsilh.com/svg/150149.svg' alt='catalogo' />
+                                <p>quemsomos</p></a>
+                        </li>
+                        <li>
+
+                            <a href='/fila' onClick={handleFilaClick}>
+                                <img src='https://cdn-icons-png.flaticon.com/512/2460/2460737.png' alt='catalogo' />
+                                <p>Fila de Espera</p></a>
+                        </li>
+                        <li>
+
+                            <a href='/reserva' onClick={handleReservasClick}>
+                                <img src='https://cdn-icons-png.flaticon.com/512/2460/2460737.png' alt='catalogo' />
+                                <p>Reservas</p></a>
+                        </li>
+                        <li className='menu-fechar-ocioso'>
+
+                            <a href='#fecharMenu' onClick={handleMenuClick}>
+                                <img src='https://www.svgrepo.com/show/12848/x-symbol.svg' alt='catalogo' /><p>Fechar Menu</p></a>
+                        </li>
+       
+                    </div>
                 </ul>
+              
             </nav>
+            <div className='menu-icon' onClick={handleMenuClick}>
+            <img src='http://192.168.0.50:5000/static/img/demas/logodemas.webp' alt='' />
+                </div>
+
 
         </>
     )
