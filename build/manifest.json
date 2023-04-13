@@ -1,19 +1,19 @@
 {
   "short_name": "Projeto Demas",
-  "name": "Projeto WebPage Demas e Divas",
+  "name": "Demas & Divas",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://dagesico.pythonanywhere.com/static/img/demas/logodemas.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "https://dagesico.pythonanywhere.com/static/img/demas/logodemas.webp",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "https://dagesico.pythonanywhere.com/static/img/demas/logodemas.webp",
       "type": "image/png",
       "sizes": "512x512"
     }
