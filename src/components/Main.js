@@ -4,6 +4,7 @@ import dados from '../configure.json';
 import Produto from './Produtos';
 import ApiGrupo from './ApiGrupo';
 import Api from './Api';
+
 function Main({ grupoh }) {
     const [produtos, setProdutos] = useState([]);
     const [grupoSelecionado, setGrupoSelecionado] = useState(grupoh);
@@ -14,7 +15,7 @@ function Main({ grupoh }) {
         setGrupoSelecionado(id);
     };
     if (grupoh === 0) {
-        console.log("testefun");
+        console.log("testefun: OK");
     }
     useEffect(() => {
         async function carregarProdutos() {

@@ -1,35 +1,51 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './loja.css';
 import dados from '../configure.json';
 
 const Loja = () => {
-  const [lojas, setLojas] = useState([]);
+  const [lojaSelecionada, setLojaSelecionada] = useState('lojaA');
+  const [lojas] = useState(dados.lojas);
 
-  useEffect(() => {
-    // Função assíncrona para carregar as lojas
-    async function carregarLojas() {
-      // Simula uma requisição assíncrona de API que retorna as lojas
-      const response = await fetch(dados);
-      console.log(dados.lojas);
-      const data = await response.json();
-      setLojas(data.lojas);
-    }
+  const handleChange = (event) => {
+    setLojaSelecionada(event.target.value);
+  };
 
-    carregarLojas();
-  }, []); // O array vazio [] como segundo parâmetro indica que o efeito só será executado uma vez, após a montagem do componente
+  const listaLojas = Object.entries(lojas).map(([key, value]) => (
+    <option key={key} value={key}>{value.dados.bairro}</option>
+  ));
 
-  const listaDeLojas = lojas.map((loja) => {
-    return (
-      <div key={loja.nomeLoja}>
-        <h2>{loja.nomeLoja}</h2>
-        <p>{loja.dados.rua}, {loja.dados.bairro} - {loja.dados.cidade}/{loja.dados.estado}</p>
-        <p>Telefone: ({loja.dados.ddd}) {loja.dados.telefone1}</p>
-        <p>E-mail: {loja.dados.email}</p>
+
+  return (
+    <div className="lojas-container">
+
+      <div className="loja">
+        <select value={lojaSelecionada} onChange={handleChange}>
+          {listaLojas}
+        </select><br />
+        <h1>
+
+          {lojas[lojaSelecionada].nomeLoja}<br /> {lojas[lojaSelecionada].dados.bairro}</h1>
+        <div className="loja-descrica-map">
+          <div className="dados-loja">
+            <div className="detalhes-dados-loja">
+              <p>Telefone: {lojas[lojaSelecionada].dados.telefone1}</p>
+              <p>Rua: {lojas[lojaSelecionada].dados.rua}</p>
+              <p>Bairro: {lojas[lojaSelecionada].dados.bairro}</p>
+              <p>Cidade: {lojas[lojaSelecionada].dados.cidade}</p>
+              <p>Estado: {lojas[lojaSelecionada].dados.estado}</p>
+            </div>
+
+          </div>
+          <div className="map-loja">
+            <iframe src={lojas[lojaSelecionada].dados.mapa} width="650" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapas"></iframe>
+
+
+          </div>
+        </div>
       </div>
-    );
-  });
+    </div>
 
-  return <div>{listaDeLojas}</div>;
+  );
 };
 
 export default Loja;

@@ -17,9 +17,7 @@ async function fetchProdutos() {
   try {
     const response = await fetch(`https://dagesico.pythonanywhere.com/produtos?nome=${nome}&token=${token}`);
     const data = await response.json();
-    console.log('--AQUI--');
-    console.log(data);
-    console.log('--TERMINA--');
+
     // Atualiza o cache
     localStorage.setItem(CACHE_KEY, JSON.stringify({
       produtos: data.produtos.map(produto => ({

@@ -29,9 +29,6 @@ function Login() {
         sessionStorage.setItem('usuario', JSON.stringify(response.usuario));
         localStorage.setItem('autenticado', true);
         localStorage.setItem('access_token', JSON.stringify(response.access_token));
-        console.log("--inicia--aqui--")
-        console.log(JSON.stringify(response.access_token));
-        console.log("--fim--aqui--")
         setAutenticado(true);
         history('/inicio');
       },
@@ -54,7 +51,7 @@ function Login() {
       console.log(autenticado);
       setAutenticado(true);
       $.ajax({
-        url: "http://192.168.0.50:5000/usuario",
+        url: "https://dagesico.pythonanywhere.com/usuario",
         type: "GET",
         dataType: "json",
         headers: {

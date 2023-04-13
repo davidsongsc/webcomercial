@@ -12,14 +12,12 @@
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: -42px;
-    background-position-x: -75px;
     background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/bgprincipal.jpg");
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 2;
-    animation: movebackground 30s ease-in-out infinite;
+    animation: movebackground 60s ease-in-out infinite;
     background-size: cover;
 }
 
@@ -111,38 +109,26 @@
 
     @keyframes movebackground {
         0% {
-
-            opacity: 0;
-        }
-
-        2% {
-            opacity: 0.5;
-        }
-        5% {
-            opacity: 1;
-        }
-
-        9% {
-
             background-position: -1010px 0;
+            
         }
 
-
-
+        5% {
+   
+            opacity: 1;
+           
+        } 
         90% {
             background-position: 0px 0;
             opacity: 1;
         }
-
-        92% {
-
+        95% {
             opacity: 0.5;
         }
-
         100% {
-
             opacity: 0;
         }
+  
 
     }
 

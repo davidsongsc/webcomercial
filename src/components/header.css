@@ -61,7 +61,7 @@ header h2 {
 nav {
   display: flex;
   justify-content: space-evenly;
-  height: 4.4vh;
+  height: 6vh;
   background-color: var(--gray-400);
   position: relative;
   transition: all 1.2s ease-in-out;

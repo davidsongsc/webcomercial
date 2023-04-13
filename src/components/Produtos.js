@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import dados from '../configure.json';
 import './produtos.css';
 
 /*
