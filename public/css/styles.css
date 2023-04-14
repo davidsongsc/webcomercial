@@ -15,11 +15,16 @@
         --red: #ff6b6b;
         --yellow: #fbc531;
         --corpadrao: #FF7B3E;
+        --corpadrao-b: #0084c1;
+        --corpadrao-i: #ff7b3e;
         --stroke-width: 0;
         --fill-opacity: 1;
         --stroke: #686909bb;
         --stroke-opacity: 1;
         --fill: #ed1515;
+        --fundo-verde-i: #c600e7;
+        --fundo-verde: #00ff00;
+        --fundo-cinza: #8c8c8c;
         --font-text: 'Montserrat', sans-serif;
         width: auto;
         --pc-min-resolution: 1065px;
@@ -259,7 +264,7 @@
 
 
 
-    @media screen and (min-width: 320px) and (max-width: 800px) {
+    @media screen and (min-width: 320px) and (max-width: 900px) {
         nav {
 
             height: 0vh;
@@ -369,57 +374,6 @@
 
 
 
-    @media screen and (min-width: 801px) and (max-width: 1064px) {
-
-        .menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-        }
-
-        .menu-icon {
-            display: none;
-        }
-
-        .menu-items li {
-            margin-left: 20px;
-            margin-bottom: 0;
-        }
-
-        .menu-items-aberto {
-            transform: translateX(0);
-            background-color: var(--gray-400);
-            padding: 30px;
-            height: 10px;
-            margin: 10px;
-
-            transition: .5s;
-        }
-
-        .menu-items-fechado {
-            margin: 28px auto auto 591px;
-        }
-
-        .div-menu-lateral {
-            position: fixed;
-            display: flex;
-            height: 40px;
-            margin-top: -20px;
-        }
-
-        .div-menu-lateral li {
-            margin: 0;
-        }
-
-        .div-menu-lateral li img {
-            display: none;
-        }
-
-        .menu-items-fechado {
-            margin: 28px auto auto 591px;
-        }
-    }
 
     @media screen and (min-width: 1065px) {
         nav {
@@ -644,46 +598,47 @@
     main {
         display: flex;
         position: relative;
-        margin: 5px 0 0 0;
         align-items: stretch;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+        background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/img_header.jpg");
+        background-size: cover;
     }
 
-    .abertura-cardapio {
-        display: flex;
-        height: 274px;
-        width: 599px;
-        flex-direction: row;
-        align-items: center;
-    }
+
 
     .abertura-cardapio .titulos-abertura {
         position: relative;
         margin: 0 auto;
-        left: -142px;
-        top: -23px;
+        /* width: 83px; */
+        left: -155px;
+        transform: rotate3d(36, 16, 6.5, 47deg);
+        top: 97px;
     }
 
     .titulos-abertura {
         position: absolute;
     }
 
+    .abertura-cardapio .quadro {
+        display: none;
+    }
+
     /* Estilo do article */
     article {
-        width: 894px;
+        margin: 5px;
+        width: 365px;
         display: flex;
-        background-image: url('https://dagesico.pythonanywhere.com/static/img/demas/fita.svg');
-        background-size: cover;
-        height: 275px;
+        background-image: url(https://dagesico.pythonanywhere.com/static/img/demas/claquete.svg);
+        background-repeat: no-repeat;
+        background-size: 370px 370px;
+        height: 375px;
         background-color: #ffffff00;
-        /*
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(0, 0, 0, 0.5);
-    */
+
         overflow: hidden;
         cursor: pointer;
-        margin: 2px 0px;
+        /* margin: 2px 0px; */
         transition: width 0.3s ease-in-out;
     }
 
@@ -704,16 +659,23 @@
     }
 
     .grupo-nome-descricao {
-        background-color: aliceblue;
-        margin: 43px 22px;
-        width: 284px;
+        width: 296px;
         height: 187px;
+        transform: rotate3d(36, 17, 6.5, 47deg);
+        top: 119px;
+        left: 17px;
+        position: relative;
+    }
+
+    .grupo-nome-descricao p {
+        height: 253px;
     }
 
     .grupo-valor-descricao {
-        display: flex;
-        margin: 20px;
-        align-items: center;
+        position: relative;
+        top: 82px;
+        left: -116px;
+        transform: rotate3d(1, -2, 61, 13deg);
 
     }
 
@@ -733,16 +695,20 @@
     }
 
     article h3 {
-        font-size: 13px;
-        font-weight: 300;
-        color: var(--gray-500);
+        font-size: 25px;
+        font-weight: 900;
+        width: 100px;
+        color: gold;
         text-transform: capitalize;
         text-align: center;
-        margin: 0 auto;
         position: absolute;
-        width: 283px;
-        left: -5px;
-        top: -19px;
+
+    }
+
+    article text {
+        position: relative;
+        top: 32px;
+        left: -7px;
     }
 
     article figure {
@@ -868,50 +834,47 @@
     }
 
     article p {
-        text-indent: 15px;
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 200;
+        text-indent: 5px;
+        font-size: 20px;
         line-height: 1.6;
-        color: var(--gray-500);
-        /* margin: auto 0; 
-    left: -5px;
-    top: 0px;*/
+        color: var(--white);
+        text-shadow: 1px 1px 1px var(--corpadrao-i);
         position: absolute;
-        width: 283px;
-        max-height: 115px;
+        width: 295px;
+        height: 204px;
         overflow-y: auto;
+        background-color: var(--corpadrao-b);
 
     }
 
     /* Estilo do section */
     section {
+
         background-color: #f8f8f84f;
-        /*width: 98%;*/
         display: flex;
-        /* margin-left: 10px; */
-        /* margin-bottom: 43px; */
         flex-direction: row;
-        /* border-radius: 10px; */
-        /*box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);*/
         flex-wrap: wrap;
         align-content: flex-start;
         align-items: stretch;
         background-repeat: no-repeat;
-        /* background-position: 5px 10px; */
         background-size: contain;
-        /* background-image: url(http://192.168.0.50:5000/static/img/demas/bgprincipal.jpg); */
         justify-content: center;
     }
 
     section h2 {
-        color: #333;
-        font-size: 22px;
-        text-shadow: 2px 2px 1px white;
-        width: 282px;
+        color: black;
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 600;
+        text-indent: 15px;
+        text-shadow: 1px 1px 1px black;
+        width: 295px;
         position: absolute;
-        font-weight: bold;
-        top: -71px;
+        top: -101px;
         left: -5px;
         background-color: var(--gray-200);
-
+        height: 87px;
     }
 
     ul,
@@ -920,7 +883,7 @@
     }
 
     section article {
-        margin-right: 10px;
+        margin-right: 20px;
     }
 
     /* ASRIDE */
@@ -1464,7 +1427,6 @@
 
     }
 
-
     .cardapio-item:hover {
         transform: translateY(-0.2rem);
         box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
@@ -1516,15 +1478,24 @@
         z-index: 1;
     }
 
-    .conteiner-imagem-valor #avaliacao-produto {
+    #avaliacao-produto {
         position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-        font-size: 1.2rem;
+        display: flex;
+        font-size: 21px;
         color: #f1c40f;
-        background-color: white;
+        width: 67px;
+        height: 68px;
+        font-weight: 200;
         padding: 10px;
+        margin: 262px 10px 10px 294px;
+        background-size: 109px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(https://img.freepik.com/vetores-premium/sinal-dourado-do-icone-da-lampada-estrela-objeto-de-ilustracao-vetorial_547150-18.jpg);
+        justify-content: center;
+        align-items: center;
         border-radius: 50%;
+        transform: rotate3d(-22, 115, -11, 65deg) scale(1.3);
     }
 
     .butao-compra-div-n {
@@ -1556,21 +1527,23 @@
     }
 
     .titulo-produto {
-        /* font-size: 20px; */
         position: relative;
         display: flex;
-        width: 284px;
-        font-weight: bold;
-        background-color: gray;
-        /* margin: -3.5rem 0; */
+        width: 295px;
+        background-color: var(--corpadrao-b);
         text-transform: capitalize;
         text-align: center;
-        height: 187px;
-        top: 43px;
-        left: 8px;
-        font-family: var(--font-text);
+        transform: rotate3d(36, 17, 6.5, 47deg);
+        height: 250px;
+        top: 107px;
+        letter-spacing: 9px;
+        left: 12px;
+        font-family: 'Montserrat', sans-serif;
+        ;
+        font-weight: 500;
         align-items: center;
         justify-content: center;
+        color: var(--white);
     }
 
     .produtos-card p {
@@ -1777,6 +1750,12 @@
     }
 
     @media screen and (max-width: 960px) {
+        article{
+            margin: -90px -198px;
+            transform: scale(.5);
+            position: relative;
+            left: 100px;
+        }
         #sobre {
             padding: 0px;
             font-family: 'Roboto Mono', monospace;
@@ -1874,4 +1853,8 @@
             margin: 10px 0;
         }
 
+    }
+
+    .true {
+        display: none;
     }

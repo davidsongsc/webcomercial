@@ -13,7 +13,7 @@ function demas(nome_produto) {
 function Produto({ produto }) {
   const imagem = demas(produto.nomeproduto);
   const [produtoAberto, setPAberto] = useState(false);
-  const [width, setWidth] = useState(300);
+  const [width, setWidth] = useState(352);
   const [dplay, setDplay] = useState('none');
 
   const handleMenuProdutoClick = () => {
@@ -23,10 +23,10 @@ function Produto({ produto }) {
     handleMenuProdutoClick();
     if (produtoAberto === false) {
       setDplay('block');
-      setWidth(894);
+      setWidth(352);
     } else {
       setDplay('none');
-      setWidth(300);
+      setWidth(352);
     }
 
   };
@@ -39,20 +39,18 @@ function Produto({ produto }) {
     }} onClick={handleClick}>
       <h2 className={`titulo-produto ${produtoAberto}`}>{produto.nomefantasia}</h2>
       <div className='grupo-nome-descricao' style={{ display: `${dplay}` }} >
-        <h4 id='avaliacao-produto'>{produto.avaliacao}</h4>
+
         <p>
           {produto.descricao}
 
         </p>
-        <div className='grupo-valor-descricao'>
-          <h3>R$ {produto.valor.toFixed(2)}</h3>
-        </div>
+
+      </div>
+      <h4 id='avaliacao-produto'>{produto.avaliacao}</h4>
+      <div className='grupo-valor-descricao'>
+      <text>R$ </text><h3>{produto.valor.toFixed(2)}</h3>
       </div>
 
-      <div className='quadro' style={{ transition: '.8s', display: `${dplay}` }}>
-        <img className='produto-imagem' src={imagem} alt={produto.nome_produto} />
-        {/*<figcaption>Imagem ilustrativa do Restaurante {dados.dados.titulo} &reg;</figcaption>*/}
-      </div>
       {/*
           <div className='butao-compra-div-n'>
             <button className='btn-adicionar'>Adicionar</button>
