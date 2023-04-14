@@ -25,12 +25,7 @@ function Header() {
         navigate('/principal/cardapio', { replace: true });
         handleMenuClickFechar();
     };
-    const handleCatalogolClick = (event) => {
-        event.preventDefault();
-        handleMenuClickFechar();
-        navigate('/catalogo', { replace: true });
 
-    };
     const handleInicioClick = (event) => {
         event.preventDefault();
         handleMenuClickFechar();
@@ -127,12 +122,7 @@ function Header() {
                                 <img src='https://cdn-icons-png.flaticon.com/512/3428/3428655.png' alt='cardapio' />
                                 <p>Cardápio</p></a>
                         </li>
-                        <li>
-
-                            <a href="/catalogo" onClick={handleCatalogolClick}>
-                                <img src='https://www.svgrepo.com/show/217925/catalogue-catalog.svg' alt='catalogo' />
-                                <p>Catálogo</p></a>
-                        </li>
+           
                         <li>
 
                             <a href='/loja' onClick={handleLojaClick}>
