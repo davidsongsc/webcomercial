@@ -117,12 +117,12 @@
     nav {
         display: flex;
         justify-content: space-evenly;
-        height: 6vh;
-        background-color: var(--gray-400);
+        height: 7vh;
+        background-color: var(--black);
         position: relative;
-        transition: all 1.2s ease-in-out;
+        transition: all .8s ease-in-out;
         align-items: center;
-        background: url("https://dagesico.pythonanywhere.com/static/img/demas/bgprincipal.jpg");
+
 
     }
 
@@ -130,7 +130,7 @@
     nav.fixed {
         position: fixed;
         background-position-y: -160px;
-        height: 6vh;
+        height: 7vh;
         /* Define a posição como fixa */
         top: 0;
         /* Fixa o elemento no topo da página */
@@ -192,24 +192,27 @@
         background-color: none;
         border: none;
         padding: 5px;
+        /* height: 51px; */
+        border-radius: 5px;
         width: auto;
-        position: fixed;
-        left: 290px;
-        top: 577px;
+        right: 6px;
+        top: 0px;
+        background-color: var(--gray-400);
         z-index: 999;
-        position: fixed;
+        position: relative;
     }
 
-    .menu-icon img {
+    .menu-icon span {
         display: block;
-        width: 73px;
-        height: 73px;
+        width: 35px;
+        height: 7px;
         margin-bottom: 5px;
         position: relative;
         background-color: none;
         background-color: transparent;
-        border-radius: 3px;
+        border-radius: 23px;
         z-index: 1;
+        background-color: white;
     }
 
     .menu-icon span:last-child {
@@ -264,28 +267,27 @@
 
 
 
-    @media screen and (min-width: 320px) and (max-width: 900px) {
+    @media screen and (max-width: 930px) {
         nav {
 
-            height: 0vh;
+            height: 8vh;
 
         }
 
         nav.fixed {
-            height: 0;
+            height: 8vh;
         }
 
         nav.fixed .logo {
-            top: 50px;
+            top: 10px;
             left: 25px;
-            position: relative;
-            display: none;
+            position: absolute;
+
         }
 
         .menu {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: flex-end;
 
         }
 
@@ -299,16 +301,19 @@
         }
 
         .menu-items-aberto {
+            background-image: url("https://dagesico.pythonanywhere.com/static/img/demas/img_header.jpg");
+            background-size: cover;
+            background-position-x: -513px;
             transform: translateX(0);
             position: fixed;
             padding: 5px;
-            right: 166px;
+            /* right: 2px; */
             bottom: 0;
             background-color: var(--gray-500);
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 211px;
+            width: 100%;
             transition: .5s ease-in-out;
         }
 
@@ -375,7 +380,7 @@
 
 
 
-    @media screen and (min-width: 1065px) {
+    @media screen and (min-width: 931px) {
         nav {
             background-color: black;
             background-image: none;
@@ -399,8 +404,9 @@
         }
 
         .menu-items-fechado {
-            margin: -6px auto auto 891px;
-
+            left: 726px;
+            position: relative;
+            width: auto;
         }
 
         .menu-items {
@@ -416,8 +422,6 @@
         .div-menu-lateral {
             display: flex;
             /*background-color: var(--gray-400);*/
-            left: 228px;
-            top: 10px;
             position: relative;
         }
 
@@ -526,7 +530,7 @@
     }
 
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 930px) {
         .principal-demas-titulo {
             position: relative;
             top: -625px;
@@ -542,7 +546,7 @@
 
         @keyframes movebackground {
             0% {
-                background-position: -1010px 0;
+                background-position: -910px 0;
 
             }
 
@@ -570,7 +574,7 @@
 
     }
 
-    @media screen and (min-width: 1065px) {
+    @media screen and (min-width: 931px) {
 
 
         .logo {
@@ -1086,7 +1090,7 @@
 
 
 
-    @media screen and (min-width: 320px) and (max-width: 800px) {
+    @media screen and (max-width: 930px) {
 
         .cont-conteudo,
         .cont-conteudo-sobremesa {
@@ -1232,7 +1236,7 @@
         /* cor da barra de rolagem */
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 930px) {
         footer {
             font-size: 13px;
         }
@@ -1359,7 +1363,7 @@
     }
 
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 930px) {
         .lojas-container {
             padding: 5px;
         }
@@ -1565,7 +1569,7 @@
     .slider {
         position: relative;
         width: 100%;
-        height: 500px;
+        height: 611px;
         overflow: hidden;
     }
 
@@ -1637,17 +1641,18 @@
     }
 
 
-    @media screen and (min-width: 320px) and (max-width: 800px) {
+    @media screen and (max-width: 930px) {
         .slider .slide {
-            background-size: 101%;
+            background-size: 100%;
             background-repeat: no-repeat;
             background-position: 0px 0px;
         }
 
         .slider .slide .descriptionContainer {
             position: relative;
-            left: -40px;
-            bottom: -101px;
+            left: -44px;
+            /* width: 98%; */
+            bottom: -187px;
         }
 
         .controls {
@@ -1749,13 +1754,14 @@
         background-color: #666;
     }
 
-    @media screen and (max-width: 960px) {
-        article{
+    @media screen and (max-width: 930px) {
+        article {
             margin: -90px -198px;
             transform: scale(.5);
             position: relative;
             left: 100px;
         }
+
         #sobre {
             padding: 0px;
             font-family: 'Roboto Mono', monospace;
@@ -1840,7 +1846,7 @@
         transform: translateY(2px);
     }
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 930px) {
         .login-grupo-stantment {
             display: flex;
             /* justify-content: center; */
