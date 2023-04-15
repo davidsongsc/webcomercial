@@ -14,8 +14,8 @@ function Login() {
   function handleLogin(event) {
     event.preventDefault();
     $.ajax({
-      //url: "https://dagesico.pythonanywhere.com/login",
-      url: "http://192.168.0.50:5000/login",
+      url: "https://dagesico.pythonanywhere.com/login",
+      //url: "http://192.168.0.50:5000/login",
       type: "POST",
       dataType: "json",
       contentType: "application/json",
