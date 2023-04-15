@@ -20,9 +20,16 @@ function Header() {
         }
 
     };
+    {/*
     const handleCardapiolClick = (event) => {
         event.preventDefault();
         navigate('/principal/cardapio', { replace: true });
+        handleMenuClickFechar();
+    };
+     */}
+    const handleCardapioUsuariolClick = (event) => {
+        event.preventDefault();
+        navigate('/cardapio/cardapio', { replace: true });
         handleMenuClickFechar();
     };
 
@@ -117,12 +124,18 @@ function Header() {
                                 <img src='https://www.svgrepo.com/show/217925/catalogue-catalog.svg' alt='catalogo' />
                                 <p>Home</p></a>
                         </li>
+                        {/*
                         <li>
                             <a href="/cardapio" onClick={handleCardapiolClick}>
                                 <img src='https://cdn-icons-png.flaticon.com/512/3428/3428655.png' alt='cardapio' />
+                                <p>GCardápio</p></a>
+                        </li>
+                         */}
+                        <li>
+                            <a href="/cardapio" onClick={handleCardapioUsuariolClick}>
+                                <img src='https://cdn-icons-png.flaticon.com/512/3428/3428655.png' alt='cardapio' />
                                 <p>Cardápio</p></a>
                         </li>
-           
                         <li>
 
                             <a href='/loja' onClick={handleLojaClick}>

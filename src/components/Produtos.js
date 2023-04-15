@@ -6,12 +6,9 @@ function Produto_imagem(nome_produto) {
   return `http://${dados.ip}:5000/static/img/produtos/${nome_produto}.png`;;
 }
 */
-function demas(nome_produto) {
-  return `https://dagesico.pythonanywhere.com/static/img/demas/${nome_produto}.jpg`;;
-}
 
 function Produto({ produto }) {
-  const imagem = demas(produto.nomeproduto);
+
   const [produtoAberto, setPAberto] = useState(false);
   const [width, setWidth] = useState(352);
   const [dplay, setDplay] = useState('none');

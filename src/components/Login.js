@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import $ from 'jquery';
+import axios from 'axios';
 
 function Login() {
   const history = useNavigate();
@@ -13,7 +14,8 @@ function Login() {
   function handleLogin(event) {
     event.preventDefault();
     $.ajax({
-      url: "https://dagesico.pythonanywhere.com/login",
+      //url: "https://dagesico.pythonanywhere.com/login",
+      url: "http://192.168.0.50:5000/login",
       type: "POST",
       dataType: "json",
       contentType: "application/json",
@@ -41,30 +43,23 @@ function Login() {
 
 
   useEffect(() => {
-    const usuario = JSON.parse(sessionStorage.getItem('usuario'));
-    const autenticado = localStorage.getItem('autenticado');
-    const access_token = localStorage.getItem('access_token');
     const token = 'abc123'
-
-    if (usuario && autenticado) {
-      console.log(usuario);
-      console.log(autenticado);
-      setAutenticado(true);
-      $.ajax({
-        url: `https://dagesico.pythonanywhere.com/usuario?nome=${usuario}&token=${token}`,
-        type: "GET",
-        dataType: "json",
-        headers: {
-          Authorization: `Bearer ${access_token}`,
-        },
-        success: function (response) {
-          setNomeUsuario(response.nome);
-        },
-        error: function (error) {
-          console.log(error);
-        },
+    axios.get('https://dagesico.pythonanywhere.com/usuario', {
+      params: {
+        nome: 'davidsongsc',
+        token: 'abc123'
+      },
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+      .then(response => {
+        setNomeUsuario(response.data.nome);
+      })
+      .catch(error => {
+        console.log(error);
       });
-    }
+    
   }, []);
 
   function handleLogout() {

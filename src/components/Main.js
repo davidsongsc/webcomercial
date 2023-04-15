@@ -5,13 +5,16 @@ import Produto from './Produtos';
 import ApiGrupo from './ApiGrupo';
 import Api from './Api';
 
+
 function Main({ grupoh }) {
     const [produtos, setProdutos] = useState([]);
     const [grupoSelecionado, setGrupoSelecionado] = useState(grupoh);
     const [grupos, setGrupos] = useState([]);
     const [carregando, setCarregando] = useState(true);
 
+
     const handleGrupoClick = (id) => {
+        
         setGrupoSelecionado(id);
     };
     if (grupoh === 0) {

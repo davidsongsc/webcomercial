@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Sobre from './components/Sobre';
 import Loja from './components/Loja';
 import Inicio from './components/inicio';
+import CardapioUsuario from './components/CardapioUsuario';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Inicio />} />
         <Route path="/inicio" element={<Inicio/>} />
         <Route path="/principal/:tipo" element={<CardapioDetalhe />} />
+        <Route path="/cardapio/:tipo" element={<CardapioUsuario />} />
         <Route path="/demas/:tipo" element={<CardapioDetalhe />} />
         <Route path="/almoco/:tipo" element={<CardapioDetalhe />} />
         <Route path="/sobremesa/:tipo" element={<CardapioDetalhe />} />
