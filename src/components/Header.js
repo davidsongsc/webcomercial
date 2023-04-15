@@ -121,7 +121,7 @@ function Header() {
                         <li>
 
                             <a href="/inicio" onClick={handleInicioClick}>
-                                <img src='https://www.svgrepo.com/show/217925/catalogue-catalog.svg' alt='catalogo' />
+                                
                                 <p>Home</p></a>
                         </li>
                         {/*
@@ -133,37 +133,37 @@ function Header() {
                          */}
                         <li>
                             <a href="/cardapio" onClick={handleCardapioUsuariolClick}>
-                                <img src='https://cdn-icons-png.flaticon.com/512/3428/3428655.png' alt='cardapio' />
+                                
                                 <p>Cardápio</p></a>
                         </li>
                         <li>
 
                             <a href='/loja' onClick={handleLojaClick}>
-                                <img src='https://cdn-icons-png.flaticon.com/512/5131/5131611.png' alt='catalogo' />
+                              
                                 <p>Loja</p></a>
                         </li>
                         <li>
 
                             <a href='/quemsomos' onClick={handleQuemSomosClick}>
-                                <img src='https://svgsilh.com/svg/150149.svg' alt='catalogo' />
+                                
                                 <p>quemsomos</p></a>
                         </li>
                         <li>
 
                             <a href='/fila' onClick={handleFilaClick}>
-                                <img src='https://cdn-icons-png.flaticon.com/512/2460/2460737.png' alt='catalogo' />
+                              
                                 <p>Fila de Espera</p></a>
                         </li>
                         <li>
 
                             <a href='/reserva' onClick={handleReservasClick}>
-                                <img src='https://cdn-icons-png.flaticon.com/512/2460/2460737.png' alt='catalogo' />
+                                
                                 <p>Reservas</p></a>
                         </li>
                         <li className='menu-fechar-ocioso'>
 
                             <a href='#fecharMenu' onClick={handleMenuClick}>
-                                <img src='https://www.svgrepo.com/show/12848/x-symbol.svg' alt='catalogo' /><p>Fechar Menu</p></a>
+                                <p>Fechar Menu</p></a>
                         </li>
 
                     </div>
