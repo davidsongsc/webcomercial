@@ -10,7 +10,7 @@ function ProdutoUsuario({ produto, carregandoCmd }) {
     const estrelas = [];
 
     // Loop para criar estrelas preenchidas ou vazias com base na nota
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 6; i++) {
       if (i <= nota) {
         estrelas.push(<i className="fas fa-star" key={i}></i>);
       } else {
@@ -21,7 +21,7 @@ function ProdutoUsuario({ produto, carregandoCmd }) {
     return (
       <div className="avaliacao-produto">
         <span className="estrelas">{estrelas}</span>
-        <span className="nota">{nota.toFixed(1)}</span>
+        {/* <span className="nota">{nota.toFixed(1)}</span>*/}
       </div>
     );
   }
@@ -43,21 +43,23 @@ function ProdutoUsuario({ produto, carregandoCmd }) {
       ) : (
         <aside className={`as-produtou-usuario `}>
           <div className={`container-produto container`} >
-            <div className="container-produto-imagem">
-              <img
-                src={`https://dagesico.pythonanywhere.com/static/img/demas/cardapio/${produto.nomeproduto}.jpg`}
-                alt=""
-              />
-             
-          
-            </div>
+
             <div className="container-produto-detalhes">
-              <h1>{produto.nomefantasia}</h1>
-
+             
+              
               <text>{produto.descricao}</text>
-              <AvaliacaoProduto nota={produto.avaliacao} />
-              <ValorProduto valor={produto.valor} />
+              <div className="container-produto-imagem">
+                <img
+                  src={`https://dagesico.pythonanywhere.com/static/img/demas/cardapio/${produto.nomeproduto}.jpg`}
+                  alt=""
 
+                />
+                <ValorProduto valor={produto.valor} />
+                <AvaliacaoProduto nota={produto.avaliacao} />
+                
+
+              </div>
+              <h1>{produto.nomefantasia}</h1>
             </div>
           </div>
         </aside>

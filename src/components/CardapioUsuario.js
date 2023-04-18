@@ -58,6 +58,15 @@ function CardapioDetail() {
             </>
         );
     }
+    else if (tipo === 'inicio' ) {
+
+        return (
+
+            <><MainUsuario grupoh={1001} />
+
+            </>
+        );
+    }
     else {
         return (
             <div>

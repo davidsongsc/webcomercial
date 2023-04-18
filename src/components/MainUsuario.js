@@ -1,21 +1,77 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import ProdutoUsuario from './ProdutoUsuario';
 import ApiGrupo from './ApiGrupo';
 import ApiUsuario from './ApiUsuario';
+
+function JackRibs() {
+    return (
+        <div className="jackribs" style={{ letterSpacing: '2px', fontFamily: "'Schibsted Grotesk', sans-serif", fontWeight: 400 }}>
+            <h1 style={{ fontSize: '69px', textTransform: 'uppercase', color: '#b82926', textAlign: 'left', height: '125px' }}>Jack Ribs</h1>
+            <div style={{ display: 'flex' }}>
+                <h2 style={{ color: '#93211e', fontSize: '28px', position: 'relative', top: '-52px' }}>OLDSCHOOL</h2>
+                <h3 style={{ fontSize: '49px', position: 'relative', color: '#b82926', top: '-63px', left: '-4px' }}>DEMAS SEASON</h3>
+            </div>
+            <img src="https://dagesico.pythonanywhere.com/static/img/demas/gastronomiaprincipal.png" alt="" />
+        </div>
+    );
+}
+
 
 function MainUsuario({ grupoh }) {
     const [produtos, setProdutos] = useState([]);
     const [grupoSelecionado, setGrupoSelecionado] = useState(Number(grupoh));
     const [grupos, setGrupos] = useState([]);
+    const [styles, setStyles] = useState([]);
     const [carregando, setCarregando] = useState(true);
-
+    const location = useLocation();
     const [paginaterior, setPaginaAnt] = useState('cardapio/principal');
     const [paginaInicial, setPaginaInicial] = useState('cardapio/principal');
 
 
     const navigate = useNavigate();
 
+
+    useEffect(() => {
+        const menuMain = document.querySelector('.sh-asride-menu-usuario-main');
+
+        if (location.pathname === '/cardapio/jackribs' && menuMain) {
+            // Personalize o estilo para a página Jack Ribs
+            document.body.style.backgroundColor = 'black';
+            menuMain.style.backgroundColor = 'black';
+
+            menuMain.style.transition = '2s';
+        
+        }else if (location.pathname === '/cardapio/entradas' && menuMain) {
+            // Personalize o estilo para a página Jack Ribs
+            
+            menuMain.style.backgroundColor = '#FB8400';
+            menuMain.style.transition = '2s';
+        
+        } 
+        
+        else {
+            // Personalize o estilo para outras páginas
+            document.body.style.backgroundColor = '#97AFC2';
+            document.body.style.transition = '2s';
+            if (menuMain) {
+
+                menuMain.style.removeProperty('background-color');
+                menuMain.style.removeProperty('height');
+  
+            }
+        }
+    }, [location]);
+
+
+    useEffect(() => {
+        async function carregarProdutos() {
+            const produtos = await ApiUsuario();
+            setProdutos(produtos);
+            setCarregando(false);
+        }
+        carregarProdutos();
+    }, []);
     const handleGrupoClick = (id) => {
         setGrupoSelecionado(id);
         if (id === 1) {
@@ -23,7 +79,7 @@ function MainUsuario({ grupoh }) {
             navigate(coDeudo, { replace: true });
             setPaginaAnt(coDeudo)
             setGrupoSelecionado(id);
-        } 
+        }
         if (id === 10) {
             var coDeudo = '/cardapio/executivo'
             navigate(coDeudo, { replace: true });
@@ -90,7 +146,7 @@ function MainUsuario({ grupoh }) {
                                 <h3>...</h3>
 
                             </div>
-          
+
                         </aside>
                         <aside className="sh-asride-menu-usuario-main">
                             <div className="loading-spinner">
@@ -106,21 +162,27 @@ function MainUsuario({ grupoh }) {
                 <div className='d-main-usuario-principal'>
                     <div className='menu-usuario-main-principal'>
                         <aside className='hh-asride-menu-usuario-main'>
-
+               
                             {grupos
                                 .filter((grupo) => grupo.grupo_chave === grupoh)
                                 .map((grupo) => (
-                                    <div className='cardapio-usuario-menu' onClick={() => handleGrupoClick(grupo.grupocombo)}>
-                                        <h2>{grupo.nome}</h2>
-                                        <text>{grupo.grupo_desc}</text>
-                                        <h3>{grupo.subnome}</h3>
+                                    <button style={{backgroundImage: `url('https://dagesico.pythonanywhere.com/static/img/demas/${grupo.nome}.jpg')`, backgroundSize: 'cover', transition: '.7s'}} className='botao-cardapio-grupo' onClick={() => handleGrupoClick(grupo.grupocombo)}>
+                                        
+                                        <div className='cardapio-usuario-menu' >
 
-                                    </div>
+                                            <h2>{grupo.nome}</h2>
+                                            <text>{grupo.grupo_desc}</text>
+                                            <h3>{grupo.subnome}</h3>
+
+                                        </div>
+                                    </button>
                                 ))}
 
                         </aside>
 
                         <aside className='sh-asride-menu-usuario-main' >
+                            {location.pathname === '/cardapio/jackribs' && <JackRibs />}
+                            {/* Coloque aqui os componentes de outras páginas */}
                             {produtos
                                 .filter((produto) => produto.grupo === grupoSelecionado)
                                 .map((produto) => (

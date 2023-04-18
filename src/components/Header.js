@@ -29,7 +29,7 @@ function Header() {
      */}
     const handleCardapioUsuariolClick = (event) => {
         event.preventDefault();
-        navigate('/cardapio/cardapio', { replace: true });
+        navigate('/cardapio/entradas', { replace: true });
         handleMenuClickFechar();
     };
 
