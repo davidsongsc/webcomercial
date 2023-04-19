@@ -981,8 +981,8 @@
     .container-produto-imagem img {
         border-radius: 10px;
         position: relative;
-        height: 221px;
         width: 175px;
+        height: 171px;
         display: flex;
         /* margin-top: -15px; */
         margin-right: -73px;
@@ -1027,7 +1027,7 @@
         width: 217px;
         text-align: center;
         z-index: 9;
-        margin-bottom: -89px;
+        margin-top: -213px;
     }
 
     /* LOADING */
