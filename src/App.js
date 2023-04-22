@@ -7,7 +7,6 @@ import Login from './components/Login';
 import Cadastro from './components/Cadastro';
 import Logout from './components/logout';
 import CardapioDetalhe from './components/CardapioDetalhe';
-import Footer from './components/Footer';
 import Sobre from './components/Sobre';
 import Loja from './components/Loja';
 import Inicio from './components/inicio';
@@ -34,7 +33,7 @@ function App() {
         <Route path="/fila" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
       </Routes>
-      <Footer />
+      
     </BrowserRouter>
   );
 }

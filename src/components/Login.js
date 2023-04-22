@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect  } from "react";
 import { useNavigate } from 'react-router-dom';
 import $ from 'jquery';
 import axios from 'axios';
+import Footer from "./Footer";
+import BaseLogo from "./BaseLogo";
 
 function Login() {
   const history = useNavigate();
+
   const [usuario, setUsername] = useState("");
   const [senha, setPassword] = useState("");
   const [autenticado, setAutenticado] = useState(false);
@@ -40,8 +43,8 @@ function Login() {
       }
     });
   }
-
-
+///http://192.168.0.50:5000/usuario
+///axios.get('https://dagesico.pythonanywhere.com/usuario'
   useEffect(() => {
     const token = 'abc123'
     axios.get('https://dagesico.pythonanywhere.com/usuario', {
@@ -80,7 +83,7 @@ function Login() {
 
   return (
     <div>
-
+      <BaseLogo/>
       {autenticado === false && (
         <div className='login-grupo-stantment'>
 
@@ -92,12 +95,14 @@ function Login() {
                 placeholder="ID"
                 value={usuario}
                 onChange={(event) => setUsername(event.target.value)}
+                required
               />
               <input
                 type="password"
                 placeholder="Senha"
                 value={senha}
                 onChange={(event) => setPassword(event.target.value)}
+                required
               />
               <button onClick={handleLogin}>Login</button>
 
@@ -112,7 +117,7 @@ function Login() {
           </div>
         </div>
       )}
-
+    <Footer/>
 
     </div>
   );

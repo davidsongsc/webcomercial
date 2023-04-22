@@ -15,10 +15,12 @@ function Header() {
         setMenuOpen(!menuOpen);
     };
     const handleMenuClickFechar = () => {
+        setMenuOpen(false);
+        {/*
         if (isMobile) {
-            setMenuOpen(false);
+           
         }
-
+ */}
     };
     {/*
     const handleCardapiolClick = (event) => {
@@ -91,9 +93,6 @@ function Header() {
 
     return (
         <>
-            <head>
-                <title>{palavra1} & {palavra2}</title>
-            </head>
 
             <header>
                 {/*
@@ -109,7 +108,7 @@ function Header() {
             <nav className={isFixed ? 'menu fixed' : `menu ${menuOpen ? 'menu-open' : ''}`}>
                 <div className='menu-icon' onClick={handleMenuClick}>
                     <span></span>
-                    
+
                     <span></span>
                     <span></span>
                 </div>
@@ -121,7 +120,7 @@ function Header() {
                         <li>
 
                             <a href="/inicio" onClick={handleInicioClick}>
-                                
+
                                 <p>Home</p></a>
                         </li>
                         {/*
@@ -133,31 +132,31 @@ function Header() {
                          */}
                         <li>
                             <a href="/cardapio" onClick={handleCardapioUsuariolClick}>
-                                
+
                                 <p>Cardápio</p></a>
                         </li>
                         <li>
 
                             <a href='/loja' onClick={handleLojaClick}>
-                              
+
                                 <p>Loja</p></a>
                         </li>
                         <li>
 
                             <a href='/quemsomos' onClick={handleQuemSomosClick}>
-                                
+
                                 <p>quemsomos</p></a>
                         </li>
                         <li>
 
                             <a href='/fila' onClick={handleFilaClick}>
-                              
+
                                 <p>Fila de Espera</p></a>
                         </li>
                         <li>
 
                             <a href='/reserva' onClick={handleReservasClick}>
-                                
+
                                 <p>Reservas</p></a>
                         </li>
                         <li className='menu-fechar-ocioso'>

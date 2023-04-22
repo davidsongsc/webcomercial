@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom';
 import MainUsuario from './MainUsuario';
+import BaseLogo from './BaseLogo';
+import Footer from './Footer';
 
 
 function CardapioDetail() {
@@ -7,45 +9,56 @@ function CardapioDetail() {
     if (tipo === 'cardapio') {
         return (
             <>
+            <BaseLogo/>
                 <MainUsuario grupoh={0} />
-
+            <Footer/>
             </>
         );
     } else if (tipo === 'principal') {
         return (
-            <><MainUsuario grupoh={1} />
-
+            <>
+            <BaseLogo/>
+            <MainUsuario grupoh={1} />
+            <Footer/>
             </>
         );
     } else if (tipo === 'executivo' || tipo === '10') {
 
         return (
 
-            <><MainUsuario grupoh={10} />
-
+            <>
+            <BaseLogo/>
+            <MainUsuario grupoh={10} />
+            <Footer/>
             </>
         );
     }
     
     else if (tipo === 'jackribs' || tipo === '12') {
         return (
-            <><MainUsuario grupoh={12} />
-
+            <>
+            <BaseLogo/>
+            <MainUsuario grupoh={12} />
+            <Footer/>
             </>
         );
     }
         
     else if (tipo === 'bebidas' || tipo === '60') {
         return (
-            <><MainUsuario grupoh={60} />
-
+            <>
+            <BaseLogo/>
+            <MainUsuario grupoh={60} />
+            <Footer/>
             </>
         );
     }
     else if (tipo === 'sucos' || tipo === '61') {
         return (
-            <><MainUsuario grupoh={61} />
-
+            <>
+            <BaseLogo/>
+            <MainUsuario grupoh={61} />
+            <Footer/>
             </>
         );
     }
@@ -53,8 +66,10 @@ function CardapioDetail() {
 
         return (
 
-            <><MainUsuario grupoh={6615} />
-
+            <>
+            <BaseLogo/>
+            <MainUsuario grupoh={6615} />
+            <Footer/>
             </>
         );
     }
@@ -62,17 +77,21 @@ function CardapioDetail() {
 
         return (
 
-            <><MainUsuario grupoh={1001} />
-
+            <>
+            <BaseLogo/>
+            <MainUsuario grupoh={1001} />
+            <Footer/>
             </>
         );
     }
     else {
         return (
             <div>
+                <BaseLogo/>
                 <h1>Error 400!</h1>
                 <h2>{tipo}</h2>
                 {/* restante do código */}
+                <Footer/>
             </div>
         );
     }

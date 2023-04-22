@@ -6,7 +6,7 @@ import ApiUsuario from './ApiUsuario';
 
 function JackRibs() {
     return (
-        <div className="jackribs" style={{ letterSpacing: '2px', fontFamily: "'Schibsted Grotesk', sans-serif", fontWeight: 400 }}>
+        <div className="jackribs" style={{ height: '100vh', letterSpacing: '2px', fontFamily: "'Schibsted Grotesk', sans-serif", fontWeight: 400 }}>
             <h1 style={{ fontSize: '69px', textTransform: 'uppercase', color: '#b82926', textAlign: 'left', height: '125px' }}>Jack Ribs</h1>
             <div style={{ display: 'flex' }}>
                 <h2 style={{ color: '#93211e', fontSize: '28px', position: 'relative', top: '-52px' }}>OLDSCHOOL</h2>
@@ -27,9 +27,24 @@ function MainUsuario({ grupoh }) {
     const location = useLocation();
     const [paginaterior, setPaginaAnt] = useState('cardapio/principal');
     const [paginaInicial, setPaginaInicial] = useState('cardapio/principal');
-
+    const [isFixed, setIsFixed] = useState(false);
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const grupoFixoEl = document.getElementsByClassName('hh-asride-menu-usuario-main')[0];
+
+            setIsFixed(grupoFixoEl && scrollTop > grupoFixoEl.clientHeight);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
 
     useEffect(() => {
@@ -41,15 +56,15 @@ function MainUsuario({ grupoh }) {
             menuMain.style.backgroundColor = 'black';
 
             menuMain.style.transition = '2s';
-        
-        }else if (location.pathname === '/cardapio/entradas' && menuMain) {
+
+        } else if (location.pathname === '/cardapio/entradas' && menuMain) {
             // Personalize o estilo para a página Jack Ribs
-            
+
             menuMain.style.backgroundColor = '#FB8400';
             menuMain.style.transition = '2s';
-        
-        } 
-        
+
+        }
+
         else {
             // Personalize o estilo para outras páginas
             document.body.style.backgroundColor = '#97AFC2';
@@ -58,7 +73,7 @@ function MainUsuario({ grupoh }) {
 
                 menuMain.style.removeProperty('background-color');
                 menuMain.style.removeProperty('height');
-  
+
             }
         }
     }, [location]);
@@ -137,6 +152,7 @@ function MainUsuario({ grupoh }) {
         <div>
             {carregando ? (
                 <>
+
                     <div className="menu-usuario-main-principal">
                         <aside className="hh-asride-menu-usuario-main">
                             <div className="cardapio-usuario-menu">
@@ -160,22 +176,23 @@ function MainUsuario({ grupoh }) {
                 </>
             ) : (
                 <div className='d-main-usuario-principal'>
+
                     <div className='menu-usuario-main-principal'>
-                        <aside className='hh-asride-menu-usuario-main'>
-               
+                        <aside className={`hh-asride-menu-usuario-main ${isFixed ? 'grupo-fix' : ''}`} >
+
                             {grupos
                                 .filter((grupo) => grupo.grupo_chave === grupoh)
                                 .map((grupo) => (
-                                    <button style={{backgroundImage: `url('https://dagesico.pythonanywhere.com/static/img/demas/${grupo.nome}.jpg')`, backgroundSize: 'cover', transition: '.7s'}} className='botao-cardapio-grupo' onClick={() => handleGrupoClick(grupo.grupocombo)}>
-                                        
-                                        <div className='cardapio-usuario-menu' >
+                                    //<button style={{backgroundImage: `url('https://dagesico.pythonanywhere.com/static/img/demas/${grupo.nome}.jpg')`, backgroundSize: 'cover', transition: '.7s'}} className={`botao-cardapio-grupo ${isFixed ? 'botao-fix' : ''}`} onClick={() => handleGrupoClick(grupo.grupocombo)}>
 
-                                            <h2>{grupo.nome}</h2>
-                                            <text>{grupo.grupo_desc}</text>
-                                            <h3>{grupo.subnome}</h3>
 
-                                        </div>
-                                    </button>
+                                    <div className={`cardapio-usuario-menu ${isFixed ? 'grupo-titulo-main' : ''}`} onClick={() => handleGrupoClick(grupo.grupocombo)}>
+
+                                        <h2 >{grupo.nome}</h2>
+
+
+                                    </div>
+
                                 ))}
 
                         </aside>
@@ -193,7 +210,9 @@ function MainUsuario({ grupoh }) {
                     </div>
                 </div>
             )}
+
         </div>
+
     )
 }
 

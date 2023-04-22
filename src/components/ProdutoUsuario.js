@@ -29,8 +29,8 @@ function ProdutoUsuario({ produto, carregandoCmd }) {
   function ValorProduto({ valor }) {
     return (
       <div className="valor-produto">
-        <text className='sifrao'>R$ </text>
-        <text className='valor-produto-valor'>{valor.toFixed(2)}</text>
+        <div className='sifrao'>R$ </div>
+        <div className='valor-produto-valor'>{valor.toFixed(2)}</div>
       </div>
     );
   }
@@ -54,12 +54,14 @@ function ProdutoUsuario({ produto, carregandoCmd }) {
                   alt=""
 
                 />
-                <ValorProduto valor={produto.valor} />
-                <AvaliacaoProduto nota={produto.avaliacao} />
+           
+                {/*<AvaliacaoProduto nota={produto.avaliacao} />*/}
                 
 
               </div>
+              <ValorProduto valor={produto.valor} />
               <h1>{produto.nomefantasia}</h1>
+             
             </div>
           </div>
         </aside>
