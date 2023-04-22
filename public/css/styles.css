@@ -447,7 +447,7 @@
         z-index: 0;
         animation: movebackground 60s ease-in-out infinite;
         background-size: cover;
-        margin: 0 0 -379px 0;
+        margin: 0 0 -310px 0;
     }
 
     .principal-demas-link {
@@ -470,6 +470,7 @@
         /* position: relative; */
         transform: scale(.5);
         z-index: 1;
+        top: -71px;
 
     }
 
