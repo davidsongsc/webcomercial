@@ -33,18 +33,19 @@ function MainUsuario({ grupoh }) {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const grupoFixoEl = document.getElementsByClassName('hh-asride-menu-usuario-main')[0];
-
-            setIsFixed(grupoFixoEl && scrollTop > grupoFixoEl.clientHeight);
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const grupoFixoEl = document.getElementsByClassName('hh-asride-menu-usuario-main')[0];
+          const alturaMinima = window.innerHeight * 0.4; // 10vh em pixels
+      
+          setIsFixed(grupoFixoEl && scrollTop > alturaMinima && scrollTop > grupoFixoEl.clientHeight);
         };
-
+      
         window.addEventListener('scroll', handleScroll);
-
+      
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+          window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+      }, []);
 
 
     useEffect(() => {

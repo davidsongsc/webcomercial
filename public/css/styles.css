@@ -295,10 +295,6 @@
         }
 
 
-        .menu-items {
-            width: 140px;
-        }
-
         .fixado-botao {
             position: absolute;
         }
@@ -316,7 +312,6 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 100%;
             transition: .5s ease-in-out;
             position: relative;
         }
@@ -418,7 +413,7 @@
             /* background-color: var(--gray-400); */
             position: relative;
             flex-direction: column;
-           
+
         }
 
         .div-menu-lateral .menu-fechar-ocioso {
@@ -449,7 +444,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        z-index: 1;
+        z-index: 0;
         animation: movebackground 60s ease-in-out infinite;
         background-size: cover;
         margin: 0 0 -379px 0;
@@ -473,10 +468,17 @@
         flex-direction: column;
         align-items: center;
         /* position: relative; */
-        top: 49px;
         transform: scale(.5);
         z-index: 1;
 
+    }
+
+    .loja-seletor-painel {
+        background-color: white;
+        border-radius: 15px;
+        padding: 25px;
+        color: black;
+        font-weight: 500;
     }
 
     .principal-demas-titulo h1 {
@@ -496,7 +498,7 @@
         top: 5px;
     }
 
-    .principal-demas-titulo h2 {
+    .principal-demas-titulo div {
         padding: 35px;
         color: whitesmoke;
         top: 3px;
@@ -507,13 +509,56 @@
         font-family: 'Roboto Mono', monospace;
         /* font-size: 32px; */
         font-weight: 100;
+        font-size: 29px;
         text-shadow: 1px 1px 1px white;
-        background-color: #000000;
-        border-radius: 19px;
+        background-color: rgba(0, 0, 0, 0.658);
+
+    }
+
+    .principal-demas-titulo a {
+        margin: auto 9px;
+        width: auto;
+    }
+
+    .principal-demas-titulo div img {
+        background-color: white;
+        width: 50px;
+        border-radius: 15px;
+        padding: 8px;
+    }
+
+    .hoolly-wood-principal {
+        display: flex;
+    }
+
+    .logoFunctionIndicador {
+
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+    }
+
+    .aberta {
+        background-image: linear-gradient(green, black);
+    }
+
+    .fechada {
+        background-image: linear-gradient(red, black);
     }
 
     .divisao {
-        height: 1.5vh;
+        margin: -7.5vh;
+    }
+
+    .modolo-delvery-pn {
+        z-index: 999;
+        position: relative;
+        height: 100vh;
+    }
+
+    .modolo-delvery-pn section {
+        display: flex;
+        padding: 190px;
     }
 
     .conteudo-principal {
@@ -532,18 +577,16 @@
 
 
     @media screen and (max-width: 930px) {
+
         .principal-demas-titulo {
             position: relative;
-         
+
         }
 
         .principal-demas-link {
             margin: 15px;
         }
 
-        .principal-demas-titulo h2 {
-            font-size: 10px;
-        }
 
         @keyframes movebackground {
             0% {
@@ -633,6 +676,8 @@
     .d-main-usuario-principal {
         display: flex;
         justify-content: center;
+        position: relative;
+
     }
 
     .menu-usuario-main-principal {
@@ -899,6 +944,7 @@
     .hh-asride-menu-usuario-main {
         transition: .9s;
         height: 10vh;
+
     }
 
     .cardapio-usuario-menu h2 {
@@ -913,7 +959,7 @@
         transition: 1.1s;
         /* margin-bottom: -5px;*/
         width: 146px;
-        
+
     }
 
     .cardapio-usuario-menu h2:hover {
@@ -952,6 +998,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
+
     }
 
     .as-produtou-usuario {
@@ -1008,10 +1055,13 @@
         top: -193px;
         left: 182px;
     }
-    .fa, .fas {
+
+    .fa,
+    .fas {
         font-weight: 900;
         margin: 10px 0;
     }
+
     .container-produto-detalhes {
         width: 100%;
     }
@@ -1128,7 +1178,7 @@
 
     /* Estilo para o componente ValorProduto */
     .valor-produto {
-       /* margin: -24px 0 -10px 0; */
+        /* margin: -24px 0 -10px 0; */
         background-image: linear-gradient(45deg, black, rgba(0, 0, 0, 0.507));
         text-align: center;
         position: relative;
@@ -1383,16 +1433,18 @@
 
 
 
-    
+
 
     /* FOOTER */
     footer section {
         text-align: center;
         font-size: x-large;
     }
-    footer img{
+
+    footer img {
         z-index: 1;
     }
+
     /* Estilo do footer */
     footer {
         font-size: 13px;
@@ -1408,22 +1460,26 @@
         margin-top: 50px;
         color: var(--white);
     }
-    footer aside{
+
+    footer aside {
         border-radius: 5px;
     }
-    footer img{
+
+    footer img {
         width: 80px;
         margin: 8px;
     }
 
-    
+
     @media screen and (max-width: 930px) {
-        footer{
+        footer {
             height: 644px;
         }
-        footer section{
+
+        footer section {
             flex-direction: column;
         }
+
         .cont-conteudo,
         .cont-conteudo-sobremesa {
             display: flex;
@@ -1432,18 +1488,22 @@
             flex-direction: column;
             background-color: #FF7B3E;
         }
-        .hh-asride-menu-usuario-main{
+
+        .hh-asride-menu-usuario-main {
             height: auto;
         }
-        .cardapio-usuario-menu h2{
+
+        .cardapio-usuario-menu h2 {
             top: 0;
             left: -21px;
             width: 126px;
             text-transform: uppercase;
         }
+
         .botao-cardapio-grupo {
             width: 19vh;
         }
+
         .cont-conteudo img {
             width: 98%;
         }
@@ -1496,6 +1556,7 @@
             flex-direction: column-reverse;
         }
     }
+
     /* Estilos adicionais */
     a {
         color: var(--blue);
@@ -1565,7 +1626,8 @@
             margin-top: 43px;
         }
     }
-    .grupo-fix{
+
+    .grupo-fix {
         position: fixed;
         top: 48px;
         border-radius: 0;
@@ -1573,15 +1635,18 @@
         height: 10.1vh;
         transition: 1.9s;
     }
-    .botao-fix{
-        
+
+    .botao-fix {
+
         height: 7vh;
         transition: 1.9s;
     }
-    .grupo-titulo-main{
-        
+
+    .grupo-titulo-main {
+
         position: relative;
     }
+
     /* LOJA */
     .lojas-container {
         display: flex;
@@ -1883,7 +1948,7 @@
         letter-spacing: 9px;
         left: 12px;
         font-family: 'Montserrat', sans-serif;
-        
+
         font-weight: 500;
         align-items: center;
         justify-content: center;
