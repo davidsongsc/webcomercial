@@ -1,9 +1,10 @@
-import React, { useState, useEffect  } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import $ from 'jquery';
 import axios from 'axios';
 import Footer from "./Footer";
 import BaseLogo from "./BaseLogo";
+
 
 function Login() {
   const history = useNavigate();
@@ -12,13 +13,13 @@ function Login() {
   const [senha, setPassword] = useState("");
   const [autenticado, setAutenticado] = useState(false);
   const [nomeUsuario, setNomeUsuario] = useState("");
-
+  const chave = 'abc123'
 
   function handleLogin(event) {
     event.preventDefault();
     $.ajax({
-      url: "https://dagesico.pythonanywhere.com/login",
-      //url: "http://192.168.0.50:5000/login",
+      //url: "https://dagesico.pythonanywhere.com/login",
+      url: "http://192.168.0.50:5000/login",
       type: "POST",
       dataType: "json",
       contentType: "application/json",
@@ -43,14 +44,15 @@ function Login() {
       }
     });
   }
-///http://192.168.0.50:5000/usuario
-///axios.get('https://dagesico.pythonanywhere.com/usuario'
+
   useEffect(() => {
-    const token = 'abc123'
-    axios.get('https://dagesico.pythonanywhere.com/usuario', {
+    const token = chave;
+    console.log(token)
+    axios.get('http://192.168.0.50:5000/usuario', {
+      //axios.get('https://dagesico.pythonanywhere.com/usuario', {
       params: {
         nome: 'davidsongsc',
-        token: 'abc123'
+        token: token
       },
       headers: {
         Authorization: `Bearer ${token}`
@@ -62,7 +64,7 @@ function Login() {
       .catch(error => {
         console.log(error);
       });
-    
+
   }, []);
 
   function handleLogout() {
@@ -83,7 +85,7 @@ function Login() {
 
   return (
     <div>
-      <BaseLogo/>
+      <BaseLogo />
       {autenticado === false && (
         <div className='login-grupo-stantment'>
 
@@ -117,7 +119,7 @@ function Login() {
           </div>
         </div>
       )}
-    <Footer/>
+      <Footer />
 
     </div>
   );

@@ -10,6 +10,7 @@ import CardapioDetalhe from './components/CardapioDetalhe';
 import Sobre from './components/Sobre';
 import Loja from './components/Loja';
 import Inicio from './components/inicio';
+import Banner from './components/Banner';
 import CardapioUsuario from './components/CardapioUsuario';
 
 
@@ -19,7 +20,7 @@ function App() {
       <Header dados={dados} />
       <Routes>
         <Route path="/catalogo" element={<Catalogo />} />
-        <Route path="/" element={<Inicio />} />
+        <Route path="/" element={<Banner />} />
         <Route path="/inicio" element={<Inicio/>} />
         <Route path="/principal/:tipo" element={<CardapioDetalhe />} />
         <Route path="/cardapio/:tipo" element={<CardapioUsuario />} />

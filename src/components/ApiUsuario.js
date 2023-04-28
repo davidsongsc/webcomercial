@@ -17,8 +17,8 @@ async function fetchProdutos() {
   }
 
   try {
-    const response = await fetch(`https://dagesico.pythonanywhere.com/produtos?nome=${nome}&token=${token}&version=100a`);
-    //const response = await fetch(`http://192.168.0.50:5000/produtos?nome=${nome}&token=${token}&version=100a`);
+    //const response = await fetch(`https://dagesico.pythonanywhere.com/produtos?nome=${nome}&token=${token}&version=100a`);
+    const response = await fetch(`http://192.168.0.50:5000/produtos?nome=${nome}&token=${token}&version=100a`);
     const data = await response.json();
 
     // Atualiza o cache ${produto.nomeproduto}

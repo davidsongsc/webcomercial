@@ -1978,6 +1978,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: white;
+        padding: 5px;
+    }
+
+    .sliderContainerc {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff40;
+        padding: 5px;
     }
 
     .slider {
@@ -2014,6 +2026,27 @@
         background-color: white;
         left: 61px;
         position: relative;
+    }
+
+    .bn-i-botom {
+        position: relative;
+        margin: 0 10px;
+        top: 10px;
+        width: 257px;
+        height: 20px;
+        background-color: rgb(241 222 174);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: .8s;
+        box-shadow: 1px 1px 10px black;
+    }
+
+    .bn-i-botom:hover {
+        background-color: orange;
+    }
+
+    .bn-i-bottom-ativado {
+        background-color: orange;
     }
 
     p {

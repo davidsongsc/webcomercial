@@ -13,8 +13,8 @@ async function fetchGrupos() {
   }
 
   // Caso contrário, faz uma nova solicitação à API
-  const response = await fetch(`https://dagesico.pythonanywhere.com/grupos?nome=${nome}&token=${token}`);
-  //const response = await fetch(`http://192.168.0.50:5000/grupos?nome=${nome}&token=${token}`);
+  //const response = await fetch(`https://dagesico.pythonanywhere.com/grupos?nome=${nome}&token=${token}`);
+  const response = await fetch(`http://192.168.0.50:5000/grupos?nome=${nome}&token=${token}`);
   const data = await response.json();
 
   // Armazena os dados no localStorage e a data atual como timestamp
