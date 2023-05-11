@@ -18,8 +18,8 @@ function Login() {
   function handleLogin(event) {
     event.preventDefault();
     $.ajax({
-      //url: "https://dagesico.pythonanywhere.com/login",
-      url: "http://192.168.0.50:5000/login",
+      url: "https://dagesico.pythonanywhere.com/login",
+      //url: "http://192.168.0.50:5000/login",
       type: "POST",
       dataType: "json",
       contentType: "application/json",
@@ -48,8 +48,8 @@ function Login() {
   useEffect(() => {
     const token = chave;
     console.log(token)
-    axios.get('http://192.168.0.50:5000/usuario', {
-      //axios.get('https://dagesico.pythonanywhere.com/usuario', {
+    //axios.get('http://192.168.0.50:5000/usuario', {
+    axios.get('https://dagesico.pythonanywhere.com/usuario', {
       params: {
         nome: 'davidsongsc',
         token: token
