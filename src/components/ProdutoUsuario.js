@@ -1,10 +1,9 @@
 import React, { useState, useRef } from 'react';
 
 
-function ProdutoUsuario({ produto, carregandoCmd }) {
+function ProdutoUsuario({ produto, carregandoCmd, api }) {
   const [carregado, setCarregado] = useState(true);
   const refContainer = useRef(null);
-
   function AvaliacaoProduto({ nota }) {
 
     const estrelas = [];
@@ -28,7 +27,7 @@ function ProdutoUsuario({ produto, carregandoCmd }) {
 
   function ValorProduto({ valor }) {
     return (
-      <div className="valor-produto">
+      <div className="valor-produto" style={{ display: 'none' }}>
         <div className='sifrao'>R$ </div>
         <div className='valor-produto-valor'>{valor.toFixed(2)}</div>
       </div>
@@ -45,23 +44,26 @@ function ProdutoUsuario({ produto, carregandoCmd }) {
           <div className={`container-produto container`} >
 
             <div className="container-produto-detalhes">
-             
-              
+
+
               <text>{produto.descricao}</text>
               <div className="container-produto-imagem">
                 <img
-                  src={`https://dagesico.pythonanywhere.com/static/img/demas/cardapio/${produto.nomeproduto}.jpg`}
+                  src={`${api()}/static/img/demas/cardapio/${produto.nomeproduto}.jpg`}
                   alt=""
 
                 />
-           
+
                 {/*<AvaliacaoProduto nota={produto.avaliacao} />*/}
-                
+
 
               </div>
               <ValorProduto valor={produto.valor} />
-              <h1>{produto.nomefantasia}</h1>
-             
+              <div className='container-nome'>
+                <h1>{produto.nomefantasia}</h1>
+              </div>
+
+
             </div>
           </div>
         </aside>

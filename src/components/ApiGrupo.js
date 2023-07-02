@@ -6,15 +6,15 @@ async function fetchGrupos() {
   const timestamp = localStorage.getItem('timestamp');
   const nome = 'maquina'
   const token = 'abc123'
-
+  const api = 0
+  const ipOperacional = ['http://192.168.0.50:5000', 'https://dagesico.pythonanywhere.com']
   // Se os dados existirem no localStorage e foram atualizados há menos de 10 minutos, retorna os dados do localStorage
   if (grupos && timestamp && Date.now() - timestamp < 600000) {
     return JSON.parse(grupos);
   }
 
   // Caso contrário, faz uma nova solicitação à API
-  const response = await fetch(`https://dagesico.pythonanywhere.com/grupos?nome=${nome}&token=${token}`);
-  //const response = await fetch(`http://192.168.0.50:5000/grupos?nome=${nome}&token=${token}`);
+  const response = await fetch(`${ipOperacional[api]}/grupos?nome=${nome}&token=${token}`);
   const data = await response.json();
 
   // Armazena os dados no localStorage e a data atual como timestamp

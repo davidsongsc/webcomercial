@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Catalogo from './components/Catalogo';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
@@ -12,29 +12,30 @@ import Loja from './components/Loja';
 import Inicio from './components/inicio';
 //import Banner from './components/Banner';
 import CardapioUsuario from './components/CardapioUsuario';
-
+import Api from './components/Api/ModoOperacional';
 
 function App() {
+
   return (
     <BrowserRouter>
-      <Header dados={dados} />
+      <Header dados={dados} api={Api} />
       <Routes>
-        <Route path="/catalogo" element={<Catalogo />} />
-        <Route path="/" element={<Inicio />} />
-        <Route path="/inicio" element={<Inicio/>} />
-        <Route path="/principal/:tipo" element={<CardapioDetalhe />} />
-        <Route path="/cardapio/:tipo" element={<CardapioUsuario />} />
-        <Route path="/demas/:tipo" element={<CardapioDetalhe />} />
-        <Route path="/almoco/:tipo" element={<CardapioDetalhe />} />
-        <Route path="/sobremesa/:tipo" element={<CardapioDetalhe />} />
-        <Route path="/cadastro" element={<Cadastro />} />
-        <Route path="/sobre" element={<Sobre />} />
-        <Route path="/loja" element={<Loja />} />
-        <Route path="/reserva" element={<Login />} />
-        <Route path="/fila" element={<Login />} />
-        <Route path="/logout" element={<Logout />} />
+        <Route path="/catalogo" element={<Catalogo api={Api} />} />
+        <Route path="/" element={<Inicio api={Api} />} />
+        <Route path="/inicio" element={<Inicio api={Api} />} />
+        <Route path="/principal/:tipo" element={<CardapioDetalhe api={Api} />} />
+        <Route path="/cardapio/:tipo" element={<CardapioUsuario api={Api} />} />
+        <Route path="/demas/:tipo" element={<CardapioDetalhe api={Api} />} />
+        <Route path="/almoco/:tipo" element={<CardapioDetalhe api={Api} />} />
+        <Route path="/sobremesa/:tipo" element={<CardapioDetalhe api={Api} />} />
+        <Route path="/cadastro" element={<Cadastro api={Api} />} />
+        <Route path="/sobre" element={<Sobre api={Api} />} />
+        <Route path="/loja" element={<Loja api={Api} />} />
+        <Route path="/reserva" element={<Login api={Api} />} />
+        <Route path="/fila" element={<Login api={Api} />} />
+        <Route path="/logout" element={<Logout api={Api} />} />
       </Routes>
-      
+
     </BrowserRouter>
   );
 }

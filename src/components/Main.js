@@ -6,7 +6,7 @@ import ApiGrupo from './ApiGrupo';
 import Api from './Api';
 
 
-function Main({ grupoh }) {
+function Main({ grupoh, api }) {
     const [produtos, setProdutos] = useState([]);
     const [grupoSelecionado, setGrupoSelecionado] = useState(grupoh);
     const [grupos, setGrupos] = useState([]);
@@ -77,7 +77,7 @@ function Main({ grupoh }) {
 
 
                         {produtos.filter((produto) => produto.grupo === grupoSelecionado).map((produto) => (
-                            <Produto key={produto.id} produto={produto} />
+                            <Produto key={produto.id} produto={produto} api={api} />
                         ))}
 
                     </>

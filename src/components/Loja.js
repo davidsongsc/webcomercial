@@ -3,7 +3,7 @@ import dados from '../configure.json';
 import Footer from "./Footer";
 import BaseLogo from "./BaseLogo";
 
-const Loja = () => {
+const Loja = ({api}) => {
   const [lojaSelecionada, setLojaSelecionada] = useState('lojaA');
   const [lojas] = useState(dados.lojas);
 
@@ -18,7 +18,7 @@ const Loja = () => {
 
   return (
     <>
-    <BaseLogo/>
+    <BaseLogo api={api}/>
       <div className="lojas-container">
 
         <div className="loja">

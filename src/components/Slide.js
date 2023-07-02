@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-function Slider() {
+function Slider({ api }) {
   // eslint-disable-next-line
   const [slides, setSlides] = useState([
     {
-      image: "https://dagesico.pythonanywhere.com/static/img/demas/figura-01.webp",
+      image: `${api()}/static/img/demas/figura-01.webp`,
       descriptions: [
         { text: "Combinados", size: "40px", font: "'Yellowtail', cursive" },
         { text: "", size: "30px", font: "Tahoma" },
@@ -12,7 +12,7 @@ function Slider() {
       ],
     },
     {
-      image: "https://dagesico.pythonanywhere.com/static/img/demas/figura-02.webp",
+      image: `${api()}/static/img/demas/figura-02.webp`,
       descriptions: [
         { text: "Gastronomia", size: "40px", font: "'Yellowtail', cursive" },
         { text: "ARTESANAL", size: "30px", font: "Tahoma" },
@@ -20,7 +20,7 @@ function Slider() {
       ],
     },
     {
-      image: "https://dagesico.pythonanywhere.com/static/img/demas/figura-03.webp",
+      image: `${api()}/static/img/demas/figura-03.webp`,
       descriptions: [
         { text: "Gastronomia", size: "40px", font: "'Yellowtail', cursive" },
         { text: "ARTESANAL", size: "30px", font: "Tahoma" },
@@ -91,21 +91,21 @@ function Slider() {
           </div>
         ))}
         <div className="controls">
-        <button className="butao-movimentos-slide" onClick={handlePrev}>←</button>
-        {isPlaying ? (
-          <button className="butao-controle-slide" onClick={handlePause}>Pause</button>
-        ) : (
-          <button className="butao-controle-slide" onClick={handlePlay}>Play</button>
-        )}
-        <button className="butao-movimentos-slide" onClick={handleNext}>→</button>
-      </div>
+          <button className="butao-movimentos-slide" onClick={handlePrev}>←</button>
+          {isPlaying ? (
+            <button className="butao-controle-slide" onClick={handlePause}>Pause</button>
+          ) : (
+            <button className="butao-controle-slide" onClick={handlePlay}>Play</button>
+          )}
+          <button className="butao-movimentos-slide" onClick={handleNext}>→</button>
+        </div>
       </div>
       {/*
       <div className="sliderDescription">
         <p>{description}</p>
       </div>
        */}
-      
+
     </div>
   );
 };

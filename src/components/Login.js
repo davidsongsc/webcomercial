@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import BaseLogo from "./BaseLogo";
 
 
-function Login() {
+function Login({api}) {
   const history = useNavigate();
 
   const [usuario, setUsername] = useState("");
@@ -14,12 +14,12 @@ function Login() {
   const [autenticado, setAutenticado] = useState(false);
   const [nomeUsuario, setNomeUsuario] = useState("");
   const chave = 'abc123'
+  
 
   function handleLogin(event) {
     event.preventDefault();
     $.ajax({
-      url: "https://dagesico.pythonanywhere.com/login",
-      //url: "http://192.168.0.50:5000/login",
+      url: api(),
       type: "POST",
       dataType: "json",
       contentType: "application/json",
@@ -48,8 +48,8 @@ function Login() {
   useEffect(() => {
     const token = chave;
     console.log(token)
-    //axios.get('http://192.168.0.50:5000/usuario', {
-    axios.get('https://dagesico.pythonanywhere.com/usuario', {
+    
+    axios.get(`${api()}/usuario`, {
       params: {
         nome: 'davidsongsc',
         token: token
@@ -85,7 +85,7 @@ function Login() {
 
   return (
     <div>
-      <BaseLogo />
+      <BaseLogo api={api}/>
       {autenticado === false && (
         <div className='login-grupo-stantment'>
 

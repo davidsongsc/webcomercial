@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import dados from '../configure.json';
+import Slider from './Slide';
 
 
 
-function Header() {
+function Header({ api }) {
     const [isFixed, setIsFixed] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const isMobile = window.matchMedia("(max-width: 960px)").matches;
@@ -105,6 +106,7 @@ function Header() {
                 <h2>{dados.dados.stitulo}</h2>
                 */}
             </header>
+
             <nav className={isFixed ? 'menu fixed' : `menu ${menuOpen ? 'menu-open' : ''}`}>
                 <div className='menu-icon' onClick={handleMenuClick}>
                     <span></span>
@@ -112,7 +114,7 @@ function Header() {
                     <span></span>
                     <span></span>
                 </div>
-                <img className='logo' src='https://dagesico.pythonanywhere.com/static/img/demas/logodemas.webp' alt='' />
+                <img className='logo' src={`${api()}/static/img/demas/logoteste.png`} alt='' />
 
                 <ul className={`menu-items ${menuOpen ? 'menu-items-aberto' : 'menu-items-fechado'}`}>
 
@@ -169,7 +171,7 @@ function Header() {
                 </ul>
 
             </nav>
-
+            <Slider api={api} />
 
 
         </>

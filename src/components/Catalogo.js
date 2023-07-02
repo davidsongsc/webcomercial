@@ -4,7 +4,7 @@ import Api from './Api';
 import Aside from './Aside';
 import dados from '../configure.json';
 
-function Favoritos() {
+function Favoritos(api) {
   const [produtos, setProdutos] = useState([]);
   const [carregando, setCarregando] = useState(true);
 
@@ -24,12 +24,12 @@ function Favoritos() {
   }
   return (
     <>
-      <Aside dados={dados} />
+      <Aside dados={dados}  api={api}/>
       <div className='c-div-cardapio'>
         {/*<h1 className='titulo-cardapio'>Cardapio</h1>*/}
         <div className="cardapio">
           {produtos.map((produto) => (
-            <Produto key={produto.id} produto={produto} />
+            <Produto key={produto.id} produto={produto} api={api} />
           ))}
         </div>
       </div>

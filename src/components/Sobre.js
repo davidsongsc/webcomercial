@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from './Footer';
 import BaseLogo from './BaseLogo';
 
-function Sobre() {
+function Sobre({api}) {
   return (
     <>
     <BaseLogo/>

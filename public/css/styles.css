@@ -32,6 +32,10 @@
     --tablet-max-resolution: 0;
     --mobile-min-resolutiion: 0;
     --mobile-max-resolution: 0;
+    --container-produto: 370px;
+    --width-produtos: var(--container-produto);
+    --width-asride: var(--container-produto);
+    --height-asride: 406px;
 }
 
 /* Reset de estilos */
@@ -936,7 +940,6 @@ article p {
 
 .cardapio-usuario-menu {
     background-size: cover;
-    margin: 0px 18px;
     color: white;
     cursor: pointer;
     float: left;
@@ -944,7 +947,7 @@ article p {
 
 .hh-asride-menu-usuario-main {
     transition: .9s;
-    height: 45px;
+   
 
 }
 
@@ -1005,14 +1008,17 @@ article p {
 }
 
 .as-produtou-usuario {
-    width: 250px;
-    height: 406px;
+    width: var(--width-asride);
+    height: var(--height-asride);
 }
 
 .as-produtou-usuario {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: row;
+    align-items: stretch;
+    padding: 5px;
+    margin: 3px;
 }
 
 .botao-cardapio-grupo {
@@ -1029,21 +1035,31 @@ article p {
 .botao-cardapio-grupo h3 {
     display: none;
 }
-
+.container-produto-imagem{
+    width: 100%;
+}
 .container-produto-imagem img {
-    border-radius: 10px;
-    position: relative;
-    width: 231px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* position: relative; */
+     width: var(--width-produtos); 
     height: 277px;
     display: flex;
     /* margin-top: -15px; */
-    margin-right: -73px;
-    align-items: center;
-    justify-content: center;
-    top: -3px;
+    /* margin-right: -73px; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* top: -3px; */
+
 
 }
-
+.container-nome{
+    height: 123px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
 .avaliacao-produto {
     /* margin: -24px 0 -10px 0; */
     background-image: linear-gradient(45deg, black, rgba(0, 0, 0, 0.507));
@@ -1079,7 +1095,6 @@ article p {
     font-family: 'Roboto Mono', monospace;
     font-weight: 600;
     font-size: 30px;
-    width: 217px;
     text-align: center;
     z-index: 1;
 
@@ -1188,7 +1203,7 @@ h1::before {
     color: goldenrod;
     border-radius: 3px;
     box-shadow: 1px 1px 3px black;
-    display: flex;
+    
     z-index: 1;
     justify-content: space-evenly;
 }
@@ -1234,14 +1249,15 @@ section article {
 
 aside {
     background-color: #f8f8f8;
-    padding: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 0px auto;
-    overflow-y: auto;
+    display: flex;
     width: 100%;
-    position: relative;
     overflow: hidden;
     left: -3px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 aside h2 {
@@ -1308,7 +1324,8 @@ aside .li-msa {
 /* CARDAPIO */
 
 .novidades {
-    max-width: 100%;
+    max-width: 75%;
+    margin: auto;
     /* definindo a largura máxima */
     overflow-x: auto;
     /* permitindo que haja uma barra de rolagem apenas na direção horizontal */
@@ -1547,10 +1564,9 @@ button.order:hover {
 
 .grupo-fix {
     position: fixed;
-    top: 68px;
+    top: 7vh;
     border-radius: 0;
     z-index: 9;
-    height: 28px;
     padding: 0;
     transition: 1.9s;
 }
@@ -1913,7 +1929,7 @@ iframe {
 .slider {
     position: relative;
     width: 100%;
-    height: 611px;
+    height: 388px;
     overflow: hidden;
 }
 
@@ -2212,6 +2228,7 @@ button {
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    margin: 5px;
 }
 
 button:hover {

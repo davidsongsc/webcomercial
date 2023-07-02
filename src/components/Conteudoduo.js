@@ -1,6 +1,6 @@
 import React from "react";
 
-function Conteudoduo() {
+function Conteudoduo(api) {
 
   return (
     <div>

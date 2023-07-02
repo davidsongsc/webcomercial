@@ -7,7 +7,7 @@ function Produto_imagem(nome_produto) {
 }
 */
 
-function Produto({ produto }) {
+function Produto({ produto, api }) {
 
   const [produtoAberto, setPAberto] = useState(false);
   const [width, setWidth] = useState(352);

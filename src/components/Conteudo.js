@@ -1,11 +1,11 @@
 import React from "react";
 
-function Conteudo() {
+function Conteudo({api}) {
 
   return (
     <div>
       <div className="cont-conteudo">
-        <img src="https://dagesico.pythonanywhere.com/static/img/demas/gastronomiaprincipal.png" alt="" />
+        <img src={`${api()}/static/img/demas/gastronomiaprincipal.png`} alt="" />
         <div className="cont-conteudo-texto">
           <h1>Gastronomia & Cinema</h1>
           <p>

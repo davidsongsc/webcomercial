@@ -1,6 +1,6 @@
 import React from "react";
 
-function Conteudo() {
+function Conteudo({api}) {
 
   return (
     <div>

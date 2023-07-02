@@ -1,10 +1,10 @@
 import React from "react";
 import SlidePromo from './SlidePromo';
 
-function Banner() {
+function Banner( api ) {
     return (
         <div style={{ backgroundColor: "black", color: "white", height: '120vh', backgroundSize: 'cover', backgroundImage: 'linear-gradient(black,black, red)' }}>
-            <SlidePromo />
+            <SlidePromo api={api} />
         </div>
     );
 }

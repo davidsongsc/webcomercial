@@ -4,21 +4,9 @@ import ProdutoUsuario from './ProdutoUsuario';
 import ApiGrupo from './ApiGrupo';
 import ApiUsuario from './ApiUsuario';
 
-function JackRibs() {
-    return (
-        <div className="jackribs" style={{ height: '100vh', letterSpacing: '2px', fontFamily: "'Schibsted Grotesk', sans-serif", fontWeight: 400 }}>
-            <h1 style={{ fontSize: '69px', textTransform: 'uppercase', color: '#b82926', textAlign: 'left', height: '125px' }}>Jack Ribs</h1>
-            <div style={{ display: 'flex' }}>
-                <h2 style={{ color: '#93211e', fontSize: '28px', position: 'relative', top: '-52px' }}>OLDSCHOOL</h2>
-                <h3 style={{ fontSize: '49px', position: 'relative', color: '#b82926', top: '-63px', left: '-4px' }}>DEMAS SEASON</h3>
-            </div>
-            <img src="https://dagesico.pythonanywhere.com/static/img/demas/gastronomiaprincipal.png" alt="" />
-        </div>
-    );
-}
 
 
-function MainUsuario({ grupoh }) {
+function MainUsuario({ grupoh, api }) {
     const [produtos, setProdutos] = useState([]);
     const [grupoSelecionado, setGrupoSelecionado] = useState(Number(grupoh));
     const [grupos, setGrupos] = useState([]);
@@ -28,24 +16,36 @@ function MainUsuario({ grupoh }) {
     const [paginaterior, setPaginaAnt] = useState('cardapio/principal');
     const [paginaInicial, setPaginaInicial] = useState('cardapio/principal');
     const [isFixed, setIsFixed] = useState(false);
-
     const navigate = useNavigate();
+    console.log(api);
+    function JackRibs() {
+        return (
+            <div className="jackribs" style={{ height: '100vh', letterSpacing: '2px', fontFamily: "'Schibsted Grotesk', sans-serif", fontWeight: 400 }}>
+                <h1 style={{ fontSize: '69px', textTransform: 'uppercase', color: '#b82926', textAlign: 'left', height: '125px' }}>Jack Ribs</h1>
+                <div style={{ display: 'flex' }}>
+                    <h2 style={{ color: '#93211e', fontSize: '28px', position: 'relative', top: '-52px' }}>OLDSCHOOL</h2>
+                    <h3 style={{ fontSize: '49px', position: 'relative', color: '#b82926', top: '-63px', left: '-4px' }}>DEMAS SEASON</h3>
+                </div>
+                <img src={`${api()}/static/img/demas/gastronomiaprincipal.png`} alt="" />
+            </div>
+        );
+    }
 
     useEffect(() => {
         const handleScroll = () => {
-          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          const grupoFixoEl = document.getElementsByClassName('hh-asride-menu-usuario-main')[0];
-          const alturaMinima = window.innerHeight * 0.4; // 10vh em pixels
-      
-          setIsFixed(grupoFixoEl && scrollTop > alturaMinima && scrollTop > grupoFixoEl.clientHeight);
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const grupoFixoEl = document.getElementsByClassName('hh-asride-menu-usuario-main')[0];
+            const alturaMinima = window.innerHeight * 0.4; // 10vh em pixels
+
+            setIsFixed(grupoFixoEl && scrollTop > alturaMinima && scrollTop > grupoFixoEl.clientHeight);
         };
-      
+
         window.addEventListener('scroll', handleScroll);
-      
+
         return () => {
-          window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         };
-      }, []);
+    }, []);
 
 
     useEffect(() => {
@@ -189,7 +189,7 @@ function MainUsuario({ grupoh }) {
 
                                     <div className={`cardapio-usuario-menu ${isFixed ? 'grupo-titulo-main' : ''}`} onClick={() => handleGrupoClick(grupo.grupocombo)}>
 
-                                        <h2 >{grupo.nome}</h2>
+                                        <button >{grupo.nome}</button>
 
 
                                     </div>
@@ -204,7 +204,7 @@ function MainUsuario({ grupoh }) {
                             {produtos
                                 .filter((produto) => produto.grupo === grupoSelecionado)
                                 .map((produto) => (
-                                    <ProdutoUsuario produto={produto} carregandoCmd={true} />
+                                    <ProdutoUsuario produto={produto} carregandoCmd={true} api={api}/>
                                 ))}
                         </aside>
 

@@ -8,7 +8,8 @@ async function fetchProdutos() {
   const timestamp = cache.timestamp;
   const nome = 'maquina'
   const token = 'abc123'
-
+  const api = 0
+  const ipOperacional = ['http://192.168.0.50:5000', 'https://dagesico.pythonanywhere.com']
 
 
   // Verifica se os dados no cache são válidos
@@ -17,15 +18,14 @@ async function fetchProdutos() {
   }
 
   try {
-    const response = await fetch(`https://dagesico.pythonanywhere.com/produtos?nome=${nome}&token=${token}&version=100a`);
-    //const response = await fetch(`http://192.168.0.50:5000/produtos?nome=${nome}&token=${token}&version=100a`);
+    const response = await fetch(`${ipOperacional[api]}/produtos?nome=${nome}&token=${token}&version=100a`);
     const data = await response.json();
 
     // Atualiza o cache ${produto.nomeproduto}
     localStorage.setItem(CACHE_KEY, JSON.stringify({
       produtos: data.produtos.map(produto => ({
         ...produto,
-        imagem: produto.nomeproduto ? `https://dagesico.pythonanywhere.com/static/img/${produto.nomeproduto}` : null,
+        imagem: produto.nomeproduto ? `${ipOperacional[api]}/static/img/${produto.nomeproduto}` : null,
       })),
       timestamp: Date.now(),
     }));

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-function SlidePromo() {
+
+function SlidePromo({api}) {
   // eslint-disable-next-line
   const [slides, setSlides] = useState([
     {

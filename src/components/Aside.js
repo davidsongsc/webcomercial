@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Aside({ dados }) {
+function Aside({ dados, api }) {
     return (
         <>
             <aside>
