@@ -13,7 +13,7 @@ function Register() {
 
     function handleRegister() {
         $.ajax({
-            url: "http://https://dagesico.pythonanywhere.com/registro",
+            url: "http://192.168.0.50:5000/registro",
             type: "POST",
             data: {
                 usuario: usuario,

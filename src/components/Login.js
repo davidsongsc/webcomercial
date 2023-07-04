@@ -19,7 +19,7 @@ function Login({api}) {
   function handleLogin(event) {
     event.preventDefault();
     $.ajax({
-      url: api(),
+      url: "http://192.168.0.50:5000",
       type: "POST",
       dataType: "json",
       contentType: "application/json",
@@ -49,7 +49,7 @@ function Login({api}) {
     const token = chave;
     console.log(token)
     
-    axios.get(`${api()}/usuario`, {
+    axios.get(`http://192.168.0.50:5000/usuario`, {
       params: {
         nome: 'davidsongsc',
         token: token

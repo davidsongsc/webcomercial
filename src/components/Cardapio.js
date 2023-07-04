@@ -10,10 +10,7 @@ function Cardapio({ api }) {
         <>
             <div >
                 <div className='novidades'>
-                    
                     <MainUsuario grupoh={0} api={api} />
-
-
                     <Conteudo api={api} />
                     <Conteudoduo api={api} />
                     <Reservas api={api} />

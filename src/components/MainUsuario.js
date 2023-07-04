@@ -17,7 +17,8 @@ function MainUsuario({ grupoh, api }) {
     const [paginaInicial, setPaginaInicial] = useState('cardapio/principal');
     const [isFixed, setIsFixed] = useState(false);
     const navigate = useNavigate();
-    console.log(api);
+
+
     function JackRibs() {
         return (
             <div className="jackribs" style={{ height: '100vh', letterSpacing: '2px', fontFamily: "'Schibsted Grotesk', sans-serif", fontWeight: 400 }}>
@@ -88,6 +89,7 @@ function MainUsuario({ grupoh, api }) {
         }
         carregarProdutos();
     }, []);
+
     const handleGrupoClick = (id) => {
         setGrupoSelecionado(id);
         if (id === 1) {
@@ -126,9 +128,11 @@ function MainUsuario({ grupoh, api }) {
 
         }
     };
+
     if (grupoh === 0) {
         console.log("testefun: OK");
-    }
+    };
+
     useEffect(() => {
         async function carregarProdutos() {
             const produtos = await ApiUsuario();
@@ -153,7 +157,6 @@ function MainUsuario({ grupoh, api }) {
         <div>
             {carregando ? (
                 <>
-
                     <div className="menu-usuario-main-principal">
                         <aside className="hh-asride-menu-usuario-main">
                             <div className="cardapio-usuario-menu">
@@ -189,7 +192,7 @@ function MainUsuario({ grupoh, api }) {
 
                                     <div className={`cardapio-usuario-menu ${isFixed ? 'grupo-titulo-main' : ''}`} onClick={() => handleGrupoClick(grupo.grupocombo)}>
 
-                                        <button >{grupo.nome}</button>
+                                        <h1>{grupo.nome}</h1>
 
 
                                     </div>
@@ -198,7 +201,7 @@ function MainUsuario({ grupoh, api }) {
 
                         </aside>
 
-                        <aside className='sh-asride-menu-usuario-main' >
+                        <aside className='sh-asride-menu-usuario-main-produtos' >
                             {location.pathname === '/cardapio/jackribs' && <JackRibs />}
                             {/* Coloque aqui os componentes de outras páginas */}
                             {produtos

@@ -1,10 +1,11 @@
 {
     "dados": {
-        "titulo": "Demas & Divas",
+        "titulo": "B&B Restaurantes",
         "stitulo": "A CASA MAIS HOLLYWOODIANA DO RIO"
     },
     "lojas": {
         "lojaA": {
+            "nomeFantasia": "Demas & Divas",
             "nomeLoja": "Demas & Divas",
             "dados": {
                 "ddd": "21",
