@@ -4,7 +4,7 @@
 /* Definindo as variáveis das cores */
 :root {
     --black: #000000;
-    --white: #ffffff;
+    --white: #fffefe;
     --gray-100: #f8f8f8;
     --gray-200: #e0e0e0;
     --gray-300: #b0b0b0;
@@ -17,6 +17,22 @@
     --corpadrao: #FF7B3E;
     --corpadrao-b: #0084c1;
     --corpadrao-i: #ff7b3e;
+
+    /* HEADER TITULO */
+    --background-header: aliceblue;
+    --transition-deley-header: 1s;
+    --text-shadow-titulo: 1px 1px 11px rgb(39, 36, 36);
+    --hfont-titulo-sletter: 0.5px;
+    --font-titulo: 5rem;
+    --weight-titulo: 100;
+
+    --text-shadow-stitulo: 1px 1px 11px rgb(171, 160, 160);
+    --hfont-stitulo-sletter: 5px;
+    --font-stitulo: 2rem;
+    --weight-stitulo: 100;
+
+
+
     --stroke-width: 0;
     --fill-opacity: 1;
     --stroke: #686909bb;
@@ -74,48 +90,53 @@ body {
 /* Estilo do header */
 header {
     display: flex;
-    justify-content: center;
     align-items: center;
     /* height: 100px; */
-    background-color: rgb(33, 33, 33);
-    flex-direction: column;
-
-    background-position-y: -160px;
-    transition-delay: 1s;
+    background-color: var(--background-header);
+    /* background-position-y: -144px; */
+    transition-delay: var(--transition-deley-header);
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-header svg {
+header .logo-divine svg {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    fill: var(--fill);
+    fill: #00000066;
     fill-opacity: var(--fill-opacity);
     stroke: var(--stroke);
     stroke-opacity: var(--stroke-opacity);
     stroke-width: var(--stroke-width);
-    left: -419px;
+    left: 136px;
     position: relative;
-    top: 171px;
+    top: -173px;
     width: 55px;
-    margin: -87px 0 0 0;
-    transform: scale(1.5);
+    /* margin: 0 auto; */
+    transform: scale(7.5);
+    z-index: 9;
+}
 
+.logo-divine {
+    transform: scale(.5);
 }
 
 header h1 {
-    font-size: 6rem;
+    font-size: var(--font-titulo);
     color: var(--white);
     text-transform: capitalize;
+    letter-spacing: var(--hfont-titulo-sletter);
+    font-weight: var(--weight-titulo);
     font-family: 'Manrope', sans-serif;
-    text-shadow: 1px 1px 11px black;
+    text-shadow: var(--text-shadow-titulo);
 }
 
 header h2 {
     color: var(--gray-300);
-    font-size: 1rem;
-    font-weight: 100;
-    letter-spacing: 5px;
+    font-size: var(--font-stitulo);
+    font-weight: var(--weight-stitulo);
+    letter-spacing: var(--hfont-stitulo-sletter);
     text-transform: capitalize;
     font-family: 'Manrope', sans-serif;
-    text-shadow: 1px 1px 5px white;
+    text-shadow: var(--text-shadow-stitulo);
 }
 
 /* Estilo do nav */
@@ -135,7 +156,7 @@ nav {
 nav.fixed {
     position: fixed;
     background-position-y: -160px;
-    height: 7vh;
+    height: 0vh;
     /* Define a posição como fixa */
     top: 0;
     /* Fixa o elemento no topo da página */
@@ -159,10 +180,10 @@ nav.fixed {
 }
 
 .logoheader {
-    height: 200px;
     width: 220px;
     /* top: 75px; */
     position: relative;
+    z-index: 9;
 }
 
 nav.fixed .logo {
@@ -193,19 +214,51 @@ nav a:hover {
 
 /* estilo padrão do menu */
 .menu-icon {
-    display: inline-block;
+    /* display: inline-block; */
     cursor: pointer;
-    background-color: none;
+    background-color: transparent;
     border: none;
     padding: 5px;
     /* height: 51px; */
     border-radius: 5px;
     width: auto;
-    right: -20px;
-    top: 0px;
+    right: -85%;
+    bottom: -91vh;
     background-color: var(--gray-400);
     z-index: 999;
     position: relative;
+    transition: .9s ease-in-out;
+    animation: aparicaoMenu 2s ease-in-out;
+}
+
+@keyframes aparicaoMenu {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    60% {
+        opacity: 0.3;
+    }
+
+    70% {
+        opacity: 0.5;
+    }
+
+    80% {
+        opacity: 0.7;
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .menu-icon span {
@@ -237,8 +290,20 @@ nav a:hover {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
-    top: 254px;
-    left: -45px;
+    top: 23vh;
+    overflow-y: auto;
+    left: -46px;
+}
+
+.menu-items-normal {
+    width: 100%;
+    position: relative;
+    list-style: none;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    z-index: 99;
+    justify-content: flex-start;
+    top: 0vh;
 }
 
 
@@ -247,9 +312,7 @@ nav a:hover {
     align-items: center;
     justify-content: space-between;
     margin: 5px;
-    padding: 15px;
-
-
+    padding: 8px;
 }
 
 .div-menu-lateral li img {
@@ -259,8 +322,7 @@ nav a:hover {
 .menu-items-aberto {
     transform: translateX(0);
     background-color: var(--gray-400);
-    padding: 45px;
-
+    padding: 13px;
     transition: .5s;
 }
 
@@ -277,12 +339,12 @@ nav a:hover {
 @media screen and (max-width: 930px) {
     nav {
 
-        height: 8vh;
+        height: 0vh;
 
     }
 
     nav.fixed {
-        height: 8vh;
+        height: 0vh;
     }
 
     nav.fixed .logo {
@@ -417,6 +479,14 @@ nav a:hover {
         /* background-color: var(--gray-400); */
         position: relative;
         flex-direction: column;
+
+    }
+
+    .div-menu-lateral-normal {
+        display: flex;
+        /* background-color: var(--gray-400); */
+        position: relative;
+
 
     }
 
@@ -965,9 +1035,13 @@ article p {
     justify-content: center;
     align-items: center;
 }
-.hh-asride-menu-usuario-main h1:active:hover {
-text-decoration: underline red;
+
+.hh-asride-menu-usuario-main h1:hover,
+.hh-asride-menu-usuario-main h1:active {
+    text-decoration: underline rebeccapurple;
+    color: red;
 }
+
 .cardapio-usuario-menu h2 {
     color: var(--black);
 
@@ -1016,7 +1090,7 @@ text-decoration: underline red;
 }
 
 .sh-asride-menu-usuario-main-produtos {
-    width: 100%;
+    width: 97%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1025,7 +1099,7 @@ text-decoration: underline red;
 }
 
 .sh-asride-menu-usuario-main {
-    width: 100%;
+    width: 97%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1072,7 +1146,7 @@ text-decoration: underline red;
     border-top-right-radius: 10px;
     /* position: relative; */
     width: var(--width-produtos);
-    height: 277px;
+    height: 237px;
     display: flex;
     /* margin-top: -15px; */
     /* margin-right: -73px; */
@@ -1084,26 +1158,24 @@ text-decoration: underline red;
 }
 
 .container-nome {
-    height: 123px;
+    height: 147px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     background-color: aliceblue;
 }
 
 .avaliacao-produto {
-    /* margin: -24px 0 -10px 0; */
-    background-image: linear-gradient(45deg, black, rgba(0, 0, 0, 0.507));
+    
     text-align: center;
-    width: 32px;
+    width: 100%;
     position: relative;
     color: gold;
-    display: flex;
     border-radius: 3px;
-    box-shadow: 1px 1px 3px black;
-    justify-content: space-around;
-    top: -193px;
-    left: 182px;
+    z-index: 5;
+    float: right;
+    top: -6vh;
+
 }
 
 .fa,
@@ -1234,9 +1306,9 @@ h1::before {
     color: goldenrod;
     border-radius: 3px;
     box-shadow: 1px 1px 3px black;
-
     z-index: 1;
     justify-content: space-evenly;
+    top: -6vh;
 }
 
 .sifrao {
@@ -1270,6 +1342,7 @@ section h2 {
 ul,
 li {
     list-style: none;
+    padding: 0 11px;
 }
 
 section article {
@@ -1596,7 +1669,7 @@ button.order:hover {
 
 .grupo-fix {
     position: fixed;
-    top: 7vh;
+    top: 0vh;
     border-radius: 0;
     z-index: 9;
     padding: 0;
@@ -1737,7 +1810,8 @@ iframe {
 
 @media screen and (max-width: 930px) {
     .lojas-container {
-        padding: 5px;
+        padding: 20px;
+        margin-top: 67px;
     }
 
     .loja {
@@ -1930,12 +2004,7 @@ iframe {
 }
 
 /* produtos */
-.estrelas {
-    /* width: 51px; */
-    display: flex;
-    flex-direction: column;
-    height: 22.5vh;
-}
+
 
 /* SLIDE */
 .sliderContainer {

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import $ from 'jquery';
-import axios from 'axios';
 import Footer from "./Footer";
 import BaseLogo from "./BaseLogo";
 
 
-function Login({api}) {
+function Login({ api }) {
   const history = useNavigate();
 
   const [usuario, setUsername] = useState("");
@@ -14,12 +13,12 @@ function Login({api}) {
   const [autenticado, setAutenticado] = useState(false);
   const [nomeUsuario, setNomeUsuario] = useState("");
   const chave = 'abc123'
-  
+
 
   function handleLogin(event) {
     event.preventDefault();
     $.ajax({
-      url: "http://192.168.0.50:5000",
+      url: "http://192.168.0.50:5000/login",
       type: "POST",
       dataType: "json",
       contentType: "application/json",
@@ -34,6 +33,7 @@ function Login({api}) {
         sessionStorage.setItem('usuario', JSON.stringify(response.usuario));
         localStorage.setItem('autenticado', true);
         localStorage.setItem('access_token', JSON.stringify(response.access_token));
+        localStorage.setItem('usuario', JSON.stringify(response.usuario));
         setAutenticado(true);
         history('/inicio');
       },
@@ -44,28 +44,33 @@ function Login({api}) {
       }
     });
   }
+  useEffect(() => {
+    // Recupere os dados do localStorage
+    const autenticadoLocalStorage = localStorage.getItem('autenticado');
+    const usuarioLocalStorage = JSON.parse(localStorage.getItem('usuario'));
+
+    // Verifique se o usuário está autenticado
+    if (autenticadoLocalStorage && usuarioLocalStorage) {
+      setAutenticado(true);
+      setNomeUsuario(usuarioLocalStorage.nome);
+    }
+  }, []);
 
   useEffect(() => {
-    const token = chave;
-    console.log(token)
-    
-    axios.get(`http://192.168.0.50:5000/usuario`, {
-      params: {
-        nome: 'davidsongsc',
-        token: token
-      },
-      headers: {
-        Authorization: `Bearer ${token}`
-      }
-    })
-      .then(response => {
-        setNomeUsuario(response.data.nome);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+  const token = chave;
+  console.log(token);
 
-  }, []);
+  fetch(`http://192.168.0.50:5000/usuario?nome=${JSON.parse(localStorage.getItem('usuario'))}&token=${token}`)
+    .then(response => response.json())
+    .then(data => {
+      setNomeUsuario(data.nome);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+
+}, []);
+
 
   function handleLogout() {
     sessionStorage.removeItem('usuario');
@@ -85,7 +90,7 @@ function Login({api}) {
 
   return (
     <div>
-      <BaseLogo api={api}/>
+      <BaseLogo api={api} />
       {autenticado === false && (
         <div className='login-grupo-stantment'>
 

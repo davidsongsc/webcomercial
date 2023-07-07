@@ -48,12 +48,12 @@ function Produto({ produto, api }) {
       <text>R$ </text><h3>{produto.valor.toFixed(2)}</h3>
       </div>
 
-      {/*
+    
           <div className='butao-compra-div-n'>
             <button className='btn-adicionar'>Adicionar</button>
             <button className='btn-remover'>Remover</button>
           </div>
-           */}
+          
 
 
 

@@ -1,39 +1,40 @@
 {
     "dados": {
-        "titulo": "B&B Restaurantes",
-        "stitulo": "A CASA MAIS HOLLYWOODIANA DO RIO"
+        "titulo": "DG Meat Club",
+        "stitulo": "A Casa da Culinaria Carioca"
     },
     "lojas": {
         "lojaA": {
-            "nomeFantasia": "Demas & Divas",
-            "nomeLoja": "Demas & Divas",
+            "nomeFantasia": "Hamburgueria DG",
+            "nomeLoja": "RJDG 01 R. ALBUQUERQUE",
             "dados": {
                 "ddd": "21",
                 "telefone1": "2146-1869",
-                "rua": "rua das rosas 126",
-                "cep": "21330-680",
-                "bairro": "Vila Valqueire",
+                "rua": "rua morais pinheiro sn",
+                "cep": "21640-260",
+                "bairro": "Ricardo de Albuquerque",
                 "cidade": "Rio de Janeiro",
                 "estado": "RJ",
-                "email": "contato@demasedivas.com.br",
+                "email": "contato_loja1@hdg.br",
                 "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1837.956582526019!2d-43.36470456113224!3d-22.879665923634978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9962f48196d16f%3A0x758fdec5f4954c98!2sDemas%20%26%20Divas!5e0!3m2!1spt-BR!2sbr!4v1681397573299!5m2!1spt-BR!2sbr"
             }
         },
         "lojaB": {
-            "nomeLoja": "Demas & Divas",
+            "nomeFantasia": "Hamburgueria DG",
+            "nomeLoja": "RJDG 02 GUADALUPE",
             "dados": {
                 "ddd": "21",
                 "telefone1": "2145-8541",
-                "rua": "rua do governo 789",
-                "cep": "21330-680",
-                "bairro": "Realengo",
+                "rua": "rua marcos de marcedo sn",
+                "cep": "21360-000",
+                "bairro": "Guadalupe",
                 "cidade": "Rio de Janeiro",
                 "estado": "RJ",
-                "email": "contato@demasedivas.com.br",
+                "email": "contato_loja2@hdg.br",
                 "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.0139292999884!2d-43.43420792372359!3d-22.875943836771388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9961d25d9422ff%3A0x48aee43f9186c5d1!2zUHJhw6dhIGRvIENhbmjDo28!5e0!3m2!1spt-BR!2sbr!4v1681397899598!5m2!1spt-BR!2sbr"
             }
         }
     },
     "ip": "192.168.0.50",
-    "nome_social_loja": "Demas & Divas"
+    "nome_social_loja": "Hamburgueria DG"
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Catalogo from './components/Catalogo';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
@@ -15,7 +15,8 @@ import CardapioUsuario from './components/CardapioUsuario';
 import Api from './components/Api/ModoOperacional';
 
 function App() {
-
+  
+  
   return (
     <BrowserRouter>
       <Header dados={dados} api={Api} />
