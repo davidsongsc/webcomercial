@@ -13,12 +13,14 @@ import Inicio from './components/inicio';
 //import Banner from './components/Banner';
 import CardapioUsuario from './components/CardapioUsuario';
 import Api from './components/Api/ModoOperacional';
+import SocketPage from './components/Api/Socket';
 
 function App() {
-  
+  const [autenticado, setAutenticado] = useState(false);
   
   return (
     <BrowserRouter>
+   
       <Header dados={dados} api={Api} />
       <Routes>
         <Route path="/catalogo" element={<Catalogo api={Api} />} />

@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import $ from 'jquery';
 import Footer from "./Footer";
 import BaseLogo from "./BaseLogo";
+import Painel from "../perfil/Painel";
+import SocketPage from "./Api/Socket";
 
 
 function Login({ api }) {
@@ -11,7 +13,6 @@ function Login({ api }) {
   const [usuario, setUsername] = useState("");
   const [senha, setPassword] = useState("");
   const [autenticado, setAutenticado] = useState(false);
-  const [nomeUsuario, setNomeUsuario] = useState("");
   const chave = 'abc123'
 
 
@@ -30,10 +31,13 @@ function Login({ api }) {
       // Armazenar o token de acesso no cookie ou no armazenamento local
 
       success: function (response) {
-        sessionStorage.setItem('usuario', JSON.stringify(response.usuario));
+        sessionStorage.setItem('usuario', response.usuario.toString());
+        sessionStorage.setItem('pedidoIdUsuario', JSON.stringify(response.pedido));
+        sessionStorage.setItem('autenticado', true);
         localStorage.setItem('autenticado', true);
         localStorage.setItem('access_token', JSON.stringify(response.access_token));
         localStorage.setItem('usuario', JSON.stringify(response.usuario));
+        localStorage.setItem('pedidoIdUsuario', parseInt(response.pedido).toString());
         setAutenticado(true);
         history('/inicio');
       },
@@ -52,45 +56,40 @@ function Login({ api }) {
     // Verifique se o usuário está autenticado
     if (autenticadoLocalStorage && usuarioLocalStorage) {
       setAutenticado(true);
-      setNomeUsuario(usuarioLocalStorage.nome);
+
     }
   }, []);
 
   useEffect(() => {
-  const token = chave;
-  console.log(token);
+    const token = chave;
+    console.log(token);
 
-  fetch(`http://192.168.0.50:5000/usuario?nome=${JSON.parse(localStorage.getItem('usuario'))}&token=${token}`)
-    .then(response => response.json())
-    .then(data => {
-      setNomeUsuario(data.nome);
-    })
-    .catch(error => {
-      console.log(error);
-    });
+    fetch(`http://192.168.0.50:5000/usuario?nome=${JSON.parse(localStorage.getItem('usuario'))}&token=${token}`)
+      .then(response => response.json())
+      .then(data => {
+        sessionStorage.setItem('usuario', data.nome);
+      })
+      .catch(error => {
+        console.log(error);
+      });
 
-}, []);
+  }, []);
 
 
   function handleLogout() {
     sessionStorage.removeItem('usuario');
     localStorage.removeItem('autenticado');
     setAutenticado(false);
-    setNomeUsuario("");
+
   }
 
-  if (autenticado) {
-    return (
-      <div>
-        <p>{nomeUsuario} já está autenticado!</p>
-        <button onClick={handleLogout}>Logout</button>
-      </div>
-    );
-  }
+
+
 
   return (
     <div>
       <BaseLogo api={api} />
+      <SocketPage autenticado={autenticado}/>
       {autenticado === false && (
         <div className='login-grupo-stantment'>
 
@@ -124,6 +123,10 @@ function Login({ api }) {
           </div>
         </div>
       )}
+      <Painel
+        autenticado={autenticado}
+        handleLogout={handleLogout}
+      />
       <Footer />
 
     </div>

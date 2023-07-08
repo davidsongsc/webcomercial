@@ -17,8 +17,11 @@ function Logout() {
 
   function handleLogout() {
     sessionStorage.removeItem('usuario');
+    sessionStorage.removeItem('pedidoIdUsuario');
+    sessionStorage.removeItem('autenticado');
     localStorage.removeItem('autenticado');
     setAutenticado(false);
+    
   }
 
   if (autenticado) {
