@@ -4,13 +4,12 @@ import React, { useState, useEffect } from 'react';
 const socket = io('http://192.168.0.50:8000');
 
 const SocketPage = () => {
-
+    const [cmd, setCmd] = useState();
     useEffect(() => {
 
         socket.on('connect', () => {
             console.log('Conectado ao servidor');
         });
-
 
     }, []);
 
@@ -20,31 +19,40 @@ const SocketPage = () => {
 
     useEffect(() => {
         fetchComandas();
-        console.log(sessionStorage.getItem('pedidoIdUsuario'));
+        let comanda;
+        let pedidoId;
 
+        console.log(sessionStorage.getItem('pedidoIdUsuario'));
+        pedidoId = sessionStorage.getItem('pedidoIdUsuario');
+        const idUser = sessionStorage.getItem('id');
         socket.on('comandas', (data) => {
 
-            const comanda = data.find((c) => c.chave === parseInt(sessionStorage.getItem('pedidoIdUsuario')));
-            console.log(sessionStorage.getItem('autenticado'));
+            comanda = data.find((c) => c.cliente === parseInt(idUser));
+            setCmd(data.find((c) => c.cliente === parseInt(idUser)));
         });
-
-        if (sessionStorage.getItem('autenticado')) {
+        console.log(idUser);
+        if (cmd != undefined) {
             const data = {
-                id: parseInt(sessionStorage.getItem('pedidoIdUsuario')),
+                id: parseInt(pedidoId),
                 status: 1,
                 operacao: 4,
             };
             socket.emit('modificar_status_comanda', data);
+
+
         } else {
             const data = {
-                id: parseInt(sessionStorage.getItem('pedidoIdUsuario')),
-                status: 3,
+                id: 401,
+                status: 1,
+                atendente: 'delivery',
                 operacao: 4,
+                cliente: idUser
             };
-            socket.emit('modificar_status_comanda', data);
+
+            socket.emit('modificar_status_comanda_nova', data);
+
+
         }
-
-
 
 
         socket.on('disconnect', () => {
@@ -60,7 +68,7 @@ const SocketPage = () => {
             socket.off('disconnect');
             socket.off('connect');
         };
-    }, [sessionStorage.getItem('autenticado')]);
+    }, []);
 
     const handleEmitStatus = (idMesa,) => {
 

@@ -16,10 +16,14 @@ function Logout() {
   }, []);
 
   function handleLogout() {
-    sessionStorage.removeItem('usuario');
-    sessionStorage.removeItem('pedidoIdUsuario');
-    sessionStorage.removeItem('autenticado');
-    localStorage.removeItem('autenticado');
+ // Limpa o cache da sessão
+ window.sessionStorage.clear();
+
+ // Limpa o cache do armazenamento local
+ window.localStorage.clear();
+
+ // Recarrega a página para aplicar as alterações
+ window.location.reload();
     setAutenticado(false);
     
   }

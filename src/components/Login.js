@@ -32,6 +32,7 @@ function Login({ api }) {
 
       success: function (response) {
         sessionStorage.setItem('usuario', response.usuario.toString());
+        sessionStorage.setItem('id', JSON.stringify(response.id));
         sessionStorage.setItem('pedidoIdUsuario', JSON.stringify(response.pedido));
         sessionStorage.setItem('autenticado', true);
         localStorage.setItem('autenticado', true);
@@ -39,7 +40,8 @@ function Login({ api }) {
         localStorage.setItem('usuario', JSON.stringify(response.usuario));
         localStorage.setItem('pedidoIdUsuario', parseInt(response.pedido).toString());
         setAutenticado(true);
-        history('/inicio');
+        console.log(response.id);
+        history('/fila');
       },
       error: function (error) {
         console.log(error);
@@ -77,9 +79,17 @@ function Login({ api }) {
 
 
   function handleLogout() {
-    sessionStorage.removeItem('usuario');
-    localStorage.removeItem('autenticado');
+    // Limpa o cache da sessão
+    window.sessionStorage.clear();
+
+    // Limpa o cache do armazenamento local
+    window.localStorage.clear();
+
+    // Recarrega a página para aplicar as alterações
+    window.location.reload();
     setAutenticado(false);
+
+
 
   }
 
@@ -89,7 +99,7 @@ function Login({ api }) {
   return (
     <div>
       <BaseLogo api={api} />
-      <SocketPage autenticado={autenticado}/>
+      <SocketPage />
       {autenticado === false && (
         <div className='login-grupo-stantment'>
 
