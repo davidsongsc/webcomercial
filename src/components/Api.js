@@ -8,7 +8,7 @@ async function fetchProdutos() {
   const timestamp = cache.timestamp;
   const nome = 'maquina'
   const token = 'abc123'
-  const api = 0
+  const api = 1
   const ipOperacional = ['http://192.168.0.50:5000', 'https://dagesico.pythonanywhere.com']
   // Verifica se os dados no cache são válidos
   if (cache.produtos && timestamp && Date.now() - timestamp < CACHE_TTL) {

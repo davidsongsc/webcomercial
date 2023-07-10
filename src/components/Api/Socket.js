@@ -1,7 +1,7 @@
 import io from 'socket.io-client';
 import React, { useState, useEffect } from 'react';
 
-const socket = io('http://192.168.0.50:8000');
+const socket = io('https://dagesico.pythonanywhere.com:8010');
 
 const SocketPage = () => {
     const [cmd, setCmd] = useState();

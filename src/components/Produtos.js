@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 
 
-/*
-function Produto_imagem(nome_produto) {
-  return `http://${dados.ip}:5000/static/img/produtos/${nome_produto}.png`;;
-}
-*/
-
 function Produto({ produto, api }) {
 
   const [produtoAberto, setPAberto] = useState(false);

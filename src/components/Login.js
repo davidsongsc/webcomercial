@@ -19,7 +19,7 @@ function Login({ api }) {
   function handleLogin(event) {
     event.preventDefault();
     $.ajax({
-      url: "http://192.168.0.50:5000/login",
+      url: "https://dagesico.pythonanywhere.com/login",
       type: "POST",
       dataType: "json",
       contentType: "application/json",
@@ -66,7 +66,7 @@ function Login({ api }) {
     const token = chave;
     console.log(token);
 
-    fetch(`http://192.168.0.50:5000/usuario?nome=${JSON.parse(localStorage.getItem('usuario'))}&token=${token}`)
+    fetch(`https://dagesico.pythonanywhere.com/usuario?nome=${JSON.parse(localStorage.getItem('usuario'))}&token=${token}`)
       .then(response => response.json())
       .then(data => {
         sessionStorage.setItem('usuario', data.nome);
