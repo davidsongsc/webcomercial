@@ -1,71 +1,65 @@
-# Projeto Web Delivery
+# **⌚ Relogio Digital**
+<div align="center" >
+Colaboração em desenvolvimento parceiro.
 
-Este app e criado com [Create React App](https://github.com/facebook/create-react-app).
+Projeto de um relógio digital em que se influencia no background dependente do horário atual.
+</div>
+</br>
 
-##  Scripts
+## 📜 Status
+> Status: in development aid
 
-Na pasta do projeto, inicie o terminal:
 
-### `npm start`
+## 💻 Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://seuip:3000](http://seuip:3000) to view it in your browser.
+> * Visualização nas horas, minutos e segundos
+> * background modular dependente das horas atual
+> * Responsividade 📲
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+###  **🔗 Links e autorias**
 
-### `npm test`
+</br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<div align="center">
 
-### `npm run build`
+> <a href="https://github.com/filipelimavaz"><b> @filipelimavaz </b></a>
+> e
+> <a href="https://github.com/IsaacGSS"><b> @IsaacGSS </b></a> :
+> </br>
+> <q>Obrigado a todos os artistas que contribuíram e pode nos ajudar neste projeto de estudos.</q>
+>
+></br>
+><a href="https://github.com/IsaacGSS/relogio_digital/blob/main/md/linkEAutoria.md" ><b>Link e Autoria.md<b></a>
+>
+></div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+</br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> <div align="center">
+> 
+> ##  <a href="https://github.com/IsaacGSS/relogio_digital/blob/main/md/responsividade.md">
+>    📲 Responsividade.md
+>   </a>  
+> </div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 👀 Preview
+ 
+> <img src="md/img/day.jpeg" style="width: 48%;">
+> <img src="md/img/morning.jpeg" style="width: 51%;">
+> <img src="md/img/sunset.jpeg" style="width: 48%;">
+> <img src="md/img/night.jpeg" style="width: 51%;">
 
-### `npm run eject`
+</br>
+<div align="center">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> <img src="md/img/photo_5139115304276830914_y.jpeg" style="width: 35%;">
+<!-- > !Add mais fotos da version mobile do web site!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> <img src="md/img/morning.jpeg" style="width: 51%;">
+> <img src="md/img/sunset.jpeg" style="width: 48%;">
+> <img src="md/img/night.jpeg" style="width: 51%;"> -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+</div>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# demasedivasSite
+> ### Gif
+> <img src="md/vid/2022-08-02-16-05-59.gif">
