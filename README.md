@@ -1,4 +1,4 @@
-# **📱 WebPage Restaurante Digital.**
+# **📱 WebPage Restaurante Digital**
 <div align="center" >
 Desenvolvimento de projeto react para visualização de cardapio.
 </div>
