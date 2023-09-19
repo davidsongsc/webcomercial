@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import Main from './Main';
+import Main from '../usuario/Main';
 
 
 function CardapioDetail(api) {

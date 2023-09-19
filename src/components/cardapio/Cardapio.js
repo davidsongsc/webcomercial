@@ -1,9 +1,9 @@
 import React from 'react';
-import Slide from './Slide';
+import Slide from '../web/Slide';
 import Conteudo from './Conteudo';
-import MainUsuario from './MainUsuario';
+import MainUsuario from '../usuario/MainUsuario';
 import Conteudoduo from './Conteudoduo';
-import Reservas from './Reservas';
+import Reservas from '../usuario/Reservas';
 
 function Cardapio({ api }) {
     return (

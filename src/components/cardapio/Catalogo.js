@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Produto from './Produtos';
-import Api from './Api';
-import Aside from './Aside';
-import dados from '../configure.json';
+import Produto from '../produtos/Produtos';
+import Api from '../Api/Api';
+import Aside from '../Aside';
+
 
 function Favoritos(api) {
   const [produtos, setProdutos] = useState([]);

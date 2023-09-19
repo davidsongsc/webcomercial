@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import Autenticado from './Autenticado';
+import Autenticado from '../Api/Autenticado';
 function AvaliacaoProduto({ nota }) {
   
   const estrelas = [];

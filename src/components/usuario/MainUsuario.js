@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import ProdutoUsuario from './ProdutoUsuario';
-import ApiGrupo from './ApiGrupo';
-import ApiUsuario from './ApiUsuario';
+import ProdutoUsuario from '../produtos/ProdutoUsuario';
+import ApiGrupo from '../Api/ApiGrupo';
+import ApiUsuario from '../Api/ApiUsuario';
 
 
 

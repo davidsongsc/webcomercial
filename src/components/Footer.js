@@ -9,11 +9,11 @@ function Footer() {
                 <section>
                     <aside>
                         <h1>Endereço</h1>
-                        <text>Rua das Rosas 126 - Vila Valqueire - RJ</text>
+                        <text>Rua das Olivas 455 - Parque das Rosas - RJ</text>
                     </aside>
                     <aside>
                         <h1>Contato</h1>
-                        <text><a href="tel:+552121461869">(21) 2146-1869</a> - Valqueire</text>
+                        <text><a href="tel:+552121212169">(21) 2146-1869</a> - Valqueire</text>
                     </aside>
                     <aside>
                         <h1>Midias Sociais</h1>

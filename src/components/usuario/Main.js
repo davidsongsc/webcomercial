@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import dados from '../configure.json';
-import Produto from './Produtos';
-import ApiGrupo from './ApiGrupo';
-import Api from './Api';
+
+import Produto from '../produtos/Produtos';
+import ApiGrupo from '../Api/ApiGrupo';
+import Api from '../Api/Api';
 
 
 function Main({ grupoh, api }) {

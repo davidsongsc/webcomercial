@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import Slider from './Slide';
+import Slider from './web/Slide';
 
 function Header({ api }) {
     const [isFixed, setIsFixed] = useState(false);
@@ -99,9 +99,9 @@ function Header({ api }) {
 
     return (
         <>
-            <Slider api={api}/>
+            <Slider api={api} />
             <header>
-                
+
             </header>
 
             <nav className={isFixed ? 'menu fixed' : `menu ${menuOpen ? 'menu-open' : ''}`}>
@@ -163,7 +163,7 @@ function Header({ api }) {
                                 </li>
 
 
-                             
+
                             </div>
                         </ul>
                         : <ul className={`menu-items-normal menu-items-aberto`} style={{ display: isFixed ? 'none' : 'block' }}>
@@ -187,6 +187,16 @@ function Header({ api }) {
 
                                         <p>Cardápio</p></a>
                                 </li>
+                                {usuarioCorrente != null ? (
+                                    <li>
+
+                                        <a href='/carrinho' >
+
+                                            <p>Pedido  <FontAwesomeIcon icon={faShoppingCart} size="16" color="white" /> </p></a>
+                                    </li>) : (
+                                    <></>
+
+                                )}
                                 <li>
 
                                     <a href='/loja' onClick={handleLojaClick}>
@@ -211,16 +221,7 @@ function Header({ api }) {
 
                                         <p>Reservas</p></a>
                                 </li>
-                                {usuarioCorrente != null ? (
-                                           <li>
 
-                                           <a href='/carrinho' >
-       
-                                               <p>Pedido  <FontAwesomeIcon icon={faShoppingCart} size="16" color="white" /> </p></a>
-                                       </li>) : (
-                                        <></>
-                                       
-                                )}
                             </div>
                         </ul>
                 }

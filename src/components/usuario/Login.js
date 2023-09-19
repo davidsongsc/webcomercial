@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import $ from 'jquery';
-import Footer from "./Footer";
-import BaseLogo from "./BaseLogo";
-import Painel from "../perfil/Painel";
+import Footer from "../Footer";
+import BaseLogo from "../BaseLogo";
+import Painel from "../usuario/Painel";
 
 
 

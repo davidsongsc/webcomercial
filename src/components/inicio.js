@@ -1,5 +1,5 @@
 import React from "react";
-import Cardapio from "./Cardapio";
+import Cardapio from "./cardapio/Cardapio";
 import Footer from "./Footer";
 import BaseLogo from "./BaseLogo";
 

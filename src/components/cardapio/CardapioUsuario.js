@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
-import MainUsuario from './MainUsuario';
-import BaseLogo from './BaseLogo';
-import Footer from './Footer';
+import MainUsuario from '../usuario/MainUsuario';
+import BaseLogo from '../BaseLogo';
+import Footer from '../Footer';
 
 
 function CardapioDetail({api}) {
