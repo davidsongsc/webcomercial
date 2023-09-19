@@ -40,7 +40,7 @@ Desenvolvimento de projeto react para site de restaurante. Este projeto permite 
 
 ## 📜 Notas
 > * Status: em desenvolvimento
-> * Versão: 1.00A
+> * Versão: 1.10A
 > * Este projeto roda em parapelo com `Projeto Legion`
 
 ### :memo: Funcionalidades: 
