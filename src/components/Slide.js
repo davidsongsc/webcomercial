@@ -7,7 +7,7 @@ function Slider({ api }) {
       image: `${api()}/static/img/demas/figura-01.webp`,
       descriptions: [
         { text: "Combinados", size: "40px", font: "'Yellowtail', cursive" },
-        { text: "", size: "30px", font: "Tahoma" },
+        { text: "", size: "20px", font: "Tahoma" },
         { text: "Combinados são entradas que misturam costelinhas de porco, coxinhas de frango temperadas e empanadas, batata fritas, tirinhas de mignon, onion rings empanadas na cerveja! Basta escolher qual combo lhe agrada mais!", size: "15px", font: "Verdana" },
       ],
     },
@@ -15,7 +15,7 @@ function Slider({ api }) {
       image: `${api()}/static/img/demas/figura-02.webp`,
       descriptions: [
         { text: "Gastronomia", size: "40px", font: "'Yellowtail', cursive" },
-        { text: "ARTESANAL", size: "30px", font: "Tahoma" },
+        { text: "ARTESANAL", size: "20px", font: "Tahoma" },
         { text: "Todos os molhos são desenvolvidos e produzidos pela cozinha do Demas & Divas,  os ingredientes são todos in natura, não usamos química nem ingredientes processados em nossos pratos e molhos!", size: "15px", font: "Verdana" },
       ],
     },
@@ -23,7 +23,7 @@ function Slider({ api }) {
       image: `${api()}/static/img/demas/figura-03.webp`,
       descriptions: [
         { text: "Gastronomia", size: "40px", font: "'Yellowtail', cursive" },
-        { text: "ARTESANAL", size: "30px", font: "Tahoma" },
+        { text: "ARTESANAL", size: "20px", font: "Tahoma" },
         { text: "Todos os molhos são desenvolvidos e produzidos pela cozinha do Demas & Divas,  os ingredientes são todos in natura, não usamos química nem ingredientes processados em nossos pratos e molhos!", size: "15px", font: "Verdana" },
       ],
     },

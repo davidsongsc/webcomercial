@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import dados from '../configure.json';
-
-
-
+import { useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import Slider from './Slide';
 
 function Header({ api }) {
     const [isFixed, setIsFixed] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-    const isMobile = window.matchMedia("(max-width: 960px)").matches;
-    const [palavra1, palavra2] = dados.dados.titulo.split(' & ');
-
-
+    const { usuarioCorrente } = useSelector((reducer) => reducer.user);
+    console.log(usuarioCorrente);
     const navigate = useNavigate();
 
     const handleMenuClick = () => {
@@ -101,22 +99,9 @@ function Header({ api }) {
 
     return (
         <>
-
+            <Slider api={api}/>
             <header>
-                <div className='logo-divine'>
-                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0 353.684 336.37" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 353.684 336.37" role="presentation" aria-hidden="true">
-                        <g>
-                            <path d="M176.842 0l54.634 110.714 122.208 17.77-88.432 86.194 20.877 121.692-109.287-57.449L67.535 336.37l20.876-121.692L0 128.484l122.189-17.77L176.842 0z"></path>
-                        </g>
-                    </svg>
-                    <img className='logoheader' src='http://192.168.0.50:5000/static/img/demas/logoteste.png' alt='' />
-
-                </div>
-
-                <div className='logo-aparel'>
-                    <h1>{palavra1}  {palavra2}</h1>
-                    <h2>{dados.dados.stitulo}</h2>
-                </div>
+                
             </header>
 
             <nav className={isFixed ? 'menu fixed' : `menu ${menuOpen ? 'menu-open' : ''}`}>
@@ -178,6 +163,7 @@ function Header({ api }) {
                                 </li>
 
 
+                             
                             </div>
                         </ul>
                         : <ul className={`menu-items-normal menu-items-aberto`} style={{ display: isFixed ? 'none' : 'block' }}>
@@ -225,7 +211,16 @@ function Header({ api }) {
 
                                         <p>Reservas</p></a>
                                 </li>
+                                {usuarioCorrente != null ? (
+                                           <li>
 
+                                           <a href='/carrinho' >
+       
+                                               <p>Pedido  <FontAwesomeIcon icon={faShoppingCart} size="16" color="white" /> </p></a>
+                                       </li>) : (
+                                        <></>
+                                       
+                                )}
                             </div>
                         </ul>
                 }

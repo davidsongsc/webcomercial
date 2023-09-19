@@ -4,7 +4,7 @@ import $ from 'jquery';
 import Footer from "./Footer";
 import BaseLogo from "./BaseLogo";
 import Painel from "../perfil/Painel";
-import SocketPage from "./Api/Socket";
+
 
 
 function Login({ api }) {
@@ -93,13 +93,10 @@ function Login({ api }) {
 
   }
 
-
-
-
   return (
     <div>
       <BaseLogo api={api} />
-      <SocketPage />
+      
       {autenticado === false && (
         <div className='login-grupo-stantment'>
 

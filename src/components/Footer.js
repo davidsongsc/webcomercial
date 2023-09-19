@@ -5,7 +5,7 @@ function Footer() {
     return (
         <>
             <footer>
-                <img className='logoFooter' src='https://dagesico.pythonanywhere.com/static/img/demas/logodemas.webp' alt='' />
+                <img className='logoFooter' src='https://dagesico.pythonanywhere.com/static/img/demas/icone.png' alt='' />
                 <section>
                     <aside>
                         <h1>Endereço</h1>
