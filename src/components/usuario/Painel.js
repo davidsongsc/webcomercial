@@ -6,7 +6,9 @@ const Painel = ({ autenticado,
         return (
             <div style={{
                 display: 'flex',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                position: 'relative',
+                top: '130px'
             }}>
                 <table>
                     <thead>

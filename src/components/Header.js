@@ -23,13 +23,7 @@ function Header({ api }) {
         }
  */}
     };
-    {/*
-    const handleCardapiolClick = (event) => {
-        event.preventDefault();
-        navigate('/principal/cardapio', { replace: true });
-        handleMenuClickFechar();
-    };
-     */}
+    
     const handleCardapioUsuariolClick = (event) => {
         event.preventDefault();
         navigate('/cardapio/entradas', { replace: true });
@@ -46,22 +40,7 @@ function Header({ api }) {
         handleMenuClickFechar();
         navigate('/sobre', { replace: true });
     };
-    /*
-        const handlePrincipalClick = (event) => {
-            event.preventDefault();
-            navigate('/demas/principal', { replace: true });
-        };
-    
-        const handleExecutivoClick = (event) => {
-            event.preventDefault();
-            navigate('/almoco/executivo', { replace: true });
-        };
-    
-        const handleSobremesaClick = (event) => {
-            event.preventDefault();
-            navigate('/sobremesa/sobremesa', { replace: true });
-        };
-    */
+   
     const handleLojaClick = (event) => {
         event.preventDefault();
         handleMenuClickFechar();
@@ -72,11 +51,7 @@ function Header({ api }) {
         handleMenuClickFechar();
         navigate('/fila');
     };
-    const handleSair = (event) => {
-        event.preventDefault();
-        handleMenuClickFechar();
-        navigate('/logout');
-    };
+
     const handleReservasClick = (event) => {
         event.preventDefault();
         handleMenuClickFechar();
@@ -118,57 +93,57 @@ function Header({ api }) {
 
                         <ul className={`menu-items ${menuOpen ? 'menu-items-aberto' : 'menu-items-fechado'}`}>
 
-                            <div className='div-menu-lateral'>
-                                <li>
 
-                                    <a href="/inicio" onClick={handleInicioClick}>
+                            <li>
 
-                                        <p>Home</p></a>
-                                </li>
-                                {/*
+                                <a href="/inicio" onClick={handleInicioClick}>
+
+                                    <p>Home</p></a>
+                            </li>
+                            {/*
                 <li>
                     <a href="/cardapio" onClick={handleCardapiolClick}>
                         <img src='https://cdn-icons-png.flaticon.com/512/3428/3428655.png' alt='cardapio' />
                         <p>GCardápio</p></a>
                 </li>
                  */}
-                                <li>
-                                    <a href="/cardapio" onClick={handleCardapioUsuariolClick}>
+                            <li>
+                                <a href="/cardapio" onClick={handleCardapioUsuariolClick}>
 
-                                        <p>Cardápio</p></a>
-                                </li>
-                                <li>
+                                    <p>Cardápio</p></a>
+                            </li>
+                            <li>
 
-                                    <a href='/loja' onClick={handleLojaClick}>
+                                <a href='/loja' onClick={handleLojaClick}>
 
-                                        <p>Loja</p></a>
-                                </li>
-                                <li>
+                                    <p>Loja</p></a>
+                            </li>
+                            <li>
 
-                                    <a href='/quemsomos' onClick={handleQuemSomosClick}>
+                                <a href='/quemsomos' onClick={handleQuemSomosClick}>
 
-                                        <p>quemsomos</p></a>
-                                </li>
-                                <li>
+                                    <p>quemsomos</p></a>
+                            </li>
+                            <li>
 
-                                    <a href='/fila' onClick={handleFilaClick}>
+                                <a href='/fila' onClick={handleFilaClick}>
 
-                                        <p>Fila de Espera</p></a>
-                                </li>
-                                <li>
+                                    <p>Fila de Espera</p></a>
+                            </li>
+                            <li>
 
-                                    <a href='/reserva' onClick={handleReservasClick}>
+                                <a href='/reserva' onClick={handleReservasClick}>
 
-                                        <p>Reservas</p></a>
-                                </li>
+                                    <p>Reservas</p></a>
+                            </li>
 
 
 
-                            </div>
+
                         </ul>
-                        : <ul className={`menu-items-normal menu-items-aberto`} style={{ display: isFixed ? 'none' : 'block' }}>
+                        : <ul className={`menu-items-normal menu-items-aberto`} style={{ display: isFixed ? 'none' : 'flex' }}>
 
-                            <div className='div-menu-lateral-normal'>
+                          
                                 <li>
 
                                     <a href="/inicio" onClick={handleInicioClick}>
@@ -222,7 +197,7 @@ function Header({ api }) {
                                         <p>Reservas</p></a>
                                 </li>
 
-                            </div>
+                        
                         </ul>
                 }
 

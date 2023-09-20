@@ -31,8 +31,6 @@
     --font-stitulo: 2rem;
     --weight-stitulo: 100;
 
-
-
     --stroke-width: 0;
     --fill-opacity: 1;
     --stroke: #686909bb;
@@ -43,15 +41,16 @@
     --fundo-cinza: #8c8c8c;
     --font-text: 'Montserrat', sans-serif;
     width: auto;
+
     --pc-min-resolution: 1065px;
     --tablet-min-resolution: 0;
     --tablet-max-resolution: 0;
     --mobile-min-resolutiion: 0;
     --mobile-max-resolution: 0;
-    --container-produto: 370px;
+    --container-produto: 470px;
     --width-produtos: var(--container-produto);
     --width-asride: var(--container-produto);
-    --height-asride: 406px;
+    --height-asride: 600px;
 }
 
 /* Reset de estilos */
@@ -140,12 +139,12 @@ header h2 {
 nav {
     display: flex;
     justify-content: space-evenly;
-    height: 7vh;
+    height: 1vh;
     background-color: var(--black);
     position: relative;
     transition: all .8s ease-in-out;
     align-items: center;
-
+    top: 16vh;
 
 }
 
@@ -203,11 +202,15 @@ nav a {
     text-shadow: 1px 1px 1px black;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
+    text-decoration: underline transparent 2px;
+    transition: 2s ease-in-out;
 }
-
 nav a:hover {
     color: var(--blue);
+    text-decoration: underline red 5px;
+
 }
+
 
 /* estilo padrão do menu */
 .menu-icon {
@@ -321,7 +324,6 @@ nav a:hover {
     background-color: var(--gray-400);
     padding: 13px;
     transition: .5s;
-    margin: 0 0 16px 0;
 }
 
 .menu-items-fechado {
@@ -338,7 +340,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-top: 67px;
 }
 
 .principal-demas .imagem-principal {
@@ -471,17 +473,16 @@ nav a:hover {
 
 .conteudo-principal {
     width: 100%;
-    margin: -412px 0 0 0;
     z-index: 1;
 }
 
 .conteudo-principal-demas {
     background-color: white;
     position: relative;
-    top: -23px;
     z-index: 999;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
+    top: 12vh;
 }
 
 /* MAIN */
@@ -520,8 +521,7 @@ main {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 55px;
-
+    top: 12vh;
 }
 
 .menu-usuario-main-principal {
@@ -860,10 +860,10 @@ article p {
 }
 
 .sh-asride-menu-usuario-main-produtos {
-    width: 97%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
 }
@@ -916,7 +916,7 @@ article p {
     border-top-right-radius: 10px;
     /* position: relative; */
     width: var(--width-produtos);
-    height: 237px;
+    height: 478px;
     display: flex;
     /* margin-top: -15px; */
     /* margin-right: -73px; */
@@ -928,11 +928,12 @@ article p {
 }
 
 .container-nome {
-    height: 147px;
+    height: 89px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     background-color: aliceblue;
+
 }
 
 .avaliacao-produto {
@@ -964,10 +965,11 @@ article p {
 
 .container-produto-detalhes h1 {
     text-transform: capitalize;
-    text-shadow: 1px 1px 1px burlywood;
+    text-shadow: 1px 1px 1px black;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 600;
-    font-size: 30px;
+    font-weight: 300;
+    /* display: flex; */
+    font-size: 21px;
     text-align: center;
     z-index: 1;
 
@@ -1078,7 +1080,6 @@ h1::before {
     box-shadow: 1px 1px 3px black;
     z-index: 1;
     justify-content: space-evenly;
-    top: -6vh;
 }
 
 .sifrao {
@@ -1198,7 +1199,6 @@ aside .li-msa {
 /* CARDAPIO */
 
 .novidades {
-    max-width: 75%;
     margin: auto;
     /* definindo a largura máxima */
     overflow-x: auto;
@@ -1207,7 +1207,6 @@ aside .li-msa {
     /* desativando a barra de rolagem vertical */
     position: relative;
     /* definindo a posição relativa para permitir o posicionamento absoluto da barra de rolagem */
-    margin-top: 384px;
 }
 
 .novidades::-webkit-scrollbar {
@@ -1341,16 +1340,19 @@ footer img {
 /* Estilo do footer */
 footer {
     font-size: 13px;
+    /* position: relative; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    height: 250px;
+    height: 411px;
     background-color: var(--gray-400);
     flex-direction: column;
+    /* bottom: 0px; */
+
 }
 
 footer p {
-    margin-top: 50px;
+    margin-top: 15px;
     color: var(--white);
 }
 
@@ -1457,21 +1459,23 @@ button.order:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 50px;
+    padding: 0px;
     background-size: cover;
     background-image: url(https://dagesico.pythonanywhere.com/static/img/demas/img_header.jpg);
-
-
+    top: 12vh;
+    position: relative;
 }
 
 select {
     background-color: var(--gray-500);
     border: none;
     color: white;
-    padding: 20px;
-    width: 335px;
-    font-size: 26px;
+    padding: 10px;
+    width: 327px;
+    font-size: 20px;
     text-transform: capitalize;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px black;
 }
 
 option {
@@ -1484,10 +1488,11 @@ option {
     display: flex;
     margin-bottom: 0px;
     background-color: white;
-    height: 70vh;
-    align-items: center;
+    height: 86vh;
     width: 100%;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
 }
 
 .loja-descrica-map {
@@ -1742,8 +1747,7 @@ iframe {
     justify-content: center;
     align-items: center;
     background-color: white;
-    padding: 0px;
-    margin-bottom: 20px;
+
 }
 
 .sliderContainerc {
@@ -1759,7 +1763,7 @@ iframe {
 .slider {
     position: relative;
     width: 100%;
-    height: 303px;
+    height: 55vh;
     overflow: hidden;
 }
 
@@ -1844,7 +1848,7 @@ p {
 }
 
 .butao-movimentos-slide {
-    height: 32vh;
+    height: 31vh;
     width: 40px;
 }
 
@@ -1863,6 +1867,8 @@ p {
 #sobre {
     background-color: #f2f2f2;
     padding: 50px;
+    top: 12vh;
+    position: relative;
 }
 
 /* Estilo do título principal */
@@ -1940,7 +1946,9 @@ p {
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin: 23vh;
+    /* margin: 2vh; */
+    top: 12vh;
+    position: relative;
 }
 
 .area-login {
