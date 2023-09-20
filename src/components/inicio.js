@@ -18,8 +18,6 @@ function Inicio({ api }) {
                 </div>
             </div>
 
-            <footer />
-            <footer />
             <Footer />
 
         </>
