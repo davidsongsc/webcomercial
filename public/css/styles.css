@@ -139,12 +139,12 @@ header h2 {
 nav {
     display: flex;
     justify-content: space-evenly;
-    height: 1vh;
+    height: 5vh;
     background-color: var(--black);
     position: relative;
     transition: all .8s ease-in-out;
     align-items: center;
-    top: 16vh;
+    top: 0;
 
 }
 
@@ -482,7 +482,7 @@ nav a:hover {
     z-index: 999;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    top: 12vh;
+    top: 44vh;
 }
 
 /* MAIN */
@@ -521,7 +521,7 @@ main {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 12vh;
+    top: 44vh;
 }
 
 .menu-usuario-main-principal {
@@ -866,6 +866,9 @@ article p {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    position: relative;
+    top: 12px;
+    align-content: flex-start;
 }
 
 .sh-asride-menu-usuario-main {
@@ -1768,7 +1771,7 @@ iframe {
 }
 
 .slide {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -1788,13 +1791,13 @@ iframe {
 
 .descriptionContainer {
     margin: 70px;
-    height: 294px;
-    width: 285px;
+    height: 230px;
+    width: 535px;
     padding: 10px;
     background-color: white;
     left: -21px;
     position: relative;
-    top: -59px;
+    top: -14px;
 }
 
 .bn-i-botom {
