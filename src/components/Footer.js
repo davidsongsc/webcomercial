@@ -13,7 +13,9 @@ function Footer() {
                     </aside>
                     <aside>
                         <h1>Contato</h1>
-                        <text><a href="tel:+552121212169">(21) 2146-1869</a> - Valqueire</text>
+                        <text><a href="tel:+552121212169">(21) 1234-5678</a> - Vila do João</text>
+                        <h1>Fale Conosco</h1>
+                        <text><a href="tel:+552121212169">(21) 1234-5678</a> - Vila do João</text>
                     </aside>
                     <aside>
                         <h1>Midias Sociais</h1>
