@@ -1,37 +1,55 @@
 {
     "dados": {
         "titulo": "DG Meat Club",
-        "stitulo": "A Casa da Culinaria Carioca"
+        "stitulo": "A Carioca Restaurantes"
     },
     "lojas": {
         "lojaA": {
             "nomeFantasia": "Hamburgueria DG",
-            "nomeLoja": "RJDG 01 R. ALBUQUERQUE",
+            "nomeLoja": "HDG/01 -   RICARDO",
+            "apelidoLoja": "RIDQUE",
             "dados": {
                 "ddd": "21",
                 "telefone1": "2146-1869",
-                "rua": "rua morais pinheiro sn",
-                "cep": "21640-260",
+                "rua": "Estr. Mal. Alencastro sn",
+                "cep": "00000-000",
                 "bairro": "Ricardo de Albuquerque",
                 "cidade": "Rio de Janeiro",
                 "estado": "RJ",
-                "email": "contato_loja1@hdg.br",
-                "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1837.956582526019!2d-43.36470456113224!3d-22.879665923634978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9962f48196d16f%3A0x758fdec5f4954c98!2sDemas%20%26%20Divas!5e0!3m2!1spt-BR!2sbr!4v1681397573299!5m2!1spt-BR!2sbr"
+                "email": "contato_loja@hdg.br",
+                "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.003103094397!2d-43.399095300000006!3d-22.8393747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9963daf074d785%3A0xd9f268ce12092952!2sPra%C3%A7a%20Cl%C3%A1udio%20de%20Souza%20-%20Ricardo%20de%20Albuquerque%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021615-320!5e0!3m2!1spt-BR!2sbr"
             }
         },
         "lojaB": {
             "nomeFantasia": "Hamburgueria DG",
-            "nomeLoja": "RJDG 02 GUADALUPE",
+            "nomeLoja": "HDG/02 -   REALENGO",
+            "apelidoLoja": "PRANHÃO",
             "dados": {
                 "ddd": "21",
                 "telefone1": "2145-8541",
-                "rua": "rua marcos de marcedo sn",
-                "cep": "21360-000",
-                "bairro": "Guadalupe",
+                "rua": "Rua Bernardo de Vascondelos sn",
+                "cep": "00000-000",
+                "bairro": "Realengo",
                 "cidade": "Rio de Janeiro",
                 "estado": "RJ",
-                "email": "contato_loja2@hdg.br",
+                "email": "contato_loja@hdg.br",
                 "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.0139292999884!2d-43.43420792372359!3d-22.875943836771388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9961d25d9422ff%3A0x48aee43f9186c5d1!2zUHJhw6dhIGRvIENhbmjDo28!5e0!3m2!1spt-BR!2sbr!4v1681397899598!5m2!1spt-BR!2sbr"
+            }
+        },
+        "lojaC": {
+            "nomeFantasia": "Hamburgueria DG",
+            "nomeLoja": "HDG/03 -   PENHA",
+            "apelidoLoja": "ARYBAR",
+            "dados": {
+                "ddd": "21",
+                "telefone1": "2145-8541",
+                "rua": "Rua Flora Lôbo sn",
+                "cep": "00000-000",
+                "bairro": "Penha Circular",
+                "cidade": "Rio de Janeiro",
+                "estado": "RJ",
+                "email": "contato_loja@hdg.br",
+                "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d576.3305227992895!2d-43.28702489495883!3d-22.838577733252354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997b9c6561bc37%3A0xb9b46e0f40b37e7!2sParque%20Ary%20Barroso!5e1!3m2!1spt-BR!2sbr!4v1695340234975!5m2!1spt-BR!2sbr"
             }
         }
     },

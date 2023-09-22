@@ -12,7 +12,7 @@ const Loja = ({api}) => {
   };
 
   const listaLojas = Object.entries(lojas).map(([key, value]) => (
-    <option key={key} value={key}>{value.dados.bairro}</option>
+    <option key={key} value={key}>{value.nomeLoja}</option>
   ));
 
 
@@ -27,7 +27,7 @@ const Loja = ({api}) => {
           </select><br />
           <h1>
 
-            {lojas[lojaSelecionada].nomeLoja}<br /> {lojas[lojaSelecionada].dados.bairro}</h1>
+            {lojas[lojaSelecionada].apelidoLoja}<br /> {lojas[lojaSelecionada].dados.bairro}</h1>
           <div className="loja-descrica-map">
             <div className="dados-loja">
               <div className="detalhes-dados-loja">
@@ -44,7 +44,9 @@ const Loja = ({api}) => {
 
 
             </div>
+           
           </div>
+    
         </div>
 
       </div>

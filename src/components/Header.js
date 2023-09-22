@@ -74,9 +74,9 @@ function Header({ api }) {
 
     return (
         <>
-            <Slider api={api} />
+    
             <header>
-
+            <Slider api={api} />
             </header>
 
             <nav className={isFixed ? 'menu fixed' : `menu ${menuOpen ? 'menu-open' : ''}`}>

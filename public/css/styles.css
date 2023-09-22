@@ -205,6 +205,7 @@ nav a {
     text-decoration: underline transparent 2px;
     transition: 2s ease-in-out;
 }
+
 nav a:hover {
     color: var(--blue);
     text-decoration: underline red 5px;
@@ -340,7 +341,6 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 67px;
 }
 
 .principal-demas .imagem-principal {
@@ -480,9 +480,6 @@ nav a:hover {
     background-color: white;
     position: relative;
     z-index: 999;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-    top: 44vh;
 }
 
 /* MAIN */
@@ -521,7 +518,6 @@ main {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 44vh;
 }
 
 .menu-usuario-main-principal {
@@ -625,7 +621,7 @@ article figure {
 }
 
 article figure .dividido-img {
-    width: 46.5%;
+    width: 20%;
     border-style: double;
     background-position: -56px -3px;
     height: 27vh;
@@ -634,7 +630,7 @@ article figure .dividido-img {
 }
 
 article figure .principal-img {
-    width: 98%;
+    width: 50%;
     height: 27vh;
 }
 
@@ -867,7 +863,6 @@ article p {
     align-items: center;
     flex-direction: row;
     position: relative;
-    top: 12px;
     align-content: flex-start;
 }
 
@@ -940,7 +935,7 @@ article p {
 }
 
 .avaliacao-produto {
-    
+
     text-align: center;
     width: 100%;
     position: relative;
@@ -1258,7 +1253,6 @@ aside .li-msa {
 
 .cont-conteudo,
 .cont-conteudo-sobremesa {
-    margin: 10px;
     display: flex;
     text-align: center;
     flex-direction: row;
@@ -1347,11 +1341,12 @@ footer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 411px;
+    height: 255px;
     background-color: var(--gray-400);
     flex-direction: column;
+    z-index: 999;
     /* bottom: 0px; */
-
+    position: relative;
 }
 
 footer p {
@@ -1423,10 +1418,8 @@ button.order:hover {
 
 /* estilizando o botão de rolagem na barra de rolagem */
 ::-webkit-scrollbar-thumb {
-    background-color: #97AFC2;
-    /* cor da rolagem */
-    border-radius: 5px;
-    /* borda arredondada */
+    background-color: #ffffff;
+    border-radius: 2px;
 }
 
 /* estilizando a barra de rolagem */
@@ -1465,7 +1458,6 @@ button.order:hover {
     padding: 0px;
     background-size: cover;
     background-image: url(https://dagesico.pythonanywhere.com/static/img/demas/img_header.jpg);
-    top: 12vh;
     position: relative;
 }
 
@@ -1489,9 +1481,9 @@ option {
 
 .loja {
     display: flex;
-    margin-bottom: 0px;
+    /* margin-bottom: 72px; */
     background-color: white;
-    height: 86vh;
+    height: 124vh;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -1791,13 +1783,13 @@ iframe {
 
 .descriptionContainer {
     margin: 70px;
-    height: 230px;
+    height: 325px;
     width: 535px;
     padding: 10px;
     background-color: white;
-    left: -21px;
+    left: -20px;
     position: relative;
-    top: -14px;
+    top: 35px;
 }
 
 .bn-i-botom {
@@ -1851,7 +1843,7 @@ p {
 }
 
 .butao-movimentos-slide {
-    height: 31vh;
+    height: 50vh;
     width: 40px;
 }
 
@@ -1870,7 +1862,6 @@ p {
 #sobre {
     background-color: #f2f2f2;
     padding: 50px;
-    top: 12vh;
     position: relative;
 }
 
@@ -1948,9 +1939,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 35vh;
     /* margin: 2vh; */
-    top: 12vh;
+    background: aliceblue;
+    /* top: 12vh; */
     position: relative;
 }
 
@@ -2009,3 +2001,46 @@ button:active {
     transform: translateY(2px);
 }
 
+
+
+@media screen and (max-width: 767px) {
+    .controls button:hover {
+        font-size: 1.2rem;
+        width: 42px;
+    }
+
+    .descriptionContainer {
+        margin: auto auto;
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        left: 0;
+
+    }
+
+    .menu-items-normal {
+        flex-direction: column;
+        top: -9vh;
+        transition: 2s ease-in-out;
+    }
+    footer {
+        height: 105vh;
+    }
+    footer section {
+        flex-direction: column;
+    }
+    footer aside{
+        border-radius: 2px;
+        margin: 10px 0;
+    }
+    .cont-conteudo, .cont-conteudo-sobremesa{
+        flex-direction: column;
+    }
+    .cont-conteudo img, .cont-conteudo-sobremesa img{
+        transform: scale(0.5);
+    }
+    .galeria-fotos-reservas {
+
+        flex-direction: column;
+    }
+}
