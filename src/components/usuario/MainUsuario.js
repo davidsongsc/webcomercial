@@ -14,7 +14,7 @@ function MainUsuario({ grupoh, api }) {
     const [carregando, setCarregando] = useState(true);
     const location = useLocation();
     const [paginaterior, setPaginaAnt] = useState('cardapio/principal');
-    const [paginaInicial, setPaginaInicial] = useState('cardapio/principal');
+    
     const [isFixed, setIsFixed] = useState(false);
     const navigate = useNavigate();
 
@@ -95,33 +95,28 @@ function MainUsuario({ grupoh, api }) {
         if (id === 1) {
             var coDeudo = '/cardapio/principal'
             navigate(coDeudo, { replace: true });
-            setPaginaAnt(coDeudo)
             setGrupoSelecionado(id);
         }
         if (id === 10) {
             var coDeudo = '/cardapio/executivo'
             navigate(coDeudo, { replace: true });
-            setPaginaAnt(coDeudo)
         }
         if (id === 12) {
             var coDeudo = '/cardapio/jackribs'
             navigate(coDeudo, { replace: true });
-            setPaginaAnt(coDeudo)
+            
         }
         if (id === 60) {
             var coDeudo = '/cardapio/bebidas'
             navigate(coDeudo, { replace: true });
-            setPaginaAnt(coDeudo)
         }
         if (id === 61) {
             var coDeudo = '/cardapio/sucos'
             navigate(coDeudo, { replace: true });
-            setPaginaAnt(coDeudo)
         }
         if (id === 6615) {
             var coDeudo = '/cardapio/entradas'
             navigate(coDeudo, { replace: true });
-            setPaginaAnt(coDeudo)
         }
         if (id === 2255) {
             navigate('/cardapio/cardapio', { replace: true });

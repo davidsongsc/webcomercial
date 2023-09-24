@@ -1,21 +1,27 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import $ from 'jquery';
 import Footer from "../Footer";
 import BaseLogo from "../BaseLogo";
 import Painel from "../usuario/Painel";
+import { loginUser } from "../../redux/user/actions";
 
 
 
 function Login({ api }) {
   const history = useNavigate();
-
+  const dispatch = useDispatch();
   const [usuario, setUsername] = useState("");
   const [senha, setPassword] = useState("");
   const [autenticado, setAutenticado] = useState(false);
   const chave = 'abc123'
 
-
+  const handleLoginState = (response) => {
+    dispatch(
+      loginUser(response)
+    )
+  }
   function handleLogin(event) {
     event.preventDefault();
     $.ajax({
@@ -25,7 +31,7 @@ function Login({ api }) {
       contentType: "application/json",
       data: JSON.stringify({
         username: usuario,
-        password: senha,
+        password: senha
       }),
 
       // Armazenar o token de acesso no cookie ou no armazenamento local
@@ -40,7 +46,7 @@ function Login({ api }) {
         localStorage.setItem('usuario', JSON.stringify(response.usuario));
         localStorage.setItem('pedidoIdUsuario', parseInt(response.pedido).toString());
         setAutenticado(true);
-        console.log(response.id);
+        handleLoginState(response);
         history('/fila');
       },
       error: function (error) {
@@ -87,6 +93,7 @@ function Login({ api }) {
 
     // Recarrega a página para aplicar as alterações
     window.location.reload();
+
     setAutenticado(false);
 
 
@@ -96,7 +103,6 @@ function Login({ api }) {
   return (
     <div>
       <BaseLogo api={api} />
-      
       {autenticado === false && (
         <div className='login-grupo-stantment'>
 
@@ -118,15 +124,12 @@ function Login({ api }) {
                 required
               />
               <button onClick={handleLogin}>Login</button>
-
               <>
                 <p>Entre com seu ID e Senha. <br /></p>
                 <p>Ainda não é cadastrado? Cadastre-se aqui!</p>
                 <button >Esqueceu a senha?</button>
               </>
-
             </div>
-
           </div>
         </div>
       )}
@@ -135,7 +138,6 @@ function Login({ api }) {
         handleLogout={handleLogout}
       />
       <Footer />
-
     </div>
   );
 }

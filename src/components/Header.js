@@ -17,13 +17,8 @@ function Header({ api }) {
     };
     const handleMenuClickFechar = () => {
         setMenuOpen(false);
-        {/*
-        if (isMobile) {
-           
-        }
- */}
     };
-    
+
     const handleCardapioUsuariolClick = (event) => {
         event.preventDefault();
         navigate('/cardapio/entradas', { replace: true });
@@ -40,7 +35,7 @@ function Header({ api }) {
         handleMenuClickFechar();
         navigate('/sobre', { replace: true });
     };
-   
+
     const handleLojaClick = (event) => {
         event.preventDefault();
         handleMenuClickFechar();
@@ -61,7 +56,6 @@ function Header({ api }) {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const headerHeight = document.querySelector('header').offsetHeight;
-
             setIsFixed(scrollTop > headerHeight);
         };
 
@@ -74,11 +68,10 @@ function Header({ api }) {
 
     return (
         <>
-    
-            <header>
-            <Slider api={api} />
-            </header>
 
+            <header>
+                <Slider api={api} />
+            </header>
             <nav className={isFixed ? 'menu fixed' : `menu ${menuOpen ? 'menu-open' : ''}`}>
                 {isFixed ? <div className='menu-icon' onClick={handleMenuClick}>
                     <span></span>
@@ -100,13 +93,7 @@ function Header({ api }) {
 
                                     <p>Home</p></a>
                             </li>
-                            {/*
-                <li>
-                    <a href="/cardapio" onClick={handleCardapiolClick}>
-                        <img src='https://cdn-icons-png.flaticon.com/512/3428/3428655.png' alt='cardapio' />
-                        <p>GCardápio</p></a>
-                </li>
-                 */}
+
                             <li>
                                 <a href="/cardapio" onClick={handleCardapioUsuariolClick}>
 
@@ -143,61 +130,55 @@ function Header({ api }) {
                         </ul>
                         : <ul className={`menu-items-normal menu-items-aberto`} style={{ display: isFixed ? 'none' : 'flex' }}>
 
-                          
+
+                            <li>
+
+                                <a href="/inicio" onClick={handleInicioClick}>
+
+                                    <p>Home</p></a>
+                            </li>
+
+                            <li>
+                                <a href="/cardapio" onClick={handleCardapioUsuariolClick}>
+
+                                    <p>Cardápio</p></a>
+                            </li>
+                            {usuarioCorrente != null ? (
                                 <li>
 
-                                    <a href="/inicio" onClick={handleInicioClick}>
+                                    <a href='/carrinho' >
 
-                                        <p>Home</p></a>
-                                </li>
-                                {/*
-<li>
-    <a href="/cardapio" onClick={handleCardapiolClick}>
-        <img src='https://cdn-icons-png.flaticon.com/512/3428/3428655.png' alt='cardapio' />
-        <p>GCardápio</p></a>
-</li>
- */}
-                                <li>
-                                    <a href="/cardapio" onClick={handleCardapioUsuariolClick}>
+                                        <p>Pedido  <FontAwesomeIcon icon={faShoppingCart} size="16" color="white" /> </p></a>
+                                </li>) : (
+                                <></>
 
-                                        <p>Cardápio</p></a>
-                                </li>
-                                {usuarioCorrente != null ? (
-                                    <li>
+                            )}
+                            <li>
 
-                                        <a href='/carrinho' >
+                                <a href='/loja' onClick={handleLojaClick}>
 
-                                            <p>Pedido  <FontAwesomeIcon icon={faShoppingCart} size="16" color="white" /> </p></a>
-                                    </li>) : (
-                                    <></>
+                                    <p>Loja</p></a>
+                            </li>
+                            <li>
 
-                                )}
-                                <li>
+                                <a href='/quemsomos' onClick={handleQuemSomosClick}>
 
-                                    <a href='/loja' onClick={handleLojaClick}>
+                                    <p>quemsomos</p></a>
+                            </li>
+                            <li>
 
-                                        <p>Loja</p></a>
-                                </li>
-                                <li>
+                                <a href='/fila' onClick={handleFilaClick}>
 
-                                    <a href='/quemsomos' onClick={handleQuemSomosClick}>
+                                    <p>Fila de Espera</p></a>
+                            </li>
+                            <li>
 
-                                        <p>quemsomos</p></a>
-                                </li>
-                                <li>
+                                <a href='/reserva' onClick={handleReservasClick}>
 
-                                    <a href='/fila' onClick={handleFilaClick}>
+                                    <p>Reservas</p></a>
+                            </li>
 
-                                        <p>Fila de Espera</p></a>
-                                </li>
-                                <li>
 
-                                    <a href='/reserva' onClick={handleReservasClick}>
-
-                                        <p>Reservas</p></a>
-                                </li>
-
-                        
                         </ul>
                 }
 

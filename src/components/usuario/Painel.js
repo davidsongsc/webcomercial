@@ -4,34 +4,29 @@ const Painel = ({ autenticado,
     handleLogout }) => {
     if (autenticado) {
         return (
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                position: 'relative',
-                top: '130px'
-            }}>
+            <div className="painel-grupo-st">
                 <table>
                     <thead>
-                        <td>
+                        <tr>
                             <th>Usuario</th>
-                        </td>
-                        <td>
+                        </tr>
+                        <tr>
                             <th>pedido</th>
-                        </td>
-                        <td>
+                        </tr>
+                        <tr>
                             <th>...</th>
-                        </td>
+                        </tr>
                     </thead>
                     <tbody>
-                        <td>
-                            <tr>{sessionStorage.getItem('usuario')}</tr>
-                        </td>
-                        <td>
-                            <tr>{sessionStorage.getItem('pedidoIdUsuario')}</tr>
-                        </td>
-                        <td>
-                            <tr><button onClick={handleLogout}>Logout</button></tr>
-                        </td>
+                        <tr>
+                            <td>{sessionStorage.getItem('usuario')}</td>
+                        </tr>
+                        <tr>
+                            <td>{sessionStorage.getItem('pedidoIdUsuario')}</td>
+                        </tr>
+                        <tr>
+                            <td><button onClick={handleLogout}>Logout</button></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { logoutUser } from "../../redux/user/actions";
 
 function Logout() {
 
@@ -15,17 +15,21 @@ function Logout() {
     }
   }, []);
 
+  const handleLogoutState = () => {
+    dispatch(logoutUser())
+  }
   function handleLogout() {
- // Limpa o cache da sessão
- window.sessionStorage.clear();
+    // Limpa o cache da sessão
+    window.sessionStorage.clear();
 
- // Limpa o cache do armazenamento local
- window.localStorage.clear();
+    // Limpa o cache do armazenamento local
+    window.localStorage.clear();
 
- // Recarrega a página para aplicar as alterações
- window.location.reload();
+    handleLogoutState();
+
+    // Recarrega a página para aplicar as alterações
     setAutenticado(false);
-    
+
   }
 
   if (autenticado) {

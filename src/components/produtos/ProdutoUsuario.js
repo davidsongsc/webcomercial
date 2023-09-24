@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Autenticado from '../Api/Autenticado';
+
 function AvaliacaoProduto({ nota }) {
   
   const estrelas = [];
@@ -33,7 +34,6 @@ function ValorProduto({ valor }) {
 
 function ProdutoUsuario({ produto, carregandoCmd, api }) {
   const [carregado, setCarregado] = useState(true);
-  const refContainer = useRef(null);
   const usuario = sessionStorage.getItem('usuario');
   
   Autenticado();

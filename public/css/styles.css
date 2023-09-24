@@ -1341,7 +1341,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 255px;
+    height: 51vh;
     background-color: var(--gray-400);
     flex-direction: column;
     z-index: 999;
@@ -1935,11 +1935,19 @@ p {
 }
 
 /* LOGIN */
+.painel-grupo-st{
+    display: flex;
+    min-height: 50vh;
+    background-color: aliceblue;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
 .login-grupo-stantment {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35vh;
+    height: 50vh;
     /* margin: 2vh; */
     background: aliceblue;
     /* top: 12vh; */
