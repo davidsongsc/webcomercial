@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import Autenticado from '../Api/Autenticado';
 
 function AvaliacaoProduto({ nota }) {
-  
+
   const estrelas = [];
 
   // Loop para criar estrelas preenchidas ou vazias com base na nota
@@ -25,9 +25,8 @@ function AvaliacaoProduto({ nota }) {
 function ValorProduto({ valor }) {
   return (
     <div className="valor-produto" style={{ display: 'block' }}>
-
-      <div className='valor-produto-valor'>R$ {valor.toFixed(2)}</div>
-       </div>
+      <div>R$ {valor.toFixed(2)}</div>
+    </div>
 
   );
 }
@@ -35,7 +34,7 @@ function ValorProduto({ valor }) {
 function ProdutoUsuario({ produto, carregandoCmd, api }) {
   const [carregado, setCarregado] = useState(true);
   const usuario = sessionStorage.getItem('usuario');
-  
+
   Autenticado();
 
   return (
@@ -51,13 +50,11 @@ function ProdutoUsuario({ produto, carregandoCmd, api }) {
 
               <text>{produto.descricao}</text>
               <div className="container-produto-imagem">
+               
                 <img
                   src={`${api()}/static/img/demas/cardapio/${produto.nomeproduto}.jpg`}
                   alt=""
-
                 />
-               
-                
 
 
               </div>
@@ -65,11 +62,11 @@ function ProdutoUsuario({ produto, carregandoCmd, api }) {
                 <h1>{produto.nomefantasia}</h1>
               </div>
               {usuario ?
-                <AvaliacaoProduto nota={produto.avaliacao} />:
-                ''
+                  <AvaliacaoProduto nota={produto.avaliacao} /> :
+                  ''
                 }
               <ValorProduto valor={produto.valor} />
-           
+
 
 
             </div>

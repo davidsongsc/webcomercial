@@ -18,6 +18,7 @@ function Logout() {
   const handleLogoutState = () => {
     dispatch(logoutUser())
   }
+  
   function handleLogout() {
     // Limpa o cache da sessão
     window.sessionStorage.clear();
