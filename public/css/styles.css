@@ -609,7 +609,7 @@ article h3 {
 
 }
 
-article text {
+article span {
     position: relative;
     top: 32px;
     left: -7px;
@@ -838,7 +838,7 @@ article p {
     text-transform: capitalize;
 }
 
-.cardapio-usuario-menu text {
+.cardapio-usuario-menu span {
     color: gray;
     font-size: 20px;
     font-weight: 600;
@@ -958,7 +958,7 @@ article p {
     width: 100%;
 }
 
-.container-produto-detalhes text {
+.container-produto-detalhes span {
     display: none;
 }
 
@@ -1621,7 +1621,7 @@ iframe {
     position: relative;
 }
 
-.conteiner-bloco text {
+.conteiner-bloco span {
     color: black;
     position: relative;
     font-size: 12px;
