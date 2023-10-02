@@ -48,7 +48,7 @@ function ProdutoUsuario({ produto, carregandoCmd, api }) {
             <div className="container-produto-detalhes">
 
 
-              <text>{produto.descricao}</text>
+              <span>{produto.descricao}</span>
               <div className="container-produto-imagem">
                
                 <img

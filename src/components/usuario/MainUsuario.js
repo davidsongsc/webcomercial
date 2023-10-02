@@ -125,7 +125,7 @@ function MainUsuario({ grupoh, api }) {
     };
 
     if (grupoh === 0) {
-        console.log("testefun: OK");
+        
     };
 
     useEffect(() => {
@@ -157,7 +157,7 @@ function MainUsuario({ grupoh, api }) {
                             <div className="cardapio-usuario-menu">
                                 <div className="loading-bar"></div>
                                 <h2>Carregando...</h2>
-                                <text>...</text>
+                                <span>...</span>
                                 <h3>...</h3>
 
                             </div>

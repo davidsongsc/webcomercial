@@ -1341,15 +1341,12 @@ footer img {
 /* Estilo do footer */
 footer {
     font-size: 13px;
-    /* position: relative; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 51vh;
     background-color: var(--gray-400);
     flex-direction: column;
     z-index: 999;
-    /* bottom: 0px; */
     position: relative;
 }
 

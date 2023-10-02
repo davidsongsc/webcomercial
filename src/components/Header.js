@@ -9,7 +9,6 @@ function Header({ api }) {
     const [isFixed, setIsFixed] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const { usuarioCorrente } = useSelector((reducer) => reducer.user);
-    console.log(usuarioCorrente);
     const navigate = useNavigate();
 
     const handleMenuClick = () => {

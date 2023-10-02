@@ -1,3 +1,4 @@
+
 const banner = document.getElementById("banner");
 const imagens = banner.getElementsByTagName("img");
 let index = 0;

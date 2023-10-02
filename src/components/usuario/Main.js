@@ -18,7 +18,6 @@ function Main({ grupoh, api }) {
         setGrupoSelecionado(id);
     };
     if (grupoh === 0) {
-        console.log("testefun: OK");
     }
     useEffect(() => {
         async function carregarProdutos() {

@@ -32,7 +32,6 @@ async function fetchProdutos() {
 
     return data.produtos;
   } catch (error) {
-    console.error(error);
     // Se ocorrer um erro ao buscar os dados da API, retorna os dados do cache (se existirem)
     return cache.produtos || [];
   }

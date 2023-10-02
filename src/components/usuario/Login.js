@@ -22,40 +22,52 @@ function Login({ api }) {
       loginUser(response)
     )
   }
-  function handleLogin(event) {
-    event.preventDefault();
-    $.ajax({
-      url: "https://dagesico.pythonanywhere.com/login",
-      type: "POST",
-      dataType: "json",
-      contentType: "application/json",
-      data: JSON.stringify({
-        username: usuario,
-        password: senha
-      }),
 
-      // Armazenar o token de acesso no cookie ou no armazenamento local
+  const handleLogin = (event) => {
+    if (usuario != "" && senha != "") {
+      event.preventDefault();
+      $.ajax({
+        url: "https://dagesico.pythonanywhere.com/login",
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json",
+        data: JSON.stringify({
+          username: usuario,
+          password: senha
+        }),
 
-      success: function (response) {
-        sessionStorage.setItem('usuario', response.usuario.toString());
-        sessionStorage.setItem('id', JSON.stringify(response.id));
-        sessionStorage.setItem('pedidoIdUsuario', JSON.stringify(response.pedido));
-        sessionStorage.setItem('autenticado', true);
-        localStorage.setItem('autenticado', true);
-        localStorage.setItem('access_token', JSON.stringify(response.access_token));
-        localStorage.setItem('usuario', JSON.stringify(response.usuario));
-        localStorage.setItem('pedidoIdUsuario', parseInt(response.pedido).toString());
-        setAutenticado(true);
-        handleLoginState(response);
-        history('/fila');
-      },
-      error: function (error) {
-        console.log(error);
-        setAutenticado(false);
-        alert('Usuario ou Senha invalidos. Clique em "Esqueceu a senha?" para redefinir sua senha.');
-      }
-    });
+        // Armazenar o token de acesso no cookie ou no armazenamento local
+
+        success: function (response) {
+          sessionStorage.setItem('usuario', response.usuario.toString());
+          sessionStorage.setItem('id', JSON.stringify(response.id));
+          sessionStorage.setItem('pedidoIdUsuario', JSON.stringify(response.pedido));
+          sessionStorage.setItem('autenticado', true);
+          localStorage.setItem('autenticado', true);
+          localStorage.setItem('access_token', JSON.stringify(response.access_token));
+          localStorage.setItem('usuario', JSON.stringify(response.usuario));
+          localStorage.setItem('pedidoIdUsuario', parseInt(response.pedido).toString());
+          setAutenticado(true);
+          handleLoginState(response);
+          history('/fila');
+        },
+        error: function (error) {
+          
+          setAutenticado(false);
+          alert('Usuario ou Senha invalidos. Clique em "Esqueceu a senha?" para redefinir sua senha.');
+        }
+      });
+    }
+    else {
+      alert("Por favor, entre com um usuario e senha validos!")
+    }
+
   }
+  const handleEsqueceuSenha = () => {
+    if (usuario != "") {
+      alert(`Um email sera enviado para o usuario: ${usuario}.`)
+    }
+  };
   useEffect(() => {
     // Recupere os dados do localStorage
     const autenticadoLocalStorage = localStorage.getItem('autenticado');
@@ -70,7 +82,7 @@ function Login({ api }) {
 
   useEffect(() => {
     const token = chave;
-    console.log(token);
+    
 
     fetch(`https://dagesico.pythonanywhere.com/usuario?nome=${JSON.parse(localStorage.getItem('usuario'))}&token=${token}`)
       .then(response => response.json())
@@ -78,7 +90,7 @@ function Login({ api }) {
         sessionStorage.setItem('usuario', data.nome);
       })
       .catch(error => {
-        console.log(error);
+        
       });
 
   }, []);
@@ -123,11 +135,11 @@ function Login({ api }) {
                 onChange={(event) => setPassword(event.target.value)}
                 required
               />
-              <button onClick={handleLogin}>Login</button>
+              <button onClick={() => handleLogin()}>Login</button>
               <>
                 <p>Entre com seu ID e Senha. <br /></p>
                 <p>Ainda não é cadastrado? Cadastre-se aqui!</p>
-                <button >Esqueceu a senha?</button>
+                <button onClick={() => handleEsqueceuSenha()}>Esqueceu a senha?</button>
               </>
             </div>
           </div>

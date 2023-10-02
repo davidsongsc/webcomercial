@@ -39,7 +39,7 @@ function Produto({ produto, api }) {
       </div>
       <h4 id='avaliacao-produto'>{produto.avaliacao}</h4>
       <div className='grupo-valor-descricao'>
-      <text>R$ </text><h3>{produto.valor.toFixed(2)}</h3>
+      <span>R$ </span><h3>{produto.valor.toFixed(2)}</h3>
       </div>
 
     
