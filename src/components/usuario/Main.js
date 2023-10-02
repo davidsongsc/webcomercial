@@ -14,7 +14,7 @@ function Main({ grupoh, api }) {
 
 
     const handleGrupoClick = (id) => {
-        
+
         setGrupoSelecionado(id);
     };
     if (grupoh === 0) {
@@ -39,9 +39,50 @@ function Main({ grupoh, api }) {
     }, []);
     if (carregando) {
         return (
-            <div className='carregando-carregamentos'>
-                <h4>Carregando...</h4>
-            </div>)
+            <>
+
+                <main>
+
+                    <section>
+
+
+                        <article className={`abertura-cardapio `} >
+
+                            <div className='titulos-abertura'>
+
+                                <h2> ... </h2>
+                                <h3> ... </h3>
+                                <p> ... </p>
+                            </div>
+
+                            <div className={`quadro`}>
+                                <figure>
+                                    <div id='imgfigura-01' className={`principal-img `} alt="Imagem" />
+                                </figure>
+                            </div>
+                        </article>
+
+
+                        <>
+
+
+                            <Produto key={0} produto={0} api={api} />
+                            <Produto key={0} produto={0} api={api} />
+                            <Produto key={0} produto={0} api={api} />
+                            <Produto key={0} produto={0} api={api} />
+
+
+                        </>
+
+                    </section>
+
+
+                </main>
+
+
+            </>
+
+        )
     }
 
 
@@ -64,9 +105,9 @@ function Main({ grupoh, api }) {
 
                             <div className={`quadro`}>
                                 <figure>
-                                    <div id='imgfigura-01' className={`principal-img ${grupo.cmdl}`} alt={dados.dados.titulo} />
+                                    <div id='imgfigura-01' className={`principal-img ${grupo.cmdl}`} alt="Titulo" />
 
-                                    {/*} <figcaption>Imagem ilustrativa do Restaurante {dados.dados.titulo} &reg;</figcaption>*/}
+
                                 </figure>
                             </div>
                         </article>

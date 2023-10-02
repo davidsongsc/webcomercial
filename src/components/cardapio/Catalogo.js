@@ -5,34 +5,11 @@ import Aside from '../Aside';
 
 
 function Favoritos(api) {
-  const [produtos, setProdutos] = useState([]);
-  const [carregando, setCarregando] = useState(true);
 
-  useEffect(() => {
-    async function carregarProdutos() {
-      const produtos = await Api();
-      setProdutos(produtos);
-      setCarregando(false);
-    }
-    carregarProdutos();
-  }, []);
-  if (carregando) {
-    return (<div className='carregando-carregamentos'>
-      <h4>Carregando...</h4>
 
-    </div>)
-  }
   return (
     <>
-      <Aside dados={dados}  api={api}/>
-      <div className='c-div-cardapio'>
-        {/*<h1 className='titulo-cardapio'>Cardapio</h1>*/}
-        <div className="cardapio">
-          {produtos.map((produto) => (
-            <Produto key={produto.id} produto={produto} api={api} />
-          ))}
-        </div>
-      </div>
+     
     </>
   );
 }

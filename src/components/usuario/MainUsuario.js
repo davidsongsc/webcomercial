@@ -14,7 +14,7 @@ function MainUsuario({ grupoh, api }) {
     const [carregando, setCarregando] = useState(true);
     const location = useLocation();
     const [paginaterior, setPaginaAnt] = useState('cardapio/principal');
-    
+
     const [isFixed, setIsFixed] = useState(false);
     const navigate = useNavigate();
 
@@ -104,7 +104,7 @@ function MainUsuario({ grupoh, api }) {
         if (id === 12) {
             var coDeudo = '/cardapio/jackribs'
             navigate(coDeudo, { replace: true });
-            
+
         }
         if (id === 60) {
             var coDeudo = '/cardapio/bebidas'
@@ -125,7 +125,7 @@ function MainUsuario({ grupoh, api }) {
     };
 
     if (grupoh === 0) {
-        
+
     };
 
     useEffect(() => {
@@ -152,24 +152,29 @@ function MainUsuario({ grupoh, api }) {
         <div>
             {carregando ? (
                 <>
-                    <div className="menu-usuario-main-principal">
-                        <aside className="hh-asride-menu-usuario-main">
-                            <div className="cardapio-usuario-menu">
-                                <div className="loading-bar"></div>
-                                <h2>Carregando...</h2>
-                                <span>...</span>
-                                <h3>...</h3>
+                    <div className='d-main-usuario-principal'>
 
-                            </div>
+                        <div className='menu-usuario-main-principal'>
+                            <aside className={`hh-asride-menu-usuario-main ${isFixed ? 'grupo-fix' : ''}`} >
 
-                        </aside>
-                        <aside className="sh-asride-menu-usuario-main">
-                            <div className="loading-spinner">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </aside>
+
+
+                                <div className={`cardapio-usuario-menu ${isFixed ? 'grupo-titulo-main' : ''}`} >
+
+                                    <h1>...</h1>
+
+
+                                </div>
+
+
+
+                            </aside>
+
+                            <aside className='sh-asride-menu-usuario-main-produtos' >
+                               ...
+                            </aside>
+
+                        </div>
                     </div>
 
                 </>
@@ -202,7 +207,7 @@ function MainUsuario({ grupoh, api }) {
                             {produtos
                                 .filter((produto) => produto.grupo === grupoSelecionado)
                                 .map((produto) => (
-                                    <ProdutoUsuario produto={produto} carregandoCmd={true} api={api}/>
+                                    <ProdutoUsuario produto={produto} carregandoCmd={true} api={api} />
                                 ))}
                         </aside>
 
