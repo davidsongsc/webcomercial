@@ -138,27 +138,22 @@ nav {
   justify-content: space-evenly;
   background-color: var(--black);
   position: relative;
-  transition: all 0.8s ease-in-out;
   align-items: center;
   top: 0;
+  transition: all 0.8s ease-in-out;
 }
 
 nav.fixed {
   position: fixed;
   background-position-y: -160px;
-  height: 0vh;
-  /* Define a posição como fixa */
-  top: 0;
-  /* Fixa o elemento no topo da página */
+  height: 0;
   background-color: rgb(27, 26, 26);
-  /* Define uma cor de fundo opcional para o elemento fixo */
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-  /* Adiciona uma sombra opcional para destacar o elemento fixo */
   width: 100%;
-  /* Define a largura como 100% para ocupar todo o espaço horizontal disponível */
   z-index: 9999;
-  /* Define uma ordem de empilhamento alta para que o elemento fique sempre acima dos outros elementos */
+  transition: opacity 0.5s ease-in-out; /* Adicionamos uma transição para a propriedade 'opacity' */
 }
+
 
 .logo {
   display: none;
@@ -270,17 +265,12 @@ nav a:hover {
 }
 
 .menu-items {
-  display: flex;
-  align-items: stretch;
   position: relative;
   height: 46vh;
   list-style: none;
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
   z-index: 99;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
   top: 23vh;
   overflow-y: auto;
   left: -46px;
@@ -1738,7 +1728,7 @@ iframe {
   background-color: white;
   position: relative;
   top: 83px;
-  left: 50%;
+  left: 15%;
   border-radius: 4px;
   box-shadow: 1px 1px;
   height: 30vh;
