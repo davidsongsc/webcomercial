@@ -7,12 +7,12 @@
   "background_color": "#ff6b6b",
   "icons": [
     {
-      "src": "https://dagesico.pythonanywhere.com/static/img/demas/logodemas.ico",
+      "src": "https://dagesico.pythonanywhere.com/static/img/demas/icone.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "https://dagesico.pythonanywhere.com/static/img/demas/logodemas.webp",
+      "src": "https://dagesico.pythonanywhere.com/static/img/demas/icone.png",
       "type": "image/png",
       "sizes": "512x512"
     }
