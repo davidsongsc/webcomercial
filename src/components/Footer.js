@@ -7,25 +7,27 @@ function Footer() {
             <footer>
                 <img className='logoFooter' src='https://dagesico.pythonanywhere.com/static/img/demas/icone.png' alt='' />
                 <section>
-                    <aside>
+                    <aside className='f-dados-stat'>
                         <h1>Endereço</h1>
-                        <span>Rua das Olivas 455 - Parque das Rosas - RJ</span>
+                        <span className='endereco-social'>
+                            Rua das Olivas 455 - Parque das Rosas - RJ
+                            </span>
                     </aside>
-                    <aside>
+                    <aside className='f-dados-stat'>
                         <h1>Contato</h1>
                         <p><a href="tel:+552121212169">(21) 1234-5678</a> </p>
 
 
                     </aside>
-                    <aside>
+                    <aside className='f-dados-stat'>
                         <h1>Midias Sociais</h1>
-                        <span>
+                        <span className='media-social'>
                             <img src='https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-instagram-1.png' alt='' />
                         </span>
-                        <span>
+                        <span className='media-social'>
                             <img src='https://cdns.iconmonstr.com/wp-content/releases/preview/2017/240/iconmonstr-facebook-6.png' alt='' />
                         </span>
-                        <span>
+                        <span className='media-social'>
                             <img src='https://cdns.iconmonstr.com/wp-content/releases/preview/2017/240/iconmonstr-spotify-1.png' alt='' />
                         </span>
 

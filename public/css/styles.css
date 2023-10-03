@@ -1301,7 +1301,7 @@ footer p {
 footer aside {
   border-radius: 5px;
   margin: 5px;
-  flex-basis: 230px;
+  flex-basis: 242px;
   flex-grow: 1;
 }
 
@@ -1309,7 +1309,31 @@ footer img {
   width: 80px;
   margin: 8px;
 }
+.f-dados-stat {
 
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.f-dados-stat h1,
+.f-dados-stat p {
+  flex-grow: 1;
+  flex-basis: 260px;
+  padding: 5px 0;
+}
+
+.f-dados-stat .media-social{
+  flex-grow: 1;
+  flex-basis: 141px;
+}
+.f-dados-stat .endereco-social{
+  flex-grow: 1;
+  flex-basis: 252px;
+}
 /* Estilos adicionais */
 a {
   color: var(--blue);
@@ -1438,7 +1462,6 @@ option {
   align-items: center;
 }
 
-
 .mapa-loja-placa,
 .mapa-loja-placa-d {
   width: 400px;
@@ -1446,13 +1469,12 @@ option {
 }
 
 .mapa-loja-placa-d {
-    top: -231px;
+  top: -231px;
 }
 
 .dados-loja {
   margin: 10px;
   flex-grow: 1;
-
 }
 .map-loja {
   display: flex;
