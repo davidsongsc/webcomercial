@@ -76,6 +76,15 @@ function Slider({ api }) {
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             <div className="descriptionContainer">
+              <div className="controls">
+                <button className="butao-movimentos-slide" onClick={handlePrev}>←</button>
+                {isPlaying ? (
+                  <button className="butao-controle-slide" onClick={handlePause}>Pause</button>
+                ) : (
+                  <button className="butao-controle-slide" onClick={handlePlay}>Play</button>
+                )}
+                <button className="butao-movimentos-slide" onClick={handleNext}>→</button>
+              </div>
               {slides[currentSlide].descriptions.map((description, index) => (
                 <p
                   key={index}
@@ -90,15 +99,7 @@ function Slider({ api }) {
             </div>
           </div>
         ))}
-        <div className="controls">
-          <button className="butao-movimentos-slide" onClick={handlePrev}>←</button>
-          {isPlaying ? (
-            <button className="butao-controle-slide" onClick={handlePause}>Pause</button>
-          ) : (
-            <button className="butao-controle-slide" onClick={handlePlay}>Play</button>
-          )}
-          <button className="butao-movimentos-slide" onClick={handleNext}>→</button>
-        </div>
+
       </div>
       {/*
       <div className="sliderDescription">

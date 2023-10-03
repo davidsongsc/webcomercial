@@ -81,12 +81,7 @@ function SlidePromo({api}) {
         ))}
       
         </div>
-        
-      {/*
-      <div className="sliderDescription">
-        <p>{description}</p>
-      </div>
-       */}
+
       
     </div>
   );

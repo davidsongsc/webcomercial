@@ -1214,25 +1214,45 @@ aside .li-msa {
   text-align: center;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cont-conteudo-sobremesa .imagens {
+  flex-basis: 374px;
   display: flex;
+  flex-grow: 0.5;
+  flex-wrap: wrap;
 }
 
-.cont-conteudo img,
+.cont-conteudo img {
+  padding: 5px;
+  margin: 5px;
+  flex-grow: 0.5;
+  flex-basis: 375px;
+  min-width: 242px;
+  max-width: 374px;
+  box-shadow: 1px 1px 5px black;
+}
+
 .cont-conteudo-sobremesa img {
   padding: 5px;
   margin: 5px;
+  flex-grow: 1;
+  flex-basis: 125px;
+  min-width: 125px;
+  max-width: 257px;
   box-shadow: 1px 1px 5px black;
 }
 
 .cont-conteudo-texto,
 .cont-conteudo-texto-sobremesa {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-shadow: 0.2px 0.2px 1px;
+  padding: 5px;
+  margin: 5px;
+  flex-grow: 0.5;
+  flex-basis: 375px;
+  min-width: 242px;
+  max-width: 860px;
 }
 
 .cont-conteudo-texto h1,
@@ -1256,14 +1276,13 @@ aside .li-msa {
 .cont-conteudo-texto-sobremesa p {
   font-family: "Roboto Mono", monospace;
   font-weight: 100;
-  font-size: 25px;
-  width: 80%;
+  font-size: 17px;
 }
 
 .galeria-fotos-reservas {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
@@ -1271,6 +1290,7 @@ aside .li-msa {
   padding: 5px;
   margin: 5px;
   box-shadow: 1px 1px 5px black;
+  flex-basis: 180px;
 }
 
 /* FOOTER */
@@ -1697,10 +1717,12 @@ iframe {
 }
 
 .slider {
-  position: relative;
-  width: 100%;
-  height: 55vh;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 55vh;
+    overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .slide {
@@ -1723,14 +1745,14 @@ iframe {
 }
 
 .descriptionContainer {
-  margin: 70px;
-  height: 325px;
-  width: 535px;
-  padding: 10px;
-  background-color: white;
-  left: -20px;
-  position: relative;
-  top: 35px;
+    margin: 11px auto;
+    padding: 10px;
+    background-color: white;
+    position: relative;
+    top: 35px;
+    border-radius: 4px;
+    box-shadow: 1px 1px;
+    width: 300px;
 }
 
 .bn-i-botom {
@@ -1760,11 +1782,11 @@ p {
 }
 
 .controls {
-  /* margin-top: 20px; */
-  display: flex;
-  justify-content: space-between;
-  /* z-index: 999; */
-  position: relative;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 999;
+    width: 95%;
 }
 
 .controls button {
@@ -1774,6 +1796,7 @@ p {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+  width: 160px;
 }
 
 .controls button:hover {
@@ -1784,7 +1807,7 @@ p {
 }
 
 .butao-movimentos-slide {
-  height: 50vh;
+  height: 28vh;
   width: 40px;
 }
 
