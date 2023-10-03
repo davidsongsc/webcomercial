@@ -200,8 +200,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--blue);
-  text-decoration: underline red 5px;
+  text-decoration: underline brown 1px;
 }
 
 /* estilo padrão do menu */
@@ -845,9 +844,9 @@ article p {
 }
 
 .as-produtou-usuario {
-  flex-grow: 1;
-  flex-basis: 300px;
-  margin: 5px;
+    flex-grow: 1;
+    flex-basis: 375px;
+    margin: 5px;
 }
 
 .botao-cardapio-grupo {
@@ -870,17 +869,8 @@ article p {
   align-items: center;
 }
 .container-produto-imagem img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  /* position: relative; */
   width: var(--width-produtos);
   height: 478px;
-  display: flex;
-  /* margin-top: -15px; */
-  /* margin-right: -73px; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* top: -3px; */
 }
 
 .container-nome {
@@ -1020,11 +1010,10 @@ h1::before {
 /* Estilo para o componente ValorProduto */
 .valor-produto {
   background-image: linear-gradient(45deg, black, rgba(0, 0, 0, 0.507));
-  text-align: right;
-  right: 37px;
-  top: 11px;
-  position: absolute;
+  text-align: center;
+  position: relative;
   color: goldenrod;
+  display: flex;
   border-radius: 3px;
   box-shadow: 1px 1px 3px black;
   z-index: 1;
@@ -1717,12 +1706,12 @@ iframe {
 }
 
 .slider {
-    position: relative;
-    width: 100%;
-    display: flex;
-    height: 55vh;
-    overflow: hidden;
-    flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 55vh;
+  overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .slide {
@@ -1745,14 +1734,14 @@ iframe {
 }
 
 .descriptionContainer {
-    margin: 11px auto;
-    padding: 10px;
-    background-color: white;
-    position: relative;
-    top: 35px;
-    border-radius: 4px;
-    box-shadow: 1px 1px;
-    width: 300px;
+  margin: 11px auto;
+  padding: 10px;
+  background-color: white;
+  position: relative;
+  top: 35px;
+  border-radius: 4px;
+  box-shadow: 1px 1px;
+  width: 300px;
 }
 
 .bn-i-botom {
@@ -1782,11 +1771,11 @@ p {
 }
 
 .controls {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    z-index: 999;
-    width: 95%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 999;
+  width: 95%;
 }
 
 .controls button {

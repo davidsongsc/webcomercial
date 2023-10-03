@@ -50,22 +50,22 @@ function ProdutoUsuario({ produto, carregandoCmd, api }) {
 
               <span>{produto.descricao}</span>
               <div className="container-produto-imagem">
-               
+                <ValorProduto valor={produto.valor} />
                 <img
                   src={`${api()}/static/img/demas/cardapio/${produto.nomeproduto}.jpg`}
                   alt=""
                 />
 
+                <div className='container-nome'>
+                  <h1>{produto.nomefantasia}</h1>
+                </div>
+              </div>
 
-              </div>
-              <div className='container-nome'>
-                <h1>{produto.nomefantasia}</h1>
-              </div>
               {usuario ?
-                  <AvaliacaoProduto nota={produto.avaliacao} /> :
-                  ''
-                }
-              <ValorProduto valor={produto.valor} />
+                <AvaliacaoProduto nota={produto.avaliacao} /> :
+                ''
+              }
+
 
 
 
