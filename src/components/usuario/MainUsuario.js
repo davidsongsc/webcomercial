@@ -171,7 +171,7 @@ function MainUsuario({ grupoh, api }) {
                             </aside>
 
                             <aside className='sh-asride-menu-usuario-main-produtos' >
-                               ...
+                                ...
                             </aside>
 
                         </div>
@@ -186,14 +186,9 @@ function MainUsuario({ grupoh, api }) {
 
                             {grupos
                                 .filter((grupo) => grupo.grupo_chave === grupoh)
-                                .map((grupo) => (
-                                    //<button style={{backgroundImage: `url('https://dagesico.pythonanywhere.com/static/img/demas/${grupo.nome}.jpg')`, backgroundSize: 'cover', transition: '.7s'}} className={`botao-cardapio-grupo ${isFixed ? 'botao-fix' : ''}`} onClick={() => handleGrupoClick(grupo.grupocombo)}>
-
-
-                                    <div className={`cardapio-usuario-menu ${isFixed ? 'grupo-titulo-main' : ''}`} onClick={() => handleGrupoClick(grupo.grupocombo)}>
-
+                                .map((grupo, index) => (
+                                    <div key={index} className={`cardapio-usuario-menu ${isFixed ? 'grupo-titulo-main' : ''}`} onClick={() => handleGrupoClick(grupo.grupocombo)}>
                                         <h1>{grupo.nome}</h1>
-
 
                                     </div>
 
@@ -206,8 +201,9 @@ function MainUsuario({ grupoh, api }) {
                             {/* Coloque aqui os componentes de outras páginas */}
                             {produtos
                                 .filter((produto) => produto.grupo === grupoSelecionado)
-                                .map((produto) => (
-                                    <ProdutoUsuario produto={produto} carregandoCmd={true} api={api} />
+                                .map((produto, index) => (
+
+                                    <ProdutoUsuario key={index} produto={produto} carregandoCmd={true} api={api} />
                                 ))}
                         </aside>
 
