@@ -73,6 +73,19 @@ npm start
 
 </br>
 
+</br>
+
+</br>
+
+
+## 👀 Preview
+ 
+> <img src="md//01.png" style="width: 48%;">
+> <img src="md//02.png" style="width: 48%;">
+> <img src="md//03.png" style="width: 48%;">
+> <img src="md//04.png" style="width: 48%;">
+> <img src="md//05.png" style="width: 48%;">
+> <img src="md//06.png" style="width: 48%;">
 
 
 
