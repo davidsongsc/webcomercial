@@ -135,11 +135,11 @@ function Login({ api }) {
                 onChange={(event) => setPassword(event.target.value)}
                 required
               />
-              <button onClick={() => handleLogin()}>Login</button>
+              <button onClick={handleLogin}>Login</button>
               <>
                 <p>Entre com seu ID e Senha. <br /></p>
                 <p>Ainda não é cadastrado? Cadastre-se aqui!</p>
-                <button onClick={() => handleEsqueceuSenha()}>Esqueceu a senha?</button>
+                <button onClick={handleEsqueceuSenha}>Esqueceu a senha?</button>
               </>
             </div>
           </div>
