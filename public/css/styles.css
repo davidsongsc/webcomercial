@@ -88,7 +88,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  height: 395px;
+  height: 34vh;
   background-color: var(--background-header);
   /* background-position-y: -144px; */
   transition-delay: var(--transition-deley-header);
@@ -153,7 +153,6 @@ nav.fixed {
   z-index: 9999;
   transition: opacity 0.5s ease-in-out; /* Adicionamos uma transição para a propriedade 'opacity' */
 }
-
 
 .logo {
   display: none;
@@ -1374,7 +1373,7 @@ button.order:hover {
 
 .grupo-fix {
   position: fixed;
-  top: 0vh;
+  top: -1px;
   border-radius: 0;
   z-index: 9;
   padding: 0;
@@ -1435,8 +1434,10 @@ option {
 
 .loja-descrica-map {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
+
 
 .mapa-loja-placa,
 .mapa-loja-placa-d {
@@ -1445,36 +1446,42 @@ option {
 }
 
 .mapa-loja-placa-d {
-  left: -70px;
-  top: -231px;
+    top: -231px;
 }
 
 .dados-loja {
   margin: 10px;
-}
+  flex-grow: 1;
 
+}
+.map-loja {
+  display: flex;
+  flex-grow: 0.9;
+  flex-basis: 600px;
+  margin: 5px;
+  min-height: 397px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px;
+}
 .detalhes-dados-loja {
   position: relative;
   display: flex;
   background-color: var(--gray-500);
   padding: 8px 0;
-  width: 526px;
-  height: 500px;
   z-index: 999;
   box-shadow: 1px 1px 4px white;
   flex-direction: column;
   justify-content: center;
+  border-radius: 8px;
   align-items: center;
+  box-shadow: 1px 1px 1px;
 }
 
 .loja h1 {
-  font-size: 64px;
-
   background-color: white;
-  padding: 15px;
+  padding: 5px;
   font-weight: 100;
   font-family: "Roboto Mono", monospace;
-
   color: black;
   text-transform: capitalize;
   text-align: center;
@@ -1676,8 +1683,10 @@ iframe {
 
 /* SLIDE */
 .sliderContainer {
-  position: absolute;
+  position: fixed;
   width: 100%;
+  top: 0px;
+  left: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1699,7 +1708,6 @@ iframe {
   position: relative;
   width: 100%;
   display: flex;
-  height: 55vh;
   overflow: hidden;
   flex-wrap: wrap;
 }
@@ -1707,7 +1715,8 @@ iframe {
 .slide {
   position: fixed;
   width: 100%;
-  height: 100%;
+  min-height: 34vh;
+  flex-grow: 1;
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -1724,15 +1733,16 @@ iframe {
 }
 
 .descriptionContainer {
-  padding: 10px;
+  padding: 5px 15px;
   background-color: white;
   position: relative;
-  top: 83px;
-  left: 15%;
+  top: 1vh;
+  left: 1vh;
   border-radius: 4px;
   box-shadow: 1px 1px;
-  height: 30vh;
-  width: 300px;
+  margin: 0px;
+  min-height: 28vh;
+  width: 350px;
 }
 
 .bn-i-botom {
@@ -1776,7 +1786,7 @@ p {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  width: 160px;
+  width: 145px;
 }
 
 .controls button:hover {

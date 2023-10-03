@@ -3,7 +3,7 @@ import dados from '../configure.json';
 import Footer from "./Footer";
 import BaseLogo from "./BaseLogo";
 
-const Loja = ({api}) => {
+const Loja = ({ api }) => {
   const [lojaSelecionada, setLojaSelecionada] = useState('lojaA');
   const [lojas] = useState(dados.lojas);
 
@@ -18,7 +18,7 @@ const Loja = ({api}) => {
 
   return (
     <>
-    <BaseLogo api={api}/>
+      <BaseLogo api={api} />
       <div className="lojas-container">
 
         <div className="loja">
@@ -39,14 +39,13 @@ const Loja = ({api}) => {
               </div>
 
             </div>
-            <div className="map-loja">
-              <iframe src={lojas[lojaSelecionada].dados.mapa} width="650" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapas"></iframe>
+            <iframe className="map-loja" src={lojas[lojaSelecionada].dados.mapa} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapas"></iframe>
 
 
-            </div>
-           
+
+
           </div>
-    
+
         </div>
 
       </div>
